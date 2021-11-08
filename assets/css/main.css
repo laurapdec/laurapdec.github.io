@@ -3137,4 +3137,132 @@
 		display: grid;
 
 	}
+
+	.bar{
+
+		position: relative;
+		
+		border: 2px solid #0d96e0;
+
+		border-radius: 20px;
+	}
+
+	.bar div{
+		position: relative;
+		width: 0;
+		height: 9px;
+		border-radius: 10px;
+		background-color: #0d96e0;
+	
+	}
+	.skills:not(:last-child){
+		margin-bottom: 30px;
+	}
+	.skills{
+		width: 100%;
+		padding: 30px 30px 50px;
+		margin: 30px 30px 30px 30px ;
+		background-color: #273244;
+		border-radius: 10px;
+		box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+	} 
+	.skillswrapper{
+		color: white;
+		width: 40%;
+		min-width: 590px;
+		left: 50%;
+		top: 50%;
+	}
+
+	#python-bar{
+		animation: python-fill 2s forwards;
+	}
+	@keyframes python-fill{
+		100%{
+			width: 80%;
+		}
+	}
+	#latex-bar{
+		animation: latex-fill 2s forwards;
+	}
+	@keyframes latex-fill{
+		100%{
+			width: 70%;
+		}
+	}
+	
+	#matlab-bar{
+		animation: matlab-fill 2s forwards;
+	}
+	@keyframes matlab-fill{
+		100%{
+			width: 70%;
+		}
+	}
+	#fortran-bar{
+		animation: fortran-fill 2s forwards;
+	}
+	@keyframes fortran-fill{
+		100%{
+			width: 70%;
+		}
+	}
+	#catia-bar{
+		animation: catia-fill 2s forwards;
+	}
+	@keyframes catia-fill{
+		100%{
+			width: 60%;
+		}
+	}
+	#solidworks-bar{
+		animation: solidworks-fill 2s forwards;
+	}
+	@keyframes solidworks-fill{
+		100%{
+			width: 60%;
+		}
+	}
+	#C-bar{
+		animation: langc-fill 2s forwards;
+	}
+	@keyframes langc-fill{
+		100%{
+			width: 60%;
+		}
+	}
+	#webdev-bar{
+		animation: webdev-fill 2s forwards;
+	}
+	@keyframes webdev-fill{
+		100%{
+			width: 40%;
+		}
+	}
+	#en-bar{
+		animation: en-fill 2s forwards;
+	}
+	@keyframes en-fill{
+		100%{
+			width: 83%;
+		}
+	}
+	
+	#fr-bar{
+		animation: fr-fill 2s forwards;
+	}
+	@keyframes fr-fill{
+		100%{
+			width: 50%;
+		}
+	}
+	
+	#pt-bar{
+		animation: pt-fill 2s forwards;
+	}
+	@keyframes pt-fill{
+		100%{
+			width: 100%;
+		}
+	}
 }
