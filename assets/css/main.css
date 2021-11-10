@@ -2551,7 +2551,7 @@
 		background-color: #5a5a5a;
 		border-radius: 0;
 		border: 0;
-		color: #d8cdbb !important;
+		color: #d8cdbb;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 600;
@@ -3159,7 +3159,7 @@
 		margin-bottom: 30px;
 	}
 	.skills{
-		width: 100%;
+		width: 80%;
 		padding: 30px 30px 50px;
 		margin: 30px 30px 30px 30px ;
 		background-color: #273244;
@@ -3168,8 +3168,8 @@
 	} 
 	.skillswrapper{
 		color: white;
-		width: 40%;
-		min-width: 590px;
+		width: 30%;
+		min-width: 50px;
 		left: 50%;
 		top: 50%;
 	}
@@ -3187,7 +3187,7 @@
 	}
 	@keyframes latex-fill{
 		100%{
-			width: 70%;
+			width: 60%;
 		}
 	}
 	
@@ -3196,7 +3196,7 @@
 	}
 	@keyframes matlab-fill{
 		100%{
-			width: 70%;
+			width: 60%;
 		}
 	}
 	#fortran-bar{
@@ -3204,7 +3204,7 @@
 	}
 	@keyframes fortran-fill{
 		100%{
-			width: 70%;
+			width: 50%;
 		}
 	}
 	#catia-bar{
@@ -3212,7 +3212,7 @@
 	}
 	@keyframes catia-fill{
 		100%{
-			width: 60%;
+			width: 50%;
 		}
 	}
 	#solidworks-bar{
@@ -3220,7 +3220,7 @@
 	}
 	@keyframes solidworks-fill{
 		100%{
-			width: 60%;
+			width: 40%;
 		}
 	}
 	#C-bar{
@@ -3228,7 +3228,7 @@
 	}
 	@keyframes langc-fill{
 		100%{
-			width: 60%;
+			width: 30%;
 		}
 	}
 	#webdev-bar{
@@ -3236,7 +3236,7 @@
 	}
 	@keyframes webdev-fill{
 		100%{
-			width: 40%;
+			width: 20%;
 		}
 	}
 	#en-bar{
@@ -3264,5 +3264,54 @@
 		100%{
 			width: 100%;
 		}
+	}	
+	#gpa-bar{
+		animation: gpa-fill 2s forwards;
 	}
+	@keyframes gpa-fill{
+		100%{
+			width: 82%;
+		}
+	}
+	
+	.accordion {
+		background-color: inherit;
+		font-size: 1.35em;
+		font-family: inherit;
+		font-style: inherit;
+		font-weight:inherit;
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		transition: 0.4s;
+		color: #000;
+	  }
+	  
+	  .active, .accordion:hover {
+		background-color: #C0AF94;
+	  }
+	  
+	  .panel {
+		padding: 0 18px;
+		background-color: inherit;
+		font: inherit;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	  }
+
+	  .accordion:after {
+		content: '\02795'; /* Unicode character for "plus" sign (+) */
+		font-size: 13px;
+		color: #9B8259;
+		float: right;
+		margin-left: 5px;
+	  }
+	  
+	  .active:after {
+		content: "\2796"; /* Unicode character for "minus" sign (-) */
+	  }
+
 }
