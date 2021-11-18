@@ -2198,6 +2198,9 @@
 
 		.box.person {
 			border: solid 1px #273244;
+			border-radius: 100%;
+			background-color: #273244;
+			display: flex;
 			padding: 1em 1em;
 		}
 
@@ -2207,6 +2210,7 @@
 
 			.box.person .image {
 				margin-bottom: 0em;
+				align-content: center;
 			}
 
 				.box.person .image img {
