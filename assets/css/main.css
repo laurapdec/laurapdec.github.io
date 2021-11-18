@@ -1779,7 +1779,7 @@
 		text-align: center;
 	}
 
-		section.special article, article.special article {
+		section.special article, .special article {
 			text-align: left;
 		}
 
@@ -3160,18 +3160,20 @@
 	}
 	.skills{
 		width: 80%;
-		padding: 30px 30px 50px;
+		padding: 30px 30px 50px 30px;
 		margin: 30px 30px 30px 30px ;
 		background-color: #273244;
 		border-radius: 10px;
 		box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+		display: block;
+		min-width: inherit	;
 	} 
 	.skillswrapper{
 		color: white;
-		width: 30%;
 		min-width: 50px;
 		left: 50%;
 		top: 50%;
+		min-width: 350px;
 	}
 
 	#python-bar{
