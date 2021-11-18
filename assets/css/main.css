@@ -3161,7 +3161,7 @@
 	.skills{
 		width: 80%;
 		padding: 30px 30px 50px 30px;
-		margin: 30px 30px 30px 30px ;
+		margin: 15px 15px 15px 15px ;
 		background-color: #273244;
 		border-radius: 10px;
 		box-shadow: 0 20px 30px rgba(0,0,0,0.2);
@@ -3173,7 +3173,7 @@
 		min-width: 50px;
 		left: 50%;
 		top: 50%;
-		min-width: 350px;
+		min-width: 280px;
 	}
 
 	#python-bar{
