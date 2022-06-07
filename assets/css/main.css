@@ -3327,7 +3327,8 @@
 
     /* Hide the images by default */
     .mySlides {
-      display: none;
+        justify-content: center;
+
     }
 
     /* Next & previous buttons */
