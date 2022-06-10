@@ -9,9 +9,14 @@
 		<title>Droney</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../assets/css/threeDCss.css" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
 	</head>
 	<body class="subpage">
+        <script src="../../assets/js/three.min.js" ></script>
+        <script src="../../assets/js/GLTFLoader.js"></script>
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 
 		<!-- Header -->
 			<header id="header">
@@ -61,40 +66,49 @@
 
 							</div>
                 		</div>
-                	</div>
+				</div>
 
-				<div class="flex flex-2"  >
-					<div class="inner">
-						<h2>Poster presentation</h2>ß
-						<iframe src="../../documents/Drone-en.pdf#page1&zoom=auto"  width="561" height="765" ></iframe>
+				<div class="flex flex-2" style="justify-content:flex-start;"  >
+					<div class="inner" style="flex-grow: 1;;margin:2em 4em 0 4em;">
+						<h2>Poster presentation</h2>
+						<div class="iframe-container" style="padding-top:141.39%;">
+							<iframe src="../../documents/Drone-en.pdf#page1&zoom=auto"  width="561" height="765" ></iframe>
+						</div>
+					</div>
 
-                	</div>
-
-					<div class="inner" style="width:50%">
+					<div class="inner" style="width:fit-content;margin:2em 4em 0 4em;">
 							<h2> Gallery</h2>
-							<div class="slideshow-container" style="max-height: 765px">
+							<div class="slideshow-container" style="width: 675.6px;max-height: 765px">
 
 							  <!-- Full-width images with number and caption text -->
 							  <div class="mySlides fade" >
-								<div class="numbertext">1 / 4</div>
-								<video width="100%"  controls>
+								<div class="numbertext">1 / 5</div>
+									<div  controls>
+										<model-viewer style="width: 675.6px;height: 675.6px;"	id="droney" skybox-image="../../documents/portfolio/background.hdr"  src="../../documents/portfolio/droney.glb" alt="A 3D model of the Droney" shadow-intensity="0" camera-controls auto-rotate ar orientation="0deg 270deg 0">
+										</model-viewer>
+									</div>
+							  </div>
+
+							  <div class="mySlides fade" >
+								<div class="numbertext">2 / 5</div>
+								<video width="675.6px"  controls>
 								  <source src="../../images/projects/Droney/droneyvideo.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>
 							  </div>
 
 							  <div class="mySlides fade" >
-								<div class="numbertext">2 / 4</div>
+								<div class="numbertext">3 / 5</div>
 								<img src="../../images/projects/Droney/Droney2.jpg" style="max-height: 765px; max-width: 100%">
 							  </div>
 
 							  <div class="mySlides fade">
-								<div class="numbertext">3 / 4</div>
+								<div class="numbertext">4 / 5</div>
 								<img src="../../images/projects/Droney/Droney3.jpg" style="max-height: 765px; max-width: 100%">
 							  </div>
 
 							  <div class="mySlides fade">
-								<div class="numbertext">4 / 4</div>
+								<div class="numbertext">5 / 5</div>
 								<img src="../../images/projects/Droney/Droney1.jpg" style="max-height: 765px; max-width: 100%">
 							  </div>
 
@@ -113,10 +127,11 @@
 						  <span class="dot" onclick="currentSlide(2)"></span>
 						  <span class="dot" onclick="currentSlide(3)"></span>
 						  <span class="dot" onclick="currentSlide(4)"></span>
+						  <span class="dot" onclick="currentSlide(5)"></span>
 						</div>
 
-						</div>
-            	</div>
+					</div>
+				</div>
 			</section>
 
 		<!-- Three -->
@@ -143,6 +158,19 @@
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
 			<script src="../../assets/js/gallery.js"></script>
+			<script>
+				const modelDroneyViewerParameters = document.querySelector("model-viewer#droney");
+
+				modelDroneyViewerParameters.addEventListener("load", (ev) => {
+
+				  let materialDroney = modelDroneyViewerParameters.model.materials[0];
+				  materialDroney.pbrMetallicRoughness.setMetallicFactor(0.1);
+				  materialDroney.pbrMetallicRoughness.setRoughnessFactor(0.9);
+				  // Defaults to gold
+				  materialDroney.pbrMetallicRoughness.setBaseColorFactor([0,0,0,1]);
+
+				});
+			</script>
 
 	</body>
 </html></title>

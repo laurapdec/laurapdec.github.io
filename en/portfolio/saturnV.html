@@ -9,11 +9,13 @@
 		<title>Saturn V</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../assets/css/threeDCss.css" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
 	</head>
 	<body class="subpage" style="height: 100%">
-        <script src="three.min.js" ></script>
-        <script src="GLTFLoader.js"></script>
+        <script src="../../assets/js/three.min.js" ></script>
+        <script src="../../assets/js/GLTFLoader.js"></script>
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
@@ -46,12 +48,89 @@
 					<header class="align-center">
 						<h2>Saturn V CATIA Project</h2>
 					</header>
-                    <h2> F1 and J2 engine</h2>
-					<p> My participation in this project was the development of the F1 and J2 engines in the software CATIA</p>
+					<div style="display:flex;justify-content:space-between;"  >
+						<div >
+							<p > My participation in this project was the development of the F1 and J2 engines in the software CATIA</p>
 
-                    <h2>Presentation</h2>
-                    <iframe src="../../documents/CATIA.pdf#page1&zoom=auto"  width="600" height="400" ></iframe>
-                </div>
+							<ul style="width:fit-content">
+							  <li><b>CATIA</b> for 3D mechanical design.</li>
+							</ul>
+						</div>
+						<div style="display:flex; justify-content:center;flex-direction:column;margin-left:1em;">
+							<h1> <b>Software:</b> </h1>
+							<div style="display:flex;">
+								<img src="../../images/catia.png" style="height: 50px; width: 50px; margin:10px">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="flex flex-2"  >
+					<div class="inner" style="flex-grow: 1;margin:2em 4em 0 4em;">
+							<h2>Presentation</h2>
+						 	<div class="iframe-container">
+								<iframe src="../../documents/CATIA.pdf#page=34&zoom=auto"	></iframe>
+							</div>
+					</div>
+
+
+					<div class="inner" style="width:fit-content;margin:2em 4em 0 4em">
+							<h2> Gallery</h2>
+							<div class="slideshow-container" style="width:fit-content;max-height: 765px">
+
+							  <div class="mySlides fade" >
+								<div class="numbertext">1 / 5</div>
+									<div style="max-height: 765px; max-width: 100%" controls>
+										<model-viewer id="SaturnV" class="background3D"  src="../../documents/portfolio/SaturnV.glb" alt="A 3D model of the Saturn V" shadow-intensity="0" camera-controls auto-rotate ar orientation="0deg 270deg 0">
+										</model-viewer>
+									</div>
+							  </div>
+
+							  <div class="mySlides fade" >
+								<div class="numbertext">2 / 5</div>
+									<td>
+										<model-viewer id="engineF1" skybox-image="../../documents/portfolio/background.hdr"  src="../../documents/portfolio/F1.glb" alt="A 3D model of a F1 engine" shadow-intensity="0" camera-controls auto-rotate ar orientation="90deg 0 0" >
+										</model-viewer>
+									</td>
+							  </div>
+
+							  <div class="mySlides fade">
+								<div class="numbertext">3 / 5</div>
+								<img src="../../images/projects/SaturnV/F1-1.jpg" style="max-height: 765px; max-width: 300px">
+							  </div>
+
+							  <div class="mySlides fade">
+								<div class="numbertext">4 / 5</div>
+								<img src="../../images/projects/SaturnV/J2-1.jpg" style="max-height: 765px; max-width: 300px">
+							  </div>
+
+							  <div class="mySlides fade">
+								<div class="numbertext">5 / 5</div>
+								<img src="../../images/projects/SaturnV/SaturnV-1.jpg" style="max-height: 765px; max-width: 300px">
+							  </div>
+
+
+
+							  <!-- Next and previous buttons -->
+							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+							</div>
+
+							<br>
+
+							<!-- The dots/circles -->
+							<div style="text-align:center">
+						  <span class="dot" onclick="currentSlide(1)"></span>
+						  <span class="dot" onclick="currentSlide(2)"></span>
+						  <span class="dot" onclick="currentSlide(3)"></span>
+						  <span class="dot" onclick="currentSlide(4)"></span>
+						</div>
+
+						</div>
+
+				</div>
+
 			</section>
 
 		
@@ -75,6 +154,7 @@
 			<script src="../../assets/js/skel.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
-
+			<script src="../../assets/js/gallery.js"></script>
+			<script src="../../assets/js/3DUtils.js"></script>
 	</body>
 </html> 
