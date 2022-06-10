@@ -1668,7 +1668,6 @@
 
 	h2 {
 		font-size: 1.75em;
-		font-weight: 100;
 	}
 
 	h3 {
@@ -2722,7 +2721,7 @@
 		button.special,
 		div.special,
 		.button.special {
-			background-color: #9B8259;
+			background-color: #3c4656;
 			color: #d8cdbb		 !important;
 			margin: 0em 0em 0em 0em;
 			width:200px;
@@ -2734,7 +2733,7 @@
 			button.special:hover,
 			div.special:hover,
 			.button.special:hover {
-				background-color: #6692c8;
+				background-color: #7d848e;
 			}
 
 			input[type="submit"].special:active,
