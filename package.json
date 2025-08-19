@@ -1,0 +1,9 @@
+{
+  "name": "laurapdec.github.io",
+  "version": "1.0.0",
+  "description": "Laura P. Castro personal website",
+  "scripts": {
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "license": "MIT"
+}

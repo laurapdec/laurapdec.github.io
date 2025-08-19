@@ -58,9 +58,29 @@
 
 		// Fix: Remove transitions on WP<10 (poor/buggy performance).
 			if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-				$('#navPanel')
-					.css('transition', 'none');
+                                $('#navPanel')
+                                        .css('transition', 'none');
 
-	});
+                // Reveal animations on scroll.
+                var revealEls = document.querySelectorAll('section, article');
+                revealEls.forEach(function(el) {
+                        el.classList.add('reveal');
+                });
+
+                if ('IntersectionObserver' in window) {
+                        var observer = new IntersectionObserver(function(entries, obs) {
+                                entries.forEach(function(entry) {
+                                        if (entry.isIntersecting) {
+                                                entry.target.classList.add('visible');
+                                                obs.unobserve(entry.target);
+                                        }
+                                });
+                        }, { threshold: 0.1 });
+                        revealEls.forEach(function(el) { observer.observe(el); });
+                } else {
+                        revealEls.forEach(function(el) { el.classList.add('visible'); });
+                }
+
+        });
 
 })(jQuery);
