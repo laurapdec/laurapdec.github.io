@@ -10,37 +10,33 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>html,body{height:100%;}</style>
 		
 			
 	</head>
 	<body class="subpage">
 
 		
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="main.html" class="logo">Laura Pereira de Castro</a>
-					<nav id="nav">
-						<a href="main.html">Home</a>
-						<a href="projects.html">Work Experience</a>
-						<a href="articles.html">Articles</a>
-						<a href="portfolio.html">Projects</a>
-						<a href="achievements.html">Achievements</a>
-						<a href="courses.html">Courses</a>
-						<a href="education.html">Education</a>
-						<a href="aboutme.html">About me</a>
-						<div class="dropdown">
-							<button class="dropbtn"><img src="../images/world.png" style="vertical-align: text-bottom;" width="18"/></button>
-							<div class="dropdown-content">
-								<a href="../fr/education.html" style="color: #6692c8;">FR</a>
-								<a href="../pt/education.html" style="color: #6692c8;">PT</a>
-								<a href="../en/education.html" style="color: #6692c8;">EN</a>
-							</div>
-						</div>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		<header class="sticky top-0 z-40 bg-gradient-to-b from-slate-900/75 via-slate-900/50 to-transparent backdrop-blur">
+			<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+				<a href="main.html" class="text-white text-xl font-semibold">Laura Pereira de Castro</a>
+				<nav class="hidden md:flex gap-6 items-center text-slate-200">
+					<a href="main.html" class="hover:text-white">Home</a>
+					<a href="projects.html" class="hover:text-white">Work</a>
+					<a href="portfolio.html" class="hover:text-white">Projects</a>
+					<a href="aboutme.html" class="hover:text-white">About</a>
+				</nav>
+				<div class="flex items-center gap-3">
+					<a href="../fr/education.html" class="text-sm px-2 py-1 rounded hover:bg-white/5">FR</a>
+					<a href="../pt/education.html" class="text-sm px-2 py-1 rounded hover:bg-white/5">PT</a>
+					<a href="../en/education.html" class="text-sm px-2 py-1 rounded bg-sky-600 text-white">EN</a>
 				</div>
-			</header>
+			</div>
+		</header>
+		<section class="max-w-6xl mx-auto px-6 py-10">
+			<header class="mb-6"><h2 class="text-3xl font-bold">Education</h2></header>
+		</section>
 
 		<!-- Three -->
 			<section id="three" class="wrapper">
