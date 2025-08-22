@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ensma",
+    "name": "ISAE-ENSMA (France)",
+    "institution": "ISAE-ENSMA (France)",
+    "years": "2021-2024: Masters Recherche + Diplôme d'Ingénieur",
+    "description": "Masters Recherche + Diplôme d'Ingénieur",
+    "projects": [
+      "Research projects in aeronautics"
+    ],
+    "lat": 46.5802,
+    "lon": 0.3404,
+    "x": 50.1156,
+    "y": 24.0828
+  },
+  
+  {
+    "id": "ufu",
+    "name": "Federal University of Uberlândia (Brazil)",
+    "institution": "Federal University of Uberlândia",
+    "years": "2017-2021: Undergraduate studies in aeronautical engineering",
+    "description": "Undergraduate studies in aeronautical engineering",
+    "projects": [
+      "Undergrad projects"
+    ],
+    "lat": -18.912,
+    "lon": -48.275,
+    "x": 36.5903,
+    "y": 60.5067
+  },
+  {
+    "id": "safran",
+    "name": "Safran (France)",
+    "institution": "Safran Helicopter Engines",
+    "years": "2023: Internship",
+    "description": "Industrial internship in aerospace engineering.",
+    "projects": [
+      "Industrial project work"
+    ],
+    "lat": 43.2951,
+    "lon": -0.3708,
+    "x": 49.8000,
+    "y": 23.9000
+  },
+  {
+    "id": "airbus",
+    "name": "Airbus (France)",
+    "institution": "Airbus",
+    "years": "2024-2025: PhD research (discontinued)",
+    "description": "PhD research (discontinued)",
+    "projects": [
+      "PhD research"
+    ],
+    "lat": 43.6045,
+    "lon": 1.444,
+    "x": 50.4011,
+    "y": 25.7753
+  },
+
+  {
+    "id": "iit",
+    "name": "Illinois Institute of Technology (USA)",
+    "institution": "Illinois Institute of Technology",
+    "years": "Summer 2022: Visiting Researcher",
+    "description": "Add exact IIT campus latitude/longitude to place this pin accurately.",
+    "projects": [],
+    "lat": 41.8349,
+    "lon": -87.627,
+    "x": 44.9788,
+    "y": 18.6821
+  }
+]
