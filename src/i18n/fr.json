@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "work": "Projets",
+    "education": "Éducation & Expériences",
+    "portfolio": "Portfolio",
+    "about": "À propos",
+    "articles": "Articles",
+    "courses": "Cours",
+    "achievements": "Réalisations"
+  },
+  "hero": {
+    "title": "Laura Pereira de Castro",
+    "subtitle": "Ingénieure diplômée • Développeuse • Designer",
+    "description": "CV interactif et portfolio — projets, publications et documents vérifiés disponibles au téléchargement.",
+    "ctaPrimary": "Portfolio",
+    "ctaSecondary": "À propos"
+  },
+  "stats": {
+    "gpa": "84.227/100",
+    "gpa_label": "Moyenne cumulée"
+  },
+  "languages": [
+    { "name": "Portugais", "level": "Langue maternelle" },
+    { "name": "Anglais", "level": "Avancé · TOEFL iBT : 104/120" },
+    { "name": "Français", "level": "Avancé · DELF B1" }
+  ],
+  "skills": ["Python", "Développement web", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
+  "tech_stack": ["JavaScript", "TypeScript", "React", "Next.js", "Sanity", "MongoDB", "Node.js", "Python", "MATLAB", "Fortran"],
+  "machine_learning": ["Apprentissage automatique", "Réseaux de neurones", "Apprentissage profond"],
+  "projects": [
+    { "title": "Coding Elf", "description": "Assistant de codage interactif.", "link": "portfolio/codingelf.html", "tags": [] },
+    { "title": "Online Resume", "description": "Ce site — CV interactif et portfolio.", "link": "portfolio/website.html", "tags": [] },
+    { "title": "Safran Internship", "description": "Stage industriel en ingénierie aérospatiale.", "link": "portfolio/safran.html", "tags": ["ensma"] },
+    { "title": "Droney", "description": "Projet UAV autonome — images, démonstration et compte-rendu.", "link": "portfolio/droney.html", "tags": ["ensma"] },
+    { "title": "ATREX", "description": "Présentation de projet aérospatial / fusée.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
+    { "title": "Undergraduate Researcher at MFLAB", "description": "Dynamique des fluides computationnelle et modélisation de la combustion utilisant des simulations Monte Carlo avancées.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
+    { "title": "EPTA", "description": "Travail en équipe et publications (rocketry).", "link": "portfolio/EPTA.html", "tags": ["ufu"] },
+    { "title": "CHARMANDER", "description": "Projet 3D/graphisme en cours.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
+    { "title": "Saturn V on CATIA", "description": "Exercice de modélisation CAD avec CATIA.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
+  ],
+  "education": [
+    { "institution": "Airbus et CERFACS", "location": "Toulouse, France", "degree": "Doctorat en modélisation complexe de la combustion (interrompu)", "years": "2024-2025" },
+    { "institution": "ISAE-ENSMA", "location": "Chasseneuil-du-Poitou, France", "degree": "Mastère - Aéronautique et Espace", "years": "2021-2024" },
+    { "institution": "ISAE-ENSMA", "location": "Chasseneuil-du-Poitou, France", "degree": "Diplôme d'Ingénieur", "years": "2021-2024" },
+    { "institution": "Universidade Federal de Uberlândia (UFU)", "location": "Uberlândia, Brésil", "degree": "Génie aéronautique", "years": "2017-2021" }
+  ],
+  "achievements": [
+    "Mention honorable - XIX Mathematical School Week and IX Statistics School Week",
+    "Médaille d'argent - Olympiade brésilienne d'astronomie et d'astronautique (OBA)",
+    "Médaille d'argent - Kangourou Mathématiques (KAN)",
+    "Médailles de bronze et mentions honorables aux olympiades nationales"
+  ],
+  "courses": [
+    "Cours d'hiver - Introduction aux technologies spatiales (INPE)",
+    "COBEM - Congrès international de génie mécanique",
+    "EPTT - École de printemps",
+    "Programme MIT Junior - Science & Technology Explorer",
+    "Cours court MATLAB",
+    "Gestion de l'innovation - Le cas Embraer"
+  ],
+  "articles": [
+    { "title": "Modelagem Fluidodinâmica", "file": "/documents/ModelagemFluidodinamica.pdf" },
+    { "title": "EPTA - Python & Data", "file": "/documents/epta_python.pdf" }
+  ],
+  "contact": {
+    "phone": "+33 07 68 57 81 91",
+    "email": "laurapdec@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/laurapdec/"
+  },
+  "portfolio": [
+    { "title": "Expériences de web design", "description": "Sites personnels et expérimentations interactives." }
+  ],
+  "locations": [
+  { "id": "ensma", "name": "ISAE-ENSMA", "institution": "ISAE-ENSMA (ENSMA)", "years": "2021-2024 (fév)", "description": "Mastère (Recherche) - Aéronautique et Espace; Diplôme d'Ingénieur (équivalent Master).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
+  { "id": "ufu", "name": "UFU", "institution": "Universidade Federal de Uberlândia", "years": "jusqu'à 2021", "description": "Études de premier cycle en ingénierie.", "projects": ["Saturn V on CATIA", "EPTA", "CHARMANDER", "Undergraduate Researcher at MFLAB"], "x": 40, "y": 62 },
+  { "id": "safran", "name": "Safran (Stage)", "institution": "Safran", "years": "Stage", "description": "Stage industriel en ingénierie aérospatiale.", "projects": ["Safran Internship"], "x": 58, "y": 26 },
+  { "id": "airbus", "name": "Airbus (Doctorat)", "institution": "Airbus", "years": "Doctorat (interrompu)", "description": "Travaux de thèse en aéronautique (interrompus).", "projects": [], "x": 60, "y": 26 }
+  ],
+  "footer": {
+    "copyright": "© 2025 Laura Pereira de Castro. Tous droits réservés."
+  }
+}

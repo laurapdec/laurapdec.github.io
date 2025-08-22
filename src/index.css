@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+	--bg-1: #d4d4d4; /* slate-900 */
+	--bg-2: #d4d4d4; /* darker */
+	--muted: #2e3744; /* slate-400 */
+	--accent: #007d91; /* cyan-500 */
+}
+
+html,body,#root{
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 60%);
+	color: #030303;
+	margin: 0;
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+/* Main scroll container when using full-screen sections */
+.site-scroll {
+    /* when header is fixed we add extra top padding via body class; when header is in flow no extra padding required */
+    padding-top: 0;
+    height: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+/* when header is fixed (scrolled) ensure content is pushed down by compact header height (80px) */
+.header-fixed-active .site-scroll {
+  padding-top: 5rem; /* 80px */
+}
+
+.section {
+	min-height: calc(100vh - 64px);
+	padding: 4rem 1.25rem;
+	scroll-snap-align: start;
+	display: flex;
+	align-items: center;
+}
+
+.hero-inner {
+	max-width: 1100px;
+	display: grid;
+	grid-template-columns: 1fr 320px;
+	gap: 2.5rem;
+	align-items: center;
+}
+
+.profile-placeholder{
+	width: 320px;
+	height: 320px;
+	border-radius: 9999px;
+	background: linear-gradient(135deg,#0ea5a5,#6366f1);
+	/* removed heavy shadow per design preference */
+	box-shadow: none;
+	display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.125rem;color:rgba(255,255,255,0.9);
+}
+
+.card {
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border-radius: 12px;
+	padding: 1rem;
+	/* removed heavy shadow for a flatter look */
+	box-shadow: none;
+}
+
+.muted { color: var(--muted); }
+.accent { color: var(--accent); }
+
+/* small responsive tweaks */
+@media (max-width: 768px){
+	.hero-inner{ grid-template-columns: 1fr; text-align:center }
+	.site-scroll{ height: calc(100vh - 56px) }
+}
+
+/* marquee animation (adjusted contrast for new bg) */
+.marquee-wrapper { position: relative; height: 44px; }
+.marquee {
+  display: inline-flex;
+  gap: 2rem;
+  animation: marquee-left 20s linear infinite;
+  will-change: transform;
+}
+@keyframes marquee-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-wrapper:hover .marquee { animation-play-state: paused; }
+
+/* ensure header background remains consistent and readable when fixed */
+.header-fixed-active header { background-color: rgba(249,250,251,0.95) !important; }
