@@ -43,7 +43,7 @@ export default function MapView({ onSelectLocation, selectedLocationId, classNam
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                         geographies.map(geo => (
-                            <Geography key={geo.rsmKey} geography={geo} fill="#d4d4d4" stroke="#0060b9ff" />
+                            <Geography key={geo.rsmKey} geography={geo} fill="#eeeeee" stroke="#0060b9ff" />
                         ))
                     }
                 </Geographies>
