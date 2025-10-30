@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import Navbar from '../components/Navbar' // Import Navbar
 import MapView from '../components/Map'
 import { useRef, useState, useEffect } from 'react'
 import { FaPython } from 'react-icons/fa'
@@ -95,6 +96,7 @@ export default function Home() {
 
   return (
     <div className="site-scroll">
+      <Navbar /> {/* Add Navbar here */}
       <section id="work" className="section">
         <div className="max-w-6xl mx-auto w-full ">
           <h2 className="text-3xl font-bold mb-8">{t('nav.education')}</h2>

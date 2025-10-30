@@ -28,21 +28,21 @@
   "machine_learning": ["Machine Learning", "Neural Networks","Pytorch","Tensorflow"],
   "projects": [ 
     { "title": "Coding Elf", "description": "Website for programming content in portuguese", "link": "portfolio/codingelf.html", "tags": [] },
-    { "title": "Online Resume", "description": "This website — interactive CV", "link": "portfolio/website.html", "tags": [] },
+    { "title": "Web Development Freelance", "description": "I've developed a range from programming blog, this interactive resume, along with other projects.", "link": "portfolio/website.html", "tags": [] },
     { "title": "Safran Internship", "description": "Industrial research internship", "link": "portfolio/safran.html", "tags": ["ensma"] },
     { "title": "IIT Internship", "description": "Academic research internship", "link": "portfolio/iit.html", "tags": ["ensma"] },
-    { "title": "Droney", "description": "Autonomous UAV project", "link": "portfolio/droney.html", "tags": ["ensma"] },
+    { "title": "Drone design", "description": "Autonomous UAV project", "link": "portfolio/droney.html", "tags": ["ensma"] },
     { "title": "ATREX", "description": "Rocket engine project.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
-    { "title": "Undergraduate Research", "description": "CFD with Monte Carlo method for combustion.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
+    { "title": "Petrobras Internship", "description": "CFD with Monte Carlo method for combustion.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
     { "title": "EPTA", "description": "Rocketry team work and publications.", "link": "portfolio/EPTA.html", "tags": ["ufu"] },
     { "title": "CHARMANDER", "description": "Graphical interface for combustion tests.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
     { "title": "Saturn V", "description": "CAD modelling using CATIA.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
   ],
   "education": [
-    { "institution": "Airbus and CERFACS ", "location": "Toulouse, France", "degree": "PhD in complex combustion modelling (discontinued)", "years": "2024-2025" },
-    { "institution": "ISAE-ENSMA ", "location": "Chasseneuil-du-Poitou, France", "degree": "Master - Aeronautic and Espace", "years": "2021-2024" },
-    { "institution": "ISAE-ENSMA ", "location": "Chasseneuil-du-Poitou, France", "degree": "Engineering Degree", "years": "2021-2024" },
-    { "institution": "Federal University of Uberlândia (UFU)", "location": "Uberlândia, Brazil", "degree":"Aeronautical Engineering","years": "2017-2021" }
+    { "institution": "Airbus ", "location": "Toulouse, France", "degree": "Interrupted PhD in complex combustion modelling and advanced techniques to couple fluid and heat solvers", "years": "Jan 2024 - Jul 2025" },
+    { "institution": "ISAE-ENSMA ", "location": "Chasseneuil-du-Poitou, France", "degree": "Master - Aeronautic and Espace", "years": "Aug 2021 - Feb 2024" },
+    { "institution": "ISAE-ENSMA ", "location": "Chasseneuil-du-Poitou, France", "degree": "Engineering Degree", "years": "Aug 2021 - Feb 2024" },
+    { "institution": "Federal University of Uberlândia (UFU)", "location": "Uberlândia, Brazil", "degree":"Coursework for Aeronautical Engineering (transfered to ENSMA)","years": "Aug 2017 - Jul 2021" }
   ],
   "achievements": [
     "Honorable mention - XIX Mathematical School Week and IX Statistics School Week",
@@ -72,7 +72,7 @@
   ],
   "locations": [
   { "id": "ensma", "name": "ISAE-ENSMA", "institution": "ISAE-ENSMA (ENSMA)", "years": "2021-2024 (Feb)", "description": "Mastère (Research) - Aéronautique et Espace; Diplôme d'Ingénieur (Master equivalent).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
-  { "id": "ufu", "name": "UFU", "institution": "Federal University of Uberlândia", "years": "until 2021", "description": "Undergraduate studies in engineering.", "projects": ["Saturn V on CATIA", "EPTA", "CHARMANDER", "Undergraduate Researcher at MFLAB"], "x": 40, "y": 62 },
+  { "id": "ufu", "name": "UFU", "institution": "Federal University of Uberlândia", "years": "until 2021", "description": "Undergraduate studies in engineering.", "projects": ["Saturn V on CATIA", "EPTA", "Petrobras Internship"], "x": 40, "y": 62 },
   { "id": "safran", "name": "Safran (Internship)", "institution": "Safran", "years": "Internship", "description": "Industrial internship in aerospace engineering.", "projects": ["Safran Internship"], "x": 58, "y": 26 },
   { "id": "airbus", "name": "Airbus (PhD)", "institution": "Airbus", "years": "PhD candidacy (stopped)", "description": "PhD work in aerospace (discontinued).", "projects": [], "x": 60, "y": 26 }
   ],
