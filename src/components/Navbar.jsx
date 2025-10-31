@@ -92,12 +92,12 @@ export default function Navbar() {
   }, [scrolled])
 
   const nav = [
-    { label: 'CV', to: '/cv' },
+    { label: 'CV', to: '/#/cv' },
     { label: 'Creative Services', to: '/' },
   ]
 
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
-  const showCvHeader = pathname === '/cv' || pathname.startsWith('/cv')
+  const showCvHeader = pathname === '/#/cv' || pathname.startsWith('/#/cv')
 
   return (
     <>
@@ -128,7 +128,7 @@ export default function Navbar() {
             <div className="flex items-center flex-shrink-0 gap-2">
               <SocialIcon url="mailto:laurapdec@gmail.com" style={{ height: 36, width: 36 }} className="social-icon" />
               <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
-              {pathname === '/cv' ? (
+              {pathname === '/#/cv' ? (
                 <SocialIcon url="https://github.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
               ) : (
                 <SocialIcon url="https://www.instagram.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
@@ -150,7 +150,7 @@ export default function Navbar() {
       </div>
 
       {/* Tech Stack Marquee - Only shown on CV page */}
-      {pathname === '/cv' && (
+      {pathname === '/#/cv' && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">
             <div className="marquee flex items-center gap-8 py-2">

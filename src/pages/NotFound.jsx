@@ -49,7 +49,7 @@ export default function NotFound() {
           The page you're looking for seems to have wandered off. Let's get you back on track!
         </p>
         <Link
-          to="/cv"
+          to="/#/cv"
           className="inline-flex items-center px-6 py-3 bg-accent text-black font-medium rounded-lg hover:bg-accent/90 transition-colors duration-200"
         >
           <svg
