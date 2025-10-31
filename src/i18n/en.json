@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "work": "Work",
-    "education": "Education & Experiences",
+    "education": "Education",
     "portfolio": "Portfolio",
     "about": "About",
     "achievements": "Achievements"
@@ -27,25 +27,86 @@
   "tech_stack": ["JavaScript", "TypeScript", "React", "Next.js", "Sanity", "MongoDB", "Node.js", "Python", "MATLAB", "Fortran"],
   "machine_learning": ["Machine Learning", "Neural Networks","Pytorch","Tensorflow"],
   "projects": [ 
-    { "title": "Coding Elf", "description": "Website for programming content in portuguese", "link": "portfolio/codingelf.html", "tags": [] },
-    { "title": "Web Development Freelance", "description": "I've developed a range from programming blog, this interactive resume, along with other projects.", "link": "portfolio/website.html", "tags": [] },
-    { "title": "Safran Internship", "description": "Industrial research internship", "link": "portfolio/safran.html", "tags": ["ensma"] },
-    { "title": "IIT Internship", "description": "Academic research internship", "link": "portfolio/iit.html", "tags": ["ensma"] },
-    { "title": "Drone design", "description": "Autonomous UAV project", "link": "portfolio/droney.html", "tags": ["ensma"] },
-    { "title": "ATREX", "description": "Rocket engine project.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
-    { "title": "Petrobras Internship", "description": "CFD with Monte Carlo method for combustion.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
-    { "title": "EPTA", "description": "Rocketry team work and publications.", "link": "portfolio/EPTA.html", "tags": ["ufu"] },
-    { "title": "CHARMANDER", "description": "Graphical interface for combustion tests.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
-    { "title": "Saturn V", "description": "CAD modelling using CATIA.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
+    { "title": "Coding Elf", "description": "Developed a website dedicated to providing programming content in Portuguese, aimed at supporting learners and professionals in the field.", "link": "portfolio/codingelf.html", "tags": [] },
+    { "title": "Web Development Freelance", "description": "Delivered a variety of web development projects, including a programming blog and this interactive resume, as well as other client-focused solutions.", "link": "portfolio/website.html", "tags": [] },
+    { "title": "Safran Internship", "description": "Completed an industrial research internship focused on combustion analysis and simulation at Safran Helicopter Engines.", "link": "portfolio/safran.html", "tags": ["ensma"] },
+    { "title": "IIT Internship", "description": "Participated in an academic research internship at the Illinois Institute of Technology, developing automation tools for simulation data analysis.", "link": "portfolio/iit.html", "tags": ["ensma"] },
+    { "title": "Drone design", "description": "Designed and developed an autonomous unmanned aerial vehicle (UAV) as part of a multidisciplinary engineering project.", "link": "portfolio/droney.html", "tags": ["ensma"] },
+    { "title": "ATREX", "description": "Contributed to the development and simulation of a rocket engine as part of a collaborative engineering initiative.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
+    { "title": "Petrobras Internship", "description": "Conducted computational fluid dynamics (CFD) research using Monte Carlo methods to study combustion processes during an internship at Petrobras.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
+    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "description": "Collaborated with the university rocketry team on research, development, and publication of aerospace engineering projects.", "link": "portfolio/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial).html", "tags": ["ufu"] },
+    { "title": "CHARMANDER", "description": "Developed a graphical interface to support combustion test analysis and data visualization for engineering research.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
+    { "title": "Saturn V", "description": "Created detailed CAD models of the Saturn V rocket using CATIA software for educational and research purposes.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
   ],
   "education": [
-    { "institution": "Airbus ", "location": "Toulouse, France", "degree": "Interrupted PhD in complex combustion modelling and advanced techniques to couple fluid and heat solvers", "years": "Jan 2024 - Jul 2025" },
-    { "institution": "ISAE-ENSMA ", "location": "Chasseneuil-du-Poitou, France", "degree": "Master - Aeronautic and Espace", "years": "Aug 2021 - Feb 2024" },
-    { "institution": "ISAE-ENSMA ", "location": "Chasseneuil-du-Poitou, France", "degree": "Engineering Degree", "years": "Aug 2021 - Feb 2024" },
-    { "institution": "Federal University of Uberlândia (UFU)", "location": "Uberlândia, Brazil", "degree":"Coursework for Aeronautical Engineering (transfered to ENSMA)","years": "Aug 2017 - Jul 2021" }
+    {
+      "institution": "Airbus",
+      "location": "Toulouse, France",
+      "period": "Jan 2024 - Jul 2025",
+      "degree": "Interrupted PhD with partner CERFACS laboratory in complex combustion modelling and advanced techniques to couple fluid and heat solvers",
+      "certificate": "/documents/airbus_cert.pdf"
+    },
+    {
+      "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)",
+      "location": "Chasseneuil-du-Poitou, France",
+      "period": "Aug 2021 - Feb 2024",
+      "degree": "Research Master - Aeronautic and Espace | Propulsion & Engineering Degree",
+      "certificate": "/documents/ENSMA(en).pdf"
+    },
+    {
+      "institution": "UFU (Universidade Federal de Uberlândia)",
+      "location": "Uberlândia, Brazil",
+      "period": "Aug 2017 - Jul 2021",
+      "degree": "Coursework for Aeronautical Engineering (transferred to ENSMA)",
+      "certificate": "/documents/UFU(en).pdf"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Airbus",
+      "role": "Research Engineer - PhD CIFRE",
+      "period": "Jan 2024 - Jul 2025",
+      "location": "Toulouse, France",
+      "description": "Conducted research in unsteady thermo-fluid dynamics, utilizing advanced fluid simulation tools and high-performance computing systems. Developed expertise in numerical simulation and software optimization, with responsibilities including solver maintenance and debugging. The PhD was interrupted to pursue interests in machine learning, computer vision, creative AI, and software security.",
+      "certificate": "/documents/airbus_recommendation.pdf"
+    },
+    {
+      "company": "Safran Helicopter Engines",
+      "role": "Combustion Graduate Research Intern",
+      "period": "Apr 2023 - Sep 2023",
+      "location": "Bordes, France",
+      "description": "Performed combustion analysis by applying the LES AVBP calculation code to experimental databases. Compared experimental results with three-dimensional simulations to improve tool accuracy and identified design strategies to reduce emissions while maintaining performance. Gained practical experience in combustion engineering at Safran, a leading aerospace propulsion company.",
+      "certificate": "/documents/safran_recommendation.pdf"
+    },
+    {
+      "company": "Illinois Institute of Technology",
+      "role": "Visiting Graduate Research Intern",
+      "period": "Jul 2022 - Sep 2022",
+      "location": "Chicago, USA",
+      "description": "Developed Python tools and GT Suite workflows to automate data pipelines for simulation analysis. Created scripts for data extraction, processing, and visualization, enhancing workflow efficiency. Integrated automation into GT Suite environments, significantly reducing manual post-processing time.",
+      "certificate": "/documents/iit_recommendation.pdf"
+    },
+    {
+      "company": "Petrobras",
+      "role": "Undergraduate Research Intern",
+      "period": "Jun 2019 - May 2021",
+      "location": "Uberlândia, Brazil",
+      "description": "Conducted research on combustion modeling and uncertainty quantification in multiphase flow systems, applying Monte Carlo stochastic methods to study combustion and quantify uncertainties. Developed and optimized in-house Fortran and C solver components to improve numerical robustness, and automated data pipelines and simulation control using Python and Bash scripts in Linux environments.",
+      "certificate": "/documents/petrobras_recommendation.pdf"
+    },
+    {
+      "company": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)",
+      "role": "Uni Rocketry Team Aerodynamics Manager",
+      "period": "Nov 2018 - Oct 2020",
+      "location": "Uberlândia, Brazil",
+      "description": "Developed a neural network algorithm using Tensorflow and Pytorch to predict aerodynamic coefficients for a reduced-scale rocket prototype. Managed fundraising initiatives, including visual identity design, game development, and Python education. Integrated predictive models into the team's flight simulator to improve trajectory control and supervised the aerodynamics sub-team, overseeing testing, modeling, and validation activities.",
+      "certificate": null
+    }
   ],
   "achievements": [
-    "Honorable mention - XIX Mathematical School Week and IX Statistics School Week",
+    "Honorable mention - Research article 'Using the transported pdf method to evaluate mixture between chemical components'",
+    "Certification - Introduction to Portfolio Risk Management in Python",
+    "Certification - Méthodes numériques pour la simulation aux grandes échelles avec AVBP",
     "Silver Medal - Brazilian Olympic of Astronomy and Astronautics (OBA)",
     "Silver Medal - Brazilian Kangaroo Mathematics (KAN)",
     "Bronze Medals and honorable mentions in national olympiads"
@@ -59,20 +120,23 @@
     "Innovation Management - The Embraer Case"
   ],
   "articles": [
-    { "title": "Modelagem Fluidodinâmica", "file": "/documents/ModelagemFluidodinamica.pdf" },
-    { "title": "EPTA - Python & Data", "file": "/documents/epta_python.pdf" }
+    { "title": "Modeling of the fluid dynamics of the phenomenon of acoustic levitation", "file": "/documents/acoustic_levitation.pdf" },
+    { "title": "Implementation of a hybrid Lagrangian filtered density function-large eddy simulation methodology in a dynamic adaptive mesh refinement environment", "file": "/documents/hybrid_les.pdf" },
+    { "title": "Using the transported pdf method to evaluate mixture between chemical components", "file": "/documents/transported_pdf.pdf" },
+    { "title": "Neural network algorithm for the prediction of aerodynamic coefficients of a micro rocket", "file": "/documents/nn_aero_coefficients.pdf" }
   ],
   "contact": {
     "phone": "+33 07 68 57 81 91",
     "email": "laurapdec@gmail.com",
+    "github": "https://github.com/laurapdec",
     "linkedin": "https://www.linkedin.com/in/laurapdec/"
   },
   "portfolio": [
     { "title": "Web Design Experiments", "description": "Playful, personal sites and interactive experiments." }
   ],
   "locations": [
-  { "id": "ensma", "name": "ISAE-ENSMA", "institution": "ISAE-ENSMA (ENSMA)", "years": "2021-2024 (Feb)", "description": "Mastère (Research) - Aéronautique et Espace; Diplôme d'Ingénieur (Master equivalent).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
-  { "id": "ufu", "name": "UFU", "institution": "Federal University of Uberlândia", "years": "until 2021", "description": "Undergraduate studies in engineering.", "projects": ["Saturn V on CATIA", "EPTA", "Petrobras Internship"], "x": 40, "y": 62 },
+  { "id": "ensma", "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (ENSMA)", "years": "2021-2024 (Feb)", "description": "Mastère (Research) - Aéronautique et Espace; Diplôme d'Ingénieur (Master equivalent).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
+  { "id": "ufu", "name": "UFU", "institution": "Federal University of Uberlândia", "years": "until 2021", "description": "Undergraduate studies in engineering.", "projects": ["Saturn V on CATIA", "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "Petrobras Internship"], "x": 40, "y": 62 },
   { "id": "safran", "name": "Safran (Internship)", "institution": "Safran", "years": "Internship", "description": "Industrial internship in aerospace engineering.", "projects": ["Safran Internship"], "x": 58, "y": 26 },
   { "id": "airbus", "name": "Airbus (PhD)", "institution": "Airbus", "years": "PhD candidacy (stopped)", "description": "PhD work in aerospace (discontinued).", "projects": [], "x": 60, "y": 26 }
   ],

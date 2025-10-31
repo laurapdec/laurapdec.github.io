@@ -55,7 +55,7 @@ export default function Projects() {
   const visible = filter ? projects.filter(p => (p._tags || []).includes(filter)) : projects
 
   return (
-    <div className="site-scroll">
+  <div className="site-scroll" style={{paddingTop: '174px'}}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
         <p className="text-muted mb-6">Selected work — focused on Machine Learning & Computer Vision. Use filters to narrow results.</p>

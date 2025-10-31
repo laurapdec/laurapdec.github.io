@@ -13,8 +13,8 @@ from math import isfinite
 locations = [
     {
         "id": "ensma",
-        "name": "ISAE-ENSMA",
-        "institution": "ISAE-ENSMA (ENSMA)",
+        "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)",
+        "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (ENSMA)",
         "years": "2021-2024 (Feb)",
         "description": "Mastère (Research) - Aéronautique et Espace; Diplôme d'Ingénieur.",
         "projects": ["Research projects in aeronautics"],

@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .card-shadow {
+    @apply relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+  
+  .card-shadow:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+
+  .experience-card {
+    @apply bg-white/20 p-6 transition-all duration-300;
+    backdrop-filter: blur(8px);
+    transform: translateZ(0);
+    will-change: transform, box-shadow;
+  }
+}
+
 :root{
 	/* Clean, professional palette: neutral + single accent */
 	--bg-1: #ffffff;
@@ -43,15 +61,16 @@ body {
 
 /* Main scroll container when using full-screen sections */
 .site-scroll {
-    padding-top: 0;
-    height: calc(100vh - 72px); /* Subtract header height */
-    margin-top: 72px; /* Add header height as margin */
+    padding-top: 178px; /* Increased to account for tech stack marquee */
+    height: calc(100vh - 178px); /* Adjust for full header height including marquee */
+    margin-top: 0;
     overflow-y: auto;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     position: relative;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    z-index: 0; /* Ensure content is below header */
 }
 
 
@@ -107,6 +126,14 @@ header {
 
 select[aria-label="Change language"] {
     margin-right: 4rem;
+	color: rgb(127, 127, 127);
+}
+div[aria-label="headerText"] {
+	margin-left: 1.5rem;
+}
+
+option[aria-label='option'] {
+	color: rgb(127, 127, 127);
 }
 
 .muted { color: var(--muted); }
@@ -116,6 +143,18 @@ select[aria-label="Change language"] {
 a { color: inherit; }
 a:hover { color: var(--accent); }
 
+/* Language selector styling */
+select[aria-label="Change language"] {
+  font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+}
+
+select[aria-label="Change language"] option {
+  font-size: 1.2rem;
+  background-color: white;
+}
+
 /* subtle utility for small CTA buttons */
 .btn-cta { background: var(--accent); color: white; padding: 0.5rem 0.9rem; border-radius: 8px; font-weight: 600 }
 .btn-ghost { border: 1px solid rgba(15,23,42,0.06); padding: 0.5rem 0.9rem; border-radius:8px }
@@ -124,24 +163,53 @@ a:hover { color: var(--accent); }
 @media (max-width: 768px){
 	.hero-inner{ grid-template-columns: 1fr; text-align:center }
 	.site-scroll{ 
-		height: calc(100vh - 56px);
-		margin-top: 56px; /* Smaller header height for mobile */
+		height: calc(100vh - 174px);
+		padding-top: 174px; /* Keep consistent with desktop */
 	}
 }
 
-/* marquee animation (adjusted contrast for new bg) */
-.marquee-wrapper { position: relative; height: 44px; }
+/* marquee animation */
+.marquee-wrapper {
+  position: relative;
+  height: 38px;
+  overflow: hidden;
+}
+
 .marquee {
   display: inline-flex;
-  gap: 2rem;
-  animation: marquee-left 20s linear infinite;
+  animation: marquee-left 40s linear infinite;
   will-change: transform;
 }
+
 @keyframes marquee-left {
-  0%   { transform: translateX(0%); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.marquee-wrapper:hover .marquee { animation-play-state: paused; }
+
+.marquee-wrapper:hover .marquee {
+  animation-play-state: paused;
+  cursor: default;
+}
+
+.marquee > div {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+/* Remove the last dot separator within each section */
+.marquee > div > div:not(:last-child)::after {
+  content: "•";
+  margin: 0 1rem;
+  color: #94a3b8;
+  opacity: 0.5;
+}
+
+/* Remove the last dot from the last item in each section */
+.marquee > div > div:last-child::after {
+  display: none;
+}
 
 /* ensure header background remains consistent and readable when fixed */
 header { 
@@ -154,5 +222,6 @@ header {
   position: fixed;
   width: 100%;
   overflow: visible; /* Prevent scroll but allow dropdowns */
-  z-index: 50;
+  z-index: 1000; /* Ensure header stays on top */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Add subtle shadow for depth */
 }

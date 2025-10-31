@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
+import Education from '../components/Education'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
@@ -109,7 +110,7 @@ export default function PortfolioMinimal() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 to-white text-gray-900">
+  <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 to-white text-gray-900" style={{paddingTop: '174px'}}>
       <Navbar />
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-6xl px-6 py-16">
         <div className="hero-inner mx-auto">
@@ -138,24 +139,45 @@ export default function PortfolioMinimal() {
         </div>
       </motion.div>
 
-      {/* Interactive 3D Models */}
-      <div className="w-full flex flex-col items-center gap-16">
+      {/* Education & Experience Section */}
+      <Education />
 
-        {/* J1 Engine */}
-        <div className="w-full h-[500px]">
-          <Canvas>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} />
-            <OrbitControls />
-            <Model url="/media/3d-designs/F1.glb" />
-          </Canvas>
-        </div>
+      {/* Projects Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="w-full max-w-6xl px-6 py-12"
+      >
+        <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
+        
+        {/* Interactive 3D Models */}
+        <div className="w-full flex flex-col items-center gap-16">
+          {/* F1 Engine */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="w-full h-[500px] bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h3 className="text-xl font-bold text-gray-900 mb-4">F1 Engine Simulation</h3>
+            <Canvas>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[10, 10, 5]} />
+              <OrbitControls />
+              <Model url="/media/3d-designs/F1.glb" />
+            </Canvas>
+          </motion.div>
 
-        {/* Saturn V Launch */}
-        <div className="w-full h-[600px]">
-          <SaturnVLaunchWrapper />
+          {/* Saturn V Launch */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="w-full h-[600px] bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Saturn V Launch Animation</h3>
+            <SaturnVLaunchWrapper />
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 w-full">
         {mediaCategories.map((category, index) => (

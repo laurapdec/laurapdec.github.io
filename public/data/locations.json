@@ -1,8 +1,8 @@
 [
   {
     "id": "ensma",
-    "name": "ISAE-ENSMA (France)",
-    "institution": "ISAE-ENSMA (France)",
+    "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (France)",
+    "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (France)",
     "years": "2021-2024: Masters Recherche + Diplôme d'Ingénieur",
     "description": "Masters Recherche + Diplôme d'Ingénieur",
     "projects": [
@@ -61,7 +61,7 @@
     "id": "iit",
     "name": "Illinois Institute of Technology (USA)",
     "institution": "Illinois Institute of Technology",
-    "years": "Summer 2022: Visiting Researcher",
+    "years": "Summer 2022: Visiting Graduate Research Intern",
     "description": "Add exact IIT campus latitude/longitude to place this pin accurately.",
     "projects": [],
     "lat": 41.8349,

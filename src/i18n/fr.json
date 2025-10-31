@@ -34,15 +34,15 @@
     { "title": "Safran Internship", "description": "Stage industriel en ingénierie aérospatiale.", "link": "portfolio/safran.html", "tags": ["ensma"] },
     { "title": "Droney", "description": "Projet UAV autonome — images, démonstration et compte-rendu.", "link": "portfolio/droney.html", "tags": ["ensma"] },
     { "title": "ATREX", "description": "Présentation de projet aérospatial / fusée.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
-    { "title": "Undergraduate Researcher at MFLAB", "description": "Dynamique des fluides computationnelle et modélisation de la combustion utilisant des simulations Monte Carlo avancées.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
-    { "title": "EPTA", "description": "Travail en équipe et publications (rocketry).", "link": "portfolio/EPTA.html", "tags": ["ufu"] },
+    { "title": "Undergraduate Research Intern at MFLAB", "description": "Dynamique des fluides computationnelle et modélisation de la combustion utilisant des simulations Monte Carlo avancées.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
+    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "description": "Travail en équipe et publications (rocketry).", "link": "portfolio/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial).html", "tags": ["ufu"] },
     { "title": "CHARMANDER", "description": "Projet 3D/graphisme en cours.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
     { "title": "Saturn V on CATIA", "description": "Exercice de modélisation CAD avec CATIA.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
   ],
   "education": [
     { "institution": "Airbus et CERFACS", "location": "Toulouse, France", "degree": "Doctorat en modélisation complexe de la combustion (interrompu)", "years": "2024-2025" },
-    { "institution": "ISAE-ENSMA", "location": "Chasseneuil-du-Poitou, France", "degree": "Mastère - Aéronautique et Espace", "years": "2021-2024" },
-    { "institution": "ISAE-ENSMA", "location": "Chasseneuil-du-Poitou, France", "degree": "Diplôme d'Ingénieur", "years": "2021-2024" },
+    { "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "location": "Chasseneuil-du-Poitou, France", "degree": "Mastère - Aéronautique et Espace", "years": "2021-2024" },
+    { "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "location": "Chasseneuil-du-Poitou, France", "degree": "Diplôme d'Ingénieur", "years": "2021-2024" },
     { "institution": "Universidade Federal de Uberlândia (UFU)", "location": "Uberlândia, Brésil", "degree": "Génie aéronautique", "years": "2017-2021" }
   ],
   "achievements": [
@@ -61,7 +61,7 @@
   ],
   "articles": [
     { "title": "Modelagem Fluidodinâmica", "file": "/documents/ModelagemFluidodinamica.pdf" },
-    { "title": "EPTA - Python & Data", "file": "/documents/epta_python.pdf" }
+    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial) - Python & Data", "file": "/documents/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)_python.pdf" }
   ],
   "contact": {
     "phone": "+33 07 68 57 81 91",
@@ -72,8 +72,8 @@
     { "title": "Expériences de web design", "description": "Sites personnels et expérimentations interactives." }
   ],
   "locations": [
-  { "id": "ensma", "name": "ISAE-ENSMA", "institution": "ISAE-ENSMA (ENSMA)", "years": "2021-2024 (fév)", "description": "Mastère (Recherche) - Aéronautique et Espace; Diplôme d'Ingénieur (équivalent Master).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
-  { "id": "ufu", "name": "UFU", "institution": "Universidade Federal de Uberlândia", "years": "jusqu'à 2021", "description": "Études de premier cycle en ingénierie.", "projects": ["Saturn V on CATIA", "EPTA", "CHARMANDER", "Undergraduate Researcher at MFLAB"], "x": 40, "y": 62 },
+  { "id": "ensma", "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (ENSMA)", "years": "2021-2024 (fév)", "description": "Mastère (Recherche) - Aéronautique et Espace; Diplôme d'Ingénieur (équivalent Master).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
+  { "id": "ufu", "name": "UFU", "institution": "Universidade Federal de Uberlândia", "years": "jusqu'à 2021", "description": "Études de premier cycle en ingénierie.", "projects": ["Saturn V on CATIA", "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "CHARMANDER", "Undergraduate Research Intern at MFLAB"], "x": 40, "y": 62 },
   { "id": "safran", "name": "Safran (Stage)", "institution": "Safran", "years": "Stage", "description": "Stage industriel en ingénierie aérospatiale.", "projects": ["Safran Internship"], "x": 58, "y": 26 },
   { "id": "airbus", "name": "Airbus (Doctorat)", "institution": "Airbus", "years": "Doctorat (interrompu)", "description": "Travaux de thèse en aéronautique (interrompus).", "projects": [], "x": 60, "y": 26 }
   ],
