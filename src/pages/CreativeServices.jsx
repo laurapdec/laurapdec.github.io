@@ -130,12 +130,25 @@ export default function CreativeServices() {
 
             </div>
 
-          <div className="profile-placeholder hidden md:flex">
-            <img 
-              src="/media/photos/DSC00068.JPG" 
-              alt="Featured Work" 
-              className="w-80 h-80 object-cover rounded-lg shadow-lg"
-            />
+          <div className="profile-placeholder hidden md:block w-96 h-96 bg-white" style={{ borderRadius: 0 }}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full"
+              style={{ 
+                pointerEvents: 'none',
+                borderRadius: 0,
+                boxShadow: 'none',
+                objectFit: 'contain',
+                background: '#f9f9fc',
+                mixBlendMode: 'normal',
+                filter: 'none'
+              }}
+            >
+              <source src="/media/videos/Make_an_animation_202510311429.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </motion.div>
@@ -226,23 +239,7 @@ export default function CreativeServices() {
           </div>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="py-12"
-        >
-          <div className="text-center">
-            <a href="https://poeinblog.wordpress.com" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
-              <span>{t('creative.more_writings')}</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </div>
-        </motion.div>
+
       </div>
     </div>
   )
