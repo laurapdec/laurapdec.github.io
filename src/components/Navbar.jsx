@@ -181,7 +181,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Creative Skills Marquee - Only shown on PortfolioMinimal */}
+      {/* Creative Skills Marquee - Only shown on CreativeServices */}
       {pathname === '/' && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">

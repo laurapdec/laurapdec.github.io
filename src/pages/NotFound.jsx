@@ -49,8 +49,8 @@ export default function NotFound() {
           The page you're looking for seems to have wandered off. Let's get you back on track!
         </p>
         <Link
-          to="/"
-          className="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition-colors duration-200"
+          to="/cv"
+          className="inline-flex items-center px-6 py-3 bg-accent text-black font-medium rounded-lg hover:bg-accent/90 transition-colors duration-200"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -65,7 +65,7 @@ export default function NotFound() {
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             />
           </svg>
-          Back to Home
+          Back to CV
         </Link>
       </div>
     </div>

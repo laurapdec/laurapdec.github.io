@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function ErrorFallback({ error }) {
   return (
@@ -12,9 +13,11 @@ function ErrorFallback({ error }) {
   );
 }
 
-export default function PortfolioMinimal() {
+export default function CreativeServices() {
+  const { t } = useTranslation();
   const [mediaCategories, setMediaCategories] = useState([])
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0) // Track the current photo index
+  const [showFullPoem, setShowFullPoem] = useState(false) // Track if full poem should be shown
 
   useEffect(() => {
     async function fetchMedia() {
@@ -111,9 +114,9 @@ export default function PortfolioMinimal() {
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-6xl mx-auto px-6 py-16">
         <div className="hero-inner">
           <div>
-            <p className="text-sm font-medium uppercase text-muted-2">Independent Creative Direction and Production</p>
-            <h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Creative Services</h1>
-            <p className="mt-4 text-lg text-muted max-w-2xl">Bringing ideas to life through both traditional videography and computer generated imagery.</p>
+            <p className="text-sm font-medium uppercase text-muted-2">{t('creative.subheading')}</p>
+            <h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">{t('creative.heading')}</h1>
+            <p className="mt-4 text-lg text-muted max-w-2xl">{t('creative.description')}</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="https://www.instagram.com/laurapdec" className="btn-cta inline-flex items-center gap-2" target="_blank" rel="noreferrer">
@@ -122,7 +125,7 @@ export default function PortfolioMinimal() {
                 </svg>
                 Instagram
               </a>
-              <a href="mailto:laurapdec@gmail.com" className="btn-ghost inline-flex items-center gap-2">Contact</a>
+              <a href="mailto:laurapdec@gmail.com" className="btn-ghost inline-flex items-center gap-2">{t('creative.contact')}</a>
             </div>
 
             </div>
@@ -143,7 +146,7 @@ export default function PortfolioMinimal() {
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-6xl mx-auto px-6 py-12"
       >
-        <h2 className="text-3xl font-bold mb-8">Photography</h2>
+        <h2 className="text-3xl font-bold mb-8">{t('creative.photography')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {mediaCategories[0]?.items.map((photo, index) => (
             <motion.div
@@ -172,102 +175,72 @@ export default function PortfolioMinimal() {
           animate={{ opacity: 1, y: 0 }}
           className="py-12 border-b border-gray-100"
         >
-          <h2 className="text-3xl font-bold mb-8">Poetry</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h2 className="text-3xl font-bold mb-8">{t('creative.writing')}</h2>
+          <div className={`grid grid-cols-1 ${showFullPoem ? 'md:grid-cols-2' : ''} gap-8`}>
             {/* Featured Poem Card */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
-              <h3 className="text-xl font-semibold mb-3">Featured Poem</h3>
-              <p className="text-gray-600 text-sm mb-4">From collection "Whispers in Code"</p>
+            <motion.div 
+              className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
+              onClick={() => setShowFullPoem(!showFullPoem)}
+              layout
+            >
+              <h3 className="text-xl font-semibold mb-3">{t('creative.poem_orlando.title')}</h3>
+              <p className="text-gray-600 text-sm mb-4">{t('creative.poem_orlando.date')}</p>
               <div className="prose prose-lg">
-                <p className="italic">
-                  Your featured poem excerpt here...
-                </p>
+                {showFullPoem ? (
+                  <motion.p 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="whitespace-pre-line text-base"
+                  >
+                    {t('creative.poem_orlando.text')}
+                  </motion.p>
+                ) : (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                  >
+                    <p className="text-base line-clamp-4 mb-4">
+                      {t('creative.poem_orlando.text').split('\n\n')[0]}...
+                    </p>
+                    <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                      {showFullPoem ? t('creative.read_less') : t('creative.read_more')}
+                    </button>
+                  </motion.div>
+                )}
               </div>
-              <a href="#" className="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-700">
-                Read more poems →
-              </a>
-            </div>
-            {/* Poetry Collections */}
-            <div className="space-y-6">
-              <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="font-medium mb-2">Collections</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center justify-between">
-                    <span>Digital Dreams</span>
-                    <span className="text-sm text-gray-500">12 poems</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Urban Rhythms</span>
-                    <span className="text-sm text-gray-500">8 poems</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Tech Sonnets</span>
-                    <span className="text-sm text-gray-500">14 poems</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </motion.div>
+            {/* Poetry Context */}
+            {showFullPoem && (
+              <motion.div 
+                className="space-y-6"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6">
+                  <h4 className="font-medium mb-2">{t('creative.about')}</h4>
+                  <p className="text-gray-600 text-sm">{t('creative.poem_orlando.context')}</p>
+                </div>
+              </motion.div>
+            )}
           </div>
         </motion.div>
 
-        {/* Stories Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="py-12 border-b border-gray-100"
-        >
-          <h2 className="text-3xl font-bold mb-8">Stories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Story Cards */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
-              <span className="text-xs font-medium text-blue-600 mb-2 block">Short Story</span>
-              <h3 className="text-xl font-semibold mb-3">The Algorithm's Heart</h3>
-              <p className="text-gray-600 mb-4 line-clamp-3">
-                Story excerpt here...
-              </p>
-              <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-700">Read story →</a>
-            </div>
-            {/* Add more story cards as needed */}
-          </div>
-          <div className="mt-8 text-center">
-            <a href="https://poeinblog.wordpress.com" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
-              <span>Visit my blog for more stories</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </div>
-        </motion.div>
-
-        {/* Songs Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="py-12"
         >
-          <h2 className="text-3xl font-bold mb-8">Songs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Featured Song */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Song Title</h3>
-                  <p className="text-gray-600 mb-4">
-                    Song description or lyrics excerpt...
-                  </p>
-                  <button className="text-sm font-medium text-blue-600 hover:text-blue-700 flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    Play song
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="text-center">
+            <a href="https://poeinblog.wordpress.com" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
+              <span>{t('creative.more_writings')}</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </motion.div>
       </div>
@@ -279,7 +252,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<PortfolioMinimal />} />
+        <Route path="/" element={<CreativeServices />} />
       </Routes>
     </Router>
   )

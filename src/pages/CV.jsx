@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react'
 import { FaPython } from 'react-icons/fa'
 import { SiReact, SiJavascript, SiTypescript, SiFortran, SiSanity, SiMongodb, SiC, SiAdobephotoshop, SiWondersharefilmora, SiE, SiDocker, SiAdobeaftereffects, SiNextdotjs, SiLatex, SiKubernetes, SiPytorch, SiTensorflow } from 'react-icons/si'
 
-export default function Home() {
+export default function CV() {
   const mainContainerClass = "site-scroll"
   const { t } = useTranslation()
   const publications = t('publications', { returnObjects: true })

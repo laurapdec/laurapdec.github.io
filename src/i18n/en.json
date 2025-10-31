@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Home",
+    "CV": "CV",
     "work": "Work",
     "education": "Education",
     "portfolio": "Portfolio",
@@ -200,5 +200,23 @@
   ],
   "footer": {
     "copyright": "© 2025 Laura Pereira de Castro. All rights reserved."
+  },
+  "creative": {
+    "heading": "Creative Services",
+    "subheading": "Independent Creative Direction and Production",
+    "description": "Bringing ideas to life through both traditional videography and computer generated imagery.",
+    "photography": "Photography",
+    "writing": "Writing",
+    "about": "About this",
+    "poem_orlando": {
+      "title": "Pray for Orlando",
+      "date": "August 5, 2016",
+      "text": "Sou um ET\nDe um mundo plano.\nVenho de um tempo\nDistante desse ano.\n\nAndava pelas ruas,\nEstavam asfaltadas.\nOlhando para o céu\nEu só via a fumaça.\nE via homens agindo como máquinas.\n\nVi um homem estuprando,\nUm matando negros e índios,\nUma mulher com olho roxo\nChorando escondido.\nTudo continua tão normal.\n\nMas de repente,\nAlgo incomodou.\nAlgo que ninguém jamais me perguntou.\n\nVi dois homens se beijando,\nQue horror!\nQueime na fogueira\nOu atire, por favor.\n\n50 mortos\n53 feridos\n\nOlha o Bolsonaro,\nUm alívio para a família.\nAntes filho morto,\nDo que gay.\n\nPorque de onde eu venho,\nIsso sim que é castigo.\nEsses homens pervertidos.\nO amor está perdido.\nMas eu não,\nPois eu sou dono da razão.",
+      "context": "Written in response to the 2016 Pulse nightclub shooting in Orlando, Florida. The poem reflects on societal prejudices and the tragedy that claimed 49 lives and injured 53 others. Through irony, it critiques discrimination and violence against the LGBTQ+ community."
+    },
+    "more_writings": "Visit my blog for more writings",
+    "contact": "Contact",
+    "read_more": "Read full text",
+    "read_less": "Show less"
   }
 }

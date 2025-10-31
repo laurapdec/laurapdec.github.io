@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Accueil",
+    "CV": "Accueil",
     "work": "Travail",
     "education": "Formation",
     "portfolio": "Portfolio",
@@ -194,5 +194,23 @@
   ],
   "footer": {
     "copyright": "© 2025 Laura Pereira de Castro. Tous droits réservés."
+  },
+  "creative": {
+    "heading": "Services Créatifs",
+    "subheading": "Direction et Production Créative Indépendante",
+    "description": "Donner vie aux idées à travers la vidéographie traditionnelle et l'imagerie générée par ordinateur.",
+    "photography": "Photographie",
+    "writing": "Rédaction",
+    "about": "À propos",
+    "poem_orlando": {
+      "title": "Prière pour Orlando",
+      "date": "5 août 2016",
+      "text": "Sou um ET\nDe um mundo plano.\nVenho de um tempo\nDistante desse ano.\n\nAndava pelas ruas,\nEstavam asfaltadas.\nOlhando para o céu\nEu só via a fumaça.\nE via homens agindo como máquinas.\n\nVi um homem estuprando,\nUm matando negros e índios,\nUma mulher com olho roxo\nChorando escondido.\nTudo continua tão normal.\n\nMas de repente,\nAlgo incomodou.\nAlgo que ninguém jamais me perguntou.\n\nVi dois homens se beijando,\nQue horror!\nQueime na fogueira\nOu atire, por favor.\n\n50 mortos\n53 feridos\n\nOlha o Bolsonaro,\nUm alívio para a família.\nAntes filho morto,\nDo que gay.\n\nPorque de onde eu venho,\nIsso sim que é castigo.\nEsses homens pervertidos.\nO amor está perdido.\nMas eu não,\nPois eu sou dono da razão.",
+      "context": "Écrit en réponse à la fusillade de 2016 dans la boîte de nuit Pulse à Orlando, en Floride. Le poème réfléchit sur les préjugés sociétaux et la tragédie qui a coûté la vie à 49 personnes et en a blessé 53 autres. À travers l'ironie, il critique la discrimination et la violence contre la communauté LGBTQ+."
+    },
+    "more_writings": "Visitez mon blog pour plus d'écrits",
+    "contact": "Contact",
+    "read_more": "Lire le texte complet",
+    "read_less": "Réduire"
   }
 }

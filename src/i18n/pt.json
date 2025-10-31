@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Início",
+    "CV": "Início",
     "work": "Trabalho",
     "education": "Formação",
     "portfolio": "Portfólio",
@@ -194,5 +194,23 @@
   ],
   "footer": {
     "copyright": "© 2025 Laura Pereira de Castro. Todos os direitos reservados."
+  },
+  "creative": {
+    "heading": "Serviços Criativos",
+    "subheading": "Direção e Produção Criativa Independente",
+    "description": "Dando vida às ideias através de videografia tradicional e imagens geradas por computador.",
+    "photography": "Fotografia",
+    "writing": "Escrita",
+    "about": "Mais sobre",
+    "poem_orlando": {
+      "title": "Reze por Orlando",
+      "date": "5 de agosto de 2016",
+      "text": "Sou um ET\nDe um mundo plano.\nVenho de um tempo\nDistante desse ano.\n\nAndava pelas ruas,\nEstavam asfaltadas.\nOlhando para o céu\nEu só via a fumaça.\nE via homens agindo como máquinas.\n\nVi um homem estuprando,\nUm matando negros e índios,\nUma mulher com olho roxo\nChorando escondido.\nTudo continua tão normal.\n\nMas de repente,\nAlgo incomodou.\nAlgo que ninguém jamais me perguntou.\n\nVi dois homens se beijando,\nQue horror!\nQueime na fogueira\nOu atire, por favor.\n\n50 mortos\n53 feridos\n\nOlha o Bolsonaro,\nUm alívio para a família.\nAntes filho morto,\nDo que gay.\n\nPorque de onde eu venho,\nIsso sim que é castigo.\nEsses homens pervertidos.\nO amor está perdido.\nMas eu não,\nPois eu sou dono da razão.",
+      "context": "Escrito em resposta ao tiroteio de 2016 na boate Pulse em Orlando, Flórida. O poema reflete sobre preconceitos sociais e a tragédia que tirou a vida de 49 pessoas e feriu outras 53. Através da ironia, critica a discriminação e a violência contra a comunidade LGBTQ+."
+    },
+    "more_writings": "Visite meu blog para mais textos",
+    "contact": "Contato",
+    "read_more": "Ler textp completo",
+    "read_less": "Mostrar menos"
   }
 }
