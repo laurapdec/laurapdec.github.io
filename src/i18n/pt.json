@@ -31,7 +31,7 @@
     {
       "title": "CodingElf",
       "description": "Blog de programação em português visando tornar o aprendizado de código mais acessível. Construído com React e styled-components.",
-      "tags": ["Next.js", "React", "JavaScript", "Vercel"],
+      "tags": ["Next.js", "JavaScript", "Sanity.io", "React", "Tailwind CSS", "Vercel"],
       "status": "Plataforma pronta, conteúdo fictício e implantação em produção pendente. Se você fala português e está interessado em produção de conteúdo educacional, entre em contato!",
       "link": "https://github.com/laurapdec/CodingElf"
     },
@@ -44,7 +44,7 @@
     {
       "title": "Gerador de CV ATS",
       "description": "Ferramenta alimentada por IA que gera CVs e cartas de apresentação otimizados para ATS usando dados do LinkedIn e descrições de vagas. Utiliza a API OpenAI para geração de conteúdo personalizado.",
-      "tags": ["Next.js", "FastAPI", "Tailwind CSS", "LinkedIn API"],
+      "tags": ["Next.js", "FastAPI", "TypeScript", "React", "Tailwind CSS", "LinkedIn API"],
       "status": "Em desenvolvimento",
       "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
     }

@@ -50,8 +50,8 @@
     }
   ],
   "projects": [ 
-    { "title": "Coding Elf", "description": "Developed a website dedicated to providing programming content in Portuguese, aimed at supporting learners and professionals in the field.", "link": "portfolio/codingelf.html", "tags": [] },
-    { "title": "Web Development Freelance", "description": "Delivered a variety of web development projects, including a programming blog and this interactive resume, as well as other client-focused solutions.", "link": "portfolio/website.html", "tags": [] },
+    { "title": "Coding Elf", "description": "Developed a website dedicated to providing programming content in Portuguese, aimed at supporting learners and professionals in the field.", "link": "portfolio/codingelf.html", "tags": ["Next.js", "React", "JavaScript"] },
+    { "title": "Web Development Freelance", "description": "Delivered a variety of web development projects, including a programming blog and this interactive resume, as well as other client-focused solutions.", "link": "portfolio/website.html", "tags": ["Next.js", "TypeScript", "React"] },
     { "title": "Safran Internship", "description": "Completed an industrial research internship focused on combustion analysis and simulation at Safran Helicopter Engines.", "link": "portfolio/safran.html", "tags": ["ensma"] },
     { "title": "IIT Internship", "description": "Participated in an academic research internship at the Illinois Institute of Technology, developing automation tools for simulation data analysis.", "link": "portfolio/iit.html", "tags": ["ensma"] },
     { "title": "Drone design", "description": "Designed and developed an autonomous unmanned aerial vehicle (UAV) as part of a multidisciplinary engineering project.", "link": "portfolio/droney.html", "tags": ["ensma"] },

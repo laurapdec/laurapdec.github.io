@@ -31,7 +31,7 @@
     {
       "title": "CodingElf",
       "description": "Blog de programmation en portugais visant à rendre l'apprentissage du code plus accessible. Construit avec React et styled-components.",
-      "tags": ["Next.js", "React", "JavaScript", "Vercel"],
+      "tags": ["Next.js", "JavaScript", "Sanity.io", "React", "Tailwind CSS", "Vercel"],
       "status": "Plateforme prête, contenu fictif et déploiement en production en attente. Si vous parlez portugais et êtes intéressé par la production de contenu éducatif, contactez-moi !",
       "link": "https://github.com/laurapdec/CodingElf"
     },
@@ -44,7 +44,7 @@
     {
       "title": "Générateur de CV ATS",
       "description": "Outil alimenté par l'IA qui génère des CV et lettres de motivation optimisés pour l'ATS en utilisant les données LinkedIn et les descriptions de poste. Utilise l'API OpenAI pour la génération de contenu personnalisé.",
-      "tags": ["Next.js", "FastAPI", "Tailwind CSS", "LinkedIn API"],
+      "tags": ["Next.js", "FastAPI", "TypeScript", "React", "Tailwind CSS", "LinkedIn API"],
       "status": "En développement",
       "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
     }
@@ -151,6 +151,7 @@
   "contact": {
     "phone": "+33 07 68 57 81 91",
     "email": "laurapdec@gmail.com",
+    "github": "https://github.com/laurapdec",
     "linkedin": "https://www.linkedin.com/in/laurapdec/"
   },
   "portfolio": [
