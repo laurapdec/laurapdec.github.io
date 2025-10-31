@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/laurapdec.github.io/', // Set base path for GitHub Pages
+  base: '/', // Set base path for custom domain
   build: { 
     outDir: 'dist',
     sourcemap: false, // Disable source maps
