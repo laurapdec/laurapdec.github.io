@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes blink {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-blink {
+  animation: blink 2s ease-in-out infinite;
+}
+
 @layer components {
   .card-shadow {
     @apply relative;
@@ -61,12 +79,12 @@ body {
 
 /* Main scroll container when using full-screen sections */
 .site-scroll {
-    padding-top: 178px; /* Increased to account for tech stack marquee */
-    height: calc(100vh - 178px); /* Adjust for full header height including marquee */
+    padding-top: 178px; /* Account for header */
+    padding-bottom: 0px; /* Space for footer */
+    height: 100vh; /* Adjust for header height */
     margin-top: 0;
     overflow-y: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
     position: relative;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;

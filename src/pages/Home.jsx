@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar' // Import Navbar
-import MapView from '../components/Map'
 import { useRef, useState, useEffect } from 'react'
 import { FaPython } from 'react-icons/fa'
 import { SiReact, SiJavascript, SiTypescript, SiFortran, SiSanity, SiMongodb, SiC, SiAdobephotoshop, SiWondersharefilmora, SiE, SiDocker, SiAdobeaftereffects, SiNextdotjs, SiLatex, SiKubernetes, SiPytorch, SiTensorflow } from 'react-icons/si'
@@ -9,25 +8,7 @@ export default function Home() {
   const mainContainerClass = "site-scroll"
   const { t } = useTranslation()
   const projects = t('projects', { returnObjects: true }) || []
-  const [filter, setFilter] = useState(null)
-  const [selectedLocationId, setSelectedLocationId] = useState(null)
-  const listRef = useRef(null)
   const [artOpen, setArtOpen] = useState(false)
-
-  // augment projects with optional location tags (match by keywords from locations in i18n)
-  const locations = t('locations', { returnObjects: true }) || []
-  const projectsWithTags = projects.map(p => {
-    const inferred = locations.filter(loc=> (p.title+ ' ' + p.description).toLowerCase().includes((loc.name||'').toLowerCase())? [loc.id] : []).flat()
-    let tags = p.tags || inferred
-    const lc = (p.title||'').toLowerCase()
-  // explicit mappings
-  if (/atrex/i.test(lc)) tags = Array.from(new Set([...(tags||[]), 'ensma']))
-  // map common UFU projects; do NOT force 'Coding Elf' to UFU (it's independent)
-  if (/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)|saturn v|charmander|mflab/i.test(lc)) tags = Array.from(new Set([...(tags||[]), 'ufu']))
-    const isEducation = /droney|charmander|saturn v|site pessoal|atrex|EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)|coding elf|mflab/i.test(lc)
-    const category = isEducation ? 'education' : 'independent'
-    return ({ ...p, tags, isEducation, category })
-  })
 
   // categorized skills for UI (icons shown, names available for search/accessibility)
   const skillCategories = [
@@ -41,14 +22,7 @@ export default function Home() {
 
   const allSkillNames = skillCategories.flatMap(c => c.items.map(i => i.label))
 
-  const visibleProjects = filter ? projectsWithTags.filter(p => (p.tags||[]).includes(filter)) : projectsWithTags
 
-  useEffect(()=>{
-    // scroll to first visible project when filter changes
-    if (!listRef.current) return
-    const first = listRef.current.querySelector('[id^="project-"]')
-    if (first) first.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  },[filter, selectedLocationId])
 
   useEffect(()=>{
     function onArtToggle(e){ setArtOpen(Boolean(e?.detail?.open)) }
@@ -296,13 +270,58 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="mt-16 mb-8">
-            <MapView 
-              className="w-full h-80 rounded-lg overflow-hidden shadow-lg" 
-              onSelectLocation={(id) => { setFilter(id); setSelectedLocationId(id); }} 
-              selectedLocationId={selectedLocationId} 
-            />
+          {/* Personal Projects Section */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8">Personal Projects</h2>
+            <div className="grid gap-6">
+              {t('personal_projects', { returnObjects: true }).map((project, idx) => (
+                <div key={idx} className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex flex-col">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-accent-dark transition-colors"
+                        >
+                          <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                    <p className="text-gray-600 mb-3">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {project.tags.map((tag, tagIdx) => (
+                        <span
+                          key={tagIdx}
+                          className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    {project.status && (
+                      <p className="text-gray-500 text-sm mt-3 italic">
+                        Status: {project.status}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

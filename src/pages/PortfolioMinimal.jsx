@@ -1,11 +1,7 @@
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
-import Education from '../components/Education'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF } from '@react-three/drei'
-import { ErrorBoundary } from 'react-error-boundary';
+import { useState, useEffect } from 'react';
 
 function ErrorFallback({ error }) {
   return (
@@ -110,187 +106,176 @@ export default function PortfolioMinimal() {
   }
 
   return (
-  <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 to-white text-gray-900" style={{paddingTop: '174px'}}>
+  <div className="site-scroll">
       <Navbar />
-      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-6xl px-6 py-16">
-        <div className="hero-inner mx-auto">
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-6xl mx-auto px-6 py-16">
+        <div className="hero-inner">
           <div>
-            <p className="text-sm font-medium uppercase text-muted-2">Machine Learning & Data Engineering</p>
-            <h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Machine Learning Engineer • Data Analyst</h1>
-            <p className="mt-4 text-lg text-muted max-w-2xl">I build production-ready computer vision systems, model-compression pipelines, and data-driven simulation tools for real-world applications in robotics and scientific computing.</p>
+            <p className="text-sm font-medium uppercase text-muted-2">Independent Creative Direction and Production</p>
+            <h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Creative Services</h1>
+            <p className="mt-4 text-lg text-muted max-w-2xl">Bringing ideas to life through both traditional videography and computer generated imagery.</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/documents/CV.pdf" className="btn-cta inline-flex items-center gap-2" target="_blank" rel="noreferrer">Download CV</a>
+              <a href="https://www.instagram.com/laurapdec" className="btn-cta inline-flex items-center gap-2" target="_blank" rel="noreferrer">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Instagram
+              </a>
               <a href="mailto:laurapdec@gmail.com" className="btn-ghost inline-flex items-center gap-2">Contact</a>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted">
-              <span className="px-2 py-1 bg-white/60 rounded">PyTorch</span>
-              <span className="px-2 py-1 bg-white/60 rounded">OpenCV</span>
-              <span className="px-2 py-1 bg-white/60 rounded">SLAM</span>
-              <span className="px-2 py-1 bg-white/60 rounded">Model Compression</span>
             </div>
-          </div>
 
           <div className="profile-placeholder hidden md:flex">
-            {/* Minimal graphic placeholder — replace with profile image if desired */}
-            <div className="w-56 h-56 rounded-full bg-gradient-to-br from-accent to-indigo-500 flex items-center justify-center text-white font-semibold">CV</div>
+            <img 
+              src="/media/photos/DSC00068.JPG" 
+              alt="Featured Work" 
+              className="w-80 h-80 object-cover rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </motion.div>
 
-      {/* Education & Experience Section */}
-      <Education />
-
-      {/* Projects Section */}
+      {/* Gallery Section */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-6xl px-6 py-12"
+        className="w-full max-w-6xl mx-auto px-6 py-12"
       >
-        <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
-        
-        {/* Interactive 3D Models */}
-        <div className="w-full flex flex-col items-center gap-16">
-          {/* F1 Engine */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="w-full h-[500px] bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <h3 className="text-xl font-bold text-gray-900 mb-4">F1 Engine Simulation</h3>
-            <Canvas>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[10, 10, 5]} />
-              <OrbitControls />
-              <Model url="/media/3d-designs/F1.glb" />
-            </Canvas>
-          </motion.div>
-
-          {/* Saturn V Launch */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="w-full h-[600px] bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Saturn V Launch Animation</h3>
-            <SaturnVLaunchWrapper />
-          </motion.div>
+        <h2 className="text-3xl font-bold mb-8">Photography</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {mediaCategories[0]?.items.map((photo, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="relative group aspect-square"
+            >
+              <img
+                src={`/media/photos/${photo}`}
+                alt={`Gallery ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={handleImageClick}
+              />
+            </motion.div>
+          ))}
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 w-full">
-        {mediaCategories.map((category, index) => (
-          <div key={index} className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {category.items.map((item, idx) => {
-              console.log('Category:', category.title, 'Item:', item);
-              const ext = (item.split('.').pop() || '').toLowerCase();
-              const src = `${category.folder}/${item}`;
-
-              // Only render <img> for known image extensions. For .glb and others, show a placeholder/link.
-              const isImage = ['jpg', 'jpeg', 'png', 'webp', 'gif'].includes(ext);
-
-              if (isImage) {
-                return (
-                  <div key={idx} className="relative group">
-                    <img
-                      src={src}
-                      alt={item}
-                      onLoad={() => console.log('Image loaded:', src)}
-                      onError={(e) => console.error('Image failed to load:', src, e)}
-                      style={{ display: 'block', opacity: 1, visibility: 'visible' }}
-                      className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-80 transition"
-                    />
-                  </div>
-                )
-              }
-
-              if (ext === 'glb') {
-                return (
-                  <div key={idx} className="p-4 rounded-lg bg-gray-800 border border-gray-700">
-                    <div className="text-sm text-gray-300">3D Model</div>
-                    <a href={src} target="_blank" rel="noreferrer" className="text-white block mt-2 underline">
-                      {item}
-                    </a>
-                  </div>
-                )
-              }
-
-              // Fallback for unknown file types
-              return (
-                <div key={idx} className="p-4 rounded-lg bg-gray-800 border border-gray-700">
-                  <div className="text-sm text-gray-300">File</div>
-                  <a href={src} target="_blank" rel="noreferrer" className="text-white block mt-2 underline">
-                    {item}
-                  </a>
-                </div>
-              )
-            })}
+      {/* Writing Sections */}
+      <div className="w-full max-w-6xl mx-auto px-6">
+        {/* Poetry Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="py-12 border-b border-gray-100"
+        >
+          <h2 className="text-3xl font-bold mb-8">Poetry</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Featured Poem Card */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+              <h3 className="text-xl font-semibold mb-3">Featured Poem</h3>
+              <p className="text-gray-600 text-sm mb-4">From collection "Whispers in Code"</p>
+              <div className="prose prose-lg">
+                <p className="italic">
+                  Your featured poem excerpt here...
+                </p>
+              </div>
+              <a href="#" className="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-700">
+                Read more poems →
+              </a>
+            </div>
+            {/* Poetry Collections */}
+            <div className="space-y-6">
+              <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6">
+                <h4 className="font-medium mb-2">Collections</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-center justify-between">
+                    <span>Digital Dreams</span>
+                    <span className="text-sm text-gray-500">12 poems</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Urban Rhythms</span>
+                    <span className="text-sm text-gray-500">8 poems</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Tech Sonnets</span>
+                    <span className="text-sm text-gray-500">14 poems</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img
-          src="/media/photos/DSC00068.JPG"
-          alt="Test Image"
-          className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-80 transition"
-        />
+        {/* Stories Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="py-12 border-b border-gray-100"
+        >
+          <h2 className="text-3xl font-bold mb-8">Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Story Cards */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+              <span className="text-xs font-medium text-blue-600 mb-2 block">Short Story</span>
+              <h3 className="text-xl font-semibold mb-3">The Algorithm's Heart</h3>
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                Story excerpt here...
+              </p>
+              <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-700">Read story →</a>
+            </div>
+            {/* Add more story cards as needed */}
+          </div>
+          <div className="mt-8 text-center">
+            <a href="https://poeinblog.wordpress.com" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
+              <span>Visit my blog for more stories</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Songs Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="py-12"
+        >
+          <h2 className="text-3xl font-bold mb-8">Songs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Featured Song */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Song Title</h3>
+                  <p className="text-gray-600 mb-4">
+                    Song description or lyrics excerpt...
+                  </p>
+                  <button className="text-sm font-medium text-blue-600 hover:text-blue-700 flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Play song
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   )
 }
 
-// Component to Load and Render a 3D Model
-function Model({ url }) {
-  const { scene } = useGLTF(url, '/draco-gltf/')
-  return <primitive object={scene} scale={1.5} />
-}
-
-// Component for Saturn V Launch Animation
-function SaturnVLaunch() {
-  const { scene } = useGLTF('/media/3d-designs/SaturnV.glb', '/draco-gltf/');
-  const [position, setPosition] = useState([0, -2, 0]);
-  const [rotation, setRotation] = useState([0, 0, 0]);
-
-  useEffect(() => {
-    let frame;
-    const animate = () => {
-      setRotation((prev) => [prev[0], prev[1] + 0.01, prev[2]]);
-      setPosition((prev) => [prev[0], prev[1] + 0.02, prev[2]]);
-      frame = requestAnimationFrame(animate);
-    };
-    animate();
-    return () => cancelAnimationFrame(frame);
-  }, []);
-
-  return (
-    <primitive object={scene} position={position} rotation={rotation} scale={1.5} />
-  );
-}
-
-function SaturnVLaunchWrapper() {
-  return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <Canvas>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} />
-        <OrbitControls />
-        <SaturnVLaunch />
-      </Canvas>
-    </ErrorBoundary>
-  );
-}
-
 function App() {
-  useEffect(() => {
-    const canvas = document.querySelector('canvas');
-    canvas.addEventListener('webglcontextlost', (event) => {
-      event.preventDefault();
-      console.error('WebGL context lost');
-    });
-  }, []);
-
   return (
     <Router>
       <Routes>

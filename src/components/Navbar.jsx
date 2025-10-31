@@ -4,9 +4,26 @@ import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import profilePhoto from '/src/assets/photo.jpg'
 import { SocialIcon } from 'react-social-icons'
+import { 
+  SiAdobephotoshop, 
+  SiBlender,
+  SiAutodesk,
+  SiBlackmagicdesign,
+  SiJavascript,
+  SiTypescript,
+  SiFortran,
+  SiMongodb,
+  SiPytorch,
+  SiNextdotjs,
+  SiTensorflow,
+  SiUnrealengine
+} from 'react-icons/si'
+import { 
+  TbMovie,
+  TbWand,
+  TbBrandCpp
+} from 'react-icons/tb'
 import { FaPython, FaReact, FaDocker, FaNodeJs } from 'react-icons/fa'
-import { SiTypescript, SiJavascript, SiMongodb, SiPytorch, SiFortran, SiNextdotjs, SiTensorflow } from 'react-icons/si'
-import { TbBrandCpp } from 'react-icons/tb'
 
 const getIconForTech = (tech) => {
   const icons = {
@@ -99,7 +116,7 @@ export default function Navbar() {
             <div className="flex-1 min-w-0 pr-4">
               <h1 className="text-xl md:text-2xl font-semibold truncate">Laura Pereira de Castro</h1>
               <div className="text-muted mt-1 truncate">Machine Learning Engineer • Data Engineer</div>
-              <p className="text-xs md:text-sm text-muted mt-1 truncate"> HPC Computing • Data Analyst</p>
+              <p className="text-xs md:text-sm text-muted mt-1 truncate"> HPC Computing • Software Engineer • Data Analyst</p>
               <nav className="mt-3 hidden md:flex items-center gap-4">
                 {nav.map(n => (
                   <a key={n.label} href={n.to} className="text-sm text-gray-700 hover:text-gray-900 transition py-1 px-2">{n.label}</a>
@@ -110,8 +127,12 @@ export default function Navbar() {
               {/* Right-aligned controls inside the expanded CV header (desktop): socials + language select */}
             <div className="flex items-center flex-shrink-0 gap-2">
               <SocialIcon url="mailto:laurapdec@gmail.com" style={{ height: 36, width: 36 }} className="social-icon" />
-              <SocialIcon url="https://github.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
               <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
+              {pathname === '/cv' ? (
+                <SocialIcon url="https://github.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
+              ) : (
+                <SocialIcon url="https://www.instagram.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
+              )}
               <select
                 aria-label="Change language"
                 className="bg-white/5 backdrop-blur-sm rounded-lg px-3 py-2 text-sm appearance-none hover:bg-white/10 transition-colors cursor-pointer"
@@ -128,35 +149,65 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Tech Stack Marquee */}
-      <div className="max-w-6xl mx-auto px-6 overflow-hidden">
-        <div className="marquee-wrapper relative border-b border-gray-100">
-          <div className="marquee flex items-center gap-8 py-2">
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center" style={{ marginRight: '3rem' }}>
-                {t('tech_stack', { returnObjects: true }).map((tech, index) => {
-                  const icon = getIconForTech(tech);
-                  return (
-                    <div key={index} className="flex items-center gap-2 whitespace-nowrap text-sm text-gray-700 mx-6">
-                      {icon && <span className="text-gray-600">{icon}</span>}
-                      <span className="font-medium">{tech}</span>
-                    </div>
-                  );
-                })}
-                {t('machine_learning', { returnObjects: true }).map((tech, index) => {
-                  const icon = getIconForTech(tech);
-                  return (
-                    <div key={`ml-${index}`} className="flex items-center gap-2 whitespace-nowrap text-sm text-gray-700 mx-6">
-                      {icon && <span className="text-gray-600">{icon}</span>}
-                      <span className="font-medium">{tech}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            ))}
+      {/* Tech Stack Marquee - Only shown on CV page */}
+      {pathname === '/cv' && (
+        <div className="max-w-6xl mx-auto px-6 overflow-hidden">
+          <div className="marquee-wrapper relative border-b border-gray-100">
+            <div className="marquee flex items-center gap-8 py-2">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex items-center" style={{ marginRight: '3rem' }}>
+                  {t('tech_stack', { returnObjects: true }).map((tech, index) => {
+                    const icon = getIconForTech(tech);
+                    return (
+                      <div key={index} className="flex items-center gap-2 whitespace-nowrap text-sm text-gray-700 mx-6">
+                        {icon && <span className="text-gray-600">{icon}</span>}
+                        <span className="font-medium">{tech}</span>
+                      </div>
+                    );
+                  })}
+                  {t('machine_learning', { returnObjects: true }).map((tech, index) => {
+                    const icon = getIconForTech(tech);
+                    return (
+                      <div key={`ml-${index}`} className="flex items-center gap-2 whitespace-nowrap text-sm text-gray-700 mx-6">
+                        {icon && <span className="text-gray-600">{icon}</span>}
+                        <span className="font-medium">{tech}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {/* Creative Skills Marquee - Only shown on PortfolioMinimal */}
+      {pathname === '/' && (
+        <div className="max-w-6xl mx-auto px-6 overflow-hidden">
+          <div className="marquee-wrapper relative border-b border-gray-100">
+            <div className="marquee flex items-center gap-8 py-2">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex items-center" style={{ marginRight: '3rem' }}>
+                  {[
+                    { name: 'Photoshop', icon: <SiAdobephotoshop className="w-5 h-5 text-[#31A8FF]" /> },
+                    { name: 'Final Cut Pro', icon: <TbMovie className="w-5 h-5 text-gray-700" /> },
+                    { name: 'DaVinci Resolve', icon: <SiBlackmagicdesign className="w-5 h-5 text-[#FF4A4A]" /> },
+                    { name: 'Nuke', icon: <TbWand className="w-5 h-5 text-[#61CC8C]" /> },
+                    { name: 'Blender', icon: <SiBlender className="w-5 h-5 text-[#F5792A]" /> },
+                    { name: 'Unreal', icon: <SiUnrealengine className="w-5 h-5 text-[#000000]" /> },
+                    { name: 'Fusion', icon: <SiAutodesk className="w-5 h-5 text-[#0696D7]" /> }
+                  ].map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2 whitespace-nowrap text-sm text-gray-700 mx-6">
+                      <span className="flex items-center justify-center">{skill.icon}</span>
+                      <span className="font-medium">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       {/* mobile menu removed (hamburger intentionally removed) */}
     </header>
     </>

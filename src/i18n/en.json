@@ -26,6 +26,28 @@
   "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
   "tech_stack": ["JavaScript", "TypeScript", "React", "Next.js", "Sanity", "MongoDB", "Node.js", "Python", "MATLAB", "Fortran"],
   "machine_learning": ["Machine Learning", "Neural Networks","Pytorch","Tensorflow"],
+  "personal_projects": [
+    {
+      "title": "CodingElf",
+      "description": "Programming blog in Portuguese aimed at making coding education more accessible. Built with React and styled-components.",
+      "tags": ["Next.js","React", "JavaScript","Vercel"],
+      "status": "Platform ready, dummy content and production deployment pending. If you speak Portuguese and are interested in educational content production contact me!",
+      "link": "https://github.com/laurapdec/CodingElf"
+    },
+    {
+      "title": "Personal Portfolio",
+      "description": "This interactive portfolio website built with Next.js, React, and Tailwind CSS. Features responsive design, i18n support, and interactive elements.",
+      "tags": ["Next.js", "TypeScript", "React", "Tailwind CSS", "i18n"],
+      "link": "https://github.com/laurapdec/laurapdec.github.io"
+    },
+    {
+      "title": "ATS CV Generator",
+      "description": "AI-powered tool that generates ATS-optimized CVs and cover letters using LinkedIn data and job descriptions. Leverages OpenAI's API for customized content generation.",
+      "tags": ["Next.js", "FastAPI", "Tailwind CSS", "LinkedIn API"],
+      "status": "In development",
+      "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
+    }
+  ],
   "projects": [ 
     { "title": "Coding Elf", "description": "Developed a website dedicated to providing programming content in Portuguese, aimed at supporting learners and professionals in the field.", "link": "portfolio/codingelf.html", "tags": [] },
     { "title": "Web Development Freelance", "description": "Delivered a variety of web development projects, including a programming blog and this interactive resume, as well as other client-focused solutions.", "link": "portfolio/website.html", "tags": [] },
