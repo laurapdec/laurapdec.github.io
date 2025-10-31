@@ -5,7 +5,8 @@
     "education": "Education",
     "portfolio": "Portfolio",
     "about": "About",
-    "achievements": "Achievements"
+    "achievements": "Achievements",
+    "publications": "Publications"
   },
   "hero": {
     "title": "Laura Pereira de Castro",
@@ -30,7 +31,7 @@
     {
       "title": "CodingElf",
       "description": "Programming blog in Portuguese aimed at making coding education more accessible. Built with React and styled-components.",
-      "tags": ["Next.js","React", "JavaScript","Vercel"],
+      "tags": ["Next.js", "JavaScript", "Sanity.io","React", "Tailwind CSS", "Vercel"],
       "status": "Platform ready, dummy content and production deployment pending. If you speak Portuguese and are interested in educational content production contact me!",
       "link": "https://github.com/laurapdec/CodingElf"
     },
@@ -43,7 +44,7 @@
     {
       "title": "ATS CV Generator",
       "description": "AI-powered tool that generates ATS-optimized CVs and cover letters using LinkedIn data and job descriptions. Leverages OpenAI's API for customized content generation.",
-      "tags": ["Next.js", "FastAPI", "Tailwind CSS", "LinkedIn API"],
+      "tags": ["Next.js", "FastAPI", "TypeScript", "React", "Tailwind CSS", "LinkedIn API"],
       "status": "In development",
       "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
     }
@@ -66,7 +67,7 @@
       "location": "Toulouse, France",
       "period": "Jan 2024 - Jul 2025",
       "degree": "Interrupted PhD with partner CERFACS laboratory in complex combustion modelling and advanced techniques to couple fluid and heat solvers",
-      "certificate": "/documents/airbus_cert.pdf"
+      "certificate": null
     },
     {
       "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)",
@@ -90,7 +91,7 @@
       "period": "Jan 2024 - Jul 2025",
       "location": "Toulouse, France",
       "description": "Conducted research in unsteady thermo-fluid dynamics, utilizing advanced fluid simulation tools and high-performance computing systems. Developed expertise in numerical simulation and software optimization, with responsibilities including solver maintenance and debugging. The PhD was interrupted to pursue interests in machine learning, computer vision, creative AI, and software security.",
-      "certificate": "/documents/airbus_recommendation.pdf"
+      "certificate": null
     },
     {
       "company": "Safran Helicopter Engines",
@@ -106,7 +107,7 @@
       "period": "Jul 2022 - Sep 2022",
       "location": "Chicago, USA",
       "description": "Developed Python tools and GT Suite workflows to automate data pipelines for simulation analysis. Created scripts for data extraction, processing, and visualization, enhancing workflow efficiency. Integrated automation into GT Suite environments, significantly reducing manual post-processing time.",
-      "certificate": "/documents/iit_recommendation.pdf"
+      "certificate": null
     },
     {
       "company": "Petrobras",
@@ -122,7 +123,7 @@
       "period": "Nov 2018 - Oct 2020",
       "location": "Uberlândia, Brazil",
       "description": "Developed a neural network algorithm using Tensorflow and Pytorch to predict aerodynamic coefficients for a reduced-scale rocket prototype. Managed fundraising initiatives, including visual identity design, game development, and Python education. Integrated predictive models into the team's flight simulator to improve trajectory control and supervised the aerodynamics sub-team, overseeing testing, modeling, and validation activities.",
-      "certificate": null
+      "certificate": "/documents/EPTA.pdf"
     }
   ],
   "achievements": [
@@ -156,6 +157,41 @@
   "portfolio": [
     { "title": "Web Design Experiments", "description": "Playful, personal sites and interactive experiments." }
   ],
+  "publications": [
+    {
+      "title": "Neural Network for Prediction of Drag and Lift Coefficients from CFD Data",
+      "venue": "18th Brazilian Congress of Thermal Sciences and Engineering (ENCIT 2020)",
+      "authors": "Laura Pereira de Castro, Rodrigo Daher, Alexandre Zuquete Guarato",
+      "description": "Developed a Python-based neural network to predict drag and lift coefficients from CFD data of EPTA's rocket, achieving < 17.7% deviation vs ANSYS CFD and RASAero II.",
+      "doi": "10.26678/ABCM.ENCIT2020.CIT20-0806",
+      "link": "https://www.researchgate.net/publication/347875623_NEURAL_NETWORK_ALGORITHM_FOR_PREDICTION_OF_AERODYNAMIC_COEFFICIENTS_OF_A_REDUCED_SCALE_ROCKET"
+    },
+    {
+      "title": "Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment",
+      "venue": "Physics of Fluids, April 2021",
+      "authors": "Laura Pereira de Castro, Abgail Paula Pinheiro, Vitor Vilela, Gabriel Marcos Magalhães, Ricardo Serfaty, João Marcelo Vedovotto",
+      "description": "Contributed to the implementation of a hybrid FDF–LES approach within a dynamic AMR framework for turbulent reactive-flow modeling.",
+      "doi": "10.1063/5.0045873"
+    },
+    {
+      "title": "Transported PDF Method for Chemical Mixing (H₂/O₂)",
+      "venue": "XIX Semana da Matemática e IX Semana da Estatística – UFU 2019",
+      "authors": "Laura Pereira de Castro, João Marcelo Vedovotto",
+      "description": "Simulated micromixing between hydrogen and oxygen using the transported PDF (IEM-LMSE) model in Python with Cantera. Awarded Honorable Mention.",
+      "document": "/documents/transported_pdf.pdf",
+      "note": "* Presented at a local university mathematics and statistics seminar. Full text available below."
+    },
+    {
+      "title": "Acoustic Levitation Modeling",
+      "venue": "XX Semana da Matemática e X Semana da Estatística – UFU 2020",
+      "authors": "Matheus Lopes Silva, Laura Pereira de Castro, Aristeu da Silveira Neto",
+      "description": "Built a 1-D fluid-dynamic Runge-Kutta model describing the motion and phase behavior of levitating pistons under acoustic pressure fields.",
+      "document": "/documents/acoustic_levitation.pdf",
+      "note": "* Presented at a local university mathematics and statistics seminar. Full text available below."
+    }
+  ],
+  "publications.not_available": "not available",
+  "publications.view_document": "View Document",
   "locations": [
   { "id": "ensma", "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (ENSMA)", "years": "2021-2024 (Feb)", "description": "Mastère (Research) - Aéronautique et Espace; Diplôme d'Ingénieur (Master equivalent).", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
   { "id": "ufu", "name": "UFU", "institution": "Federal University of Uberlândia", "years": "until 2021", "description": "Undergraduate studies in engineering.", "projects": ["Saturn V on CATIA", "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "Petrobras Internship"], "x": 40, "y": 62 },

@@ -1,13 +1,12 @@
 {
   "nav": {
     "home": "Início",
-    "work": "Projetos",
-    "education": "Educação & Experiências",
+    "work": "Trabalho",
+    "education": "Formação",
     "portfolio": "Portfólio",
     "about": "Sobre",
-    "articles": "Artigos",
-    "courses": "Cursos",
-    "achievements": "Conquistas"
+    "achievements": "Conquistas",
+    "publications": "Publicações"
   },
   "hero": {
     "title": "Laura Pereira de Castro",
@@ -25,57 +24,173 @@
     { "name": "Inglês", "level": "Avançado · TOEFL iBT: 104/120" },
     { "name": "Francês", "level": "Avançado · DELF B1" }
   ],
-  "skills": ["Python", "Desenvolvimento web", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
+  "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
   "tech_stack": ["JavaScript", "TypeScript", "React", "Next.js", "Sanity", "MongoDB", "Node.js", "Python", "MATLAB", "Fortran"],
-  "machine_learning": ["Machine Learning", "Neural Networks", "Deep Learning"],
+  "machine_learning": ["Machine Learning", "Neural Networks", "Pytorch", "Tensorflow"],
+  "personal_projects": [
+    {
+      "title": "CodingElf",
+      "description": "Blog de programação em português visando tornar o aprendizado de código mais acessível. Construído com React e styled-components.",
+      "tags": ["Next.js", "React", "JavaScript", "Vercel"],
+      "status": "Plataforma pronta, conteúdo fictício e implantação em produção pendente. Se você fala português e está interessado em produção de conteúdo educacional, entre em contato!",
+      "link": "https://github.com/laurapdec/CodingElf"
+    },
+    {
+      "title": "Portfolio Pessoal",
+      "description": "Este site de portfólio interativo construído com Next.js, React e Tailwind CSS. Inclui design responsivo, suporte i18n e elementos interativos.",
+      "tags": ["Next.js", "TypeScript", "React", "Tailwind CSS", "i18n"],
+      "link": "https://github.com/laurapdec/laurapdec.github.io"
+    },
+    {
+      "title": "Gerador de CV ATS",
+      "description": "Ferramenta alimentada por IA que gera CVs e cartas de apresentação otimizados para ATS usando dados do LinkedIn e descrições de vagas. Utiliza a API OpenAI para geração de conteúdo personalizado.",
+      "tags": ["Next.js", "FastAPI", "Tailwind CSS", "LinkedIn API"],
+      "status": "Em desenvolvimento",
+      "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
+    }
+  ],
   "projects": [
-    { "title": "Coding Elf", "description": "Assistente de codificação interativo.", "link": "portfolio/codingelf.html", "tags": [] },
-    { "title": "Online Resume", "description": "Este site — CV interativo e portfólio.", "link": "portfolio/website.html", "tags": [] },
-    { "title": "Safran Internship", "description": "Estágio industrial em engenharia aeroespacial.", "link": "portfolio/safran.html", "tags": ["ensma"] },
-    { "title": "Droney", "description": "Projeto UAV autônomo — imagens, demonstração e relatório.", "link": "portfolio/droney.html", "tags": ["ensma"] },
-    { "title": "ATREX", "description": "Apresentação de projeto aeroespacial / foguete.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
-    { "title": "Undergraduate Research Intern at MFLAB", "description": "Dinâmica dos fluidos computacional e modelagem de combustão usando simulações Monte Carlo avançadas.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
-    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "description": "Trabalho em equipe e publicações (rocketry).", "link": "portfolio/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial).html", "tags": ["ufu"] },
-    { "title": "CHARMANDER", "description": "Projeto 3D/graphics em andamento.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
-    { "title": "Saturn V on CATIA", "description": "Exercício de modelagem CAD usando CATIA.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
+    { "title": "Coding Elf", "description": "Desenvolvimento de um site dedicado a fornecer conteúdo de programação em português, visando apoiar estudantes e profissionais da área.", "link": "portfolio/codingelf.html", "tags": [] },
+    { "title": "Web Development Freelance", "description": "Entrega de diversos projetos de desenvolvimento web, incluindo um blog de programação e este currículo interativo, além de outras soluções focadas no cliente.", "link": "portfolio/website.html", "tags": [] },
+    { "title": "Safran Internship", "description": "Estágio de pesquisa industrial focado em análise e simulação de combustão na Safran Helicopter Engines.", "link": "portfolio/safran.html", "tags": ["ensma"] },
+    { "title": "IIT Internship", "description": "Estágio de pesquisa acadêmica no Illinois Institute of Technology, desenvolvimento de ferramentas de automação para análise de dados de simulação.", "link": "portfolio/iit.html", "tags": ["ensma"] },
+    { "title": "Drone design", "description": "Projeto e desenvolvimento de um veículo aéreo não tripulado (UAV) autônomo como parte de um projeto de engenharia multidisciplinar.", "link": "portfolio/droney.html", "tags": ["ensma"] },
+    { "title": "ATREX", "description": "Contribuição para o desenvolvimento e simulação de um motor de foguete como parte de uma iniciativa de engenharia colaborativa.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
+    { "title": "Petrobras Internship", "description": "Pesquisa em dinâmica dos fluidos computacional (CFD) usando métodos Monte Carlo para estudar processos de combustão durante estágio na Petrobras.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
+    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "description": "Colaboração com a equipe universitária de foguetes em pesquisa, desenvolvimento e publicação de projetos de engenharia aeroespacial.", "link": "portfolio/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial).html", "tags": ["ufu"] },
+    { "title": "CHARMANDER", "description": "Desenvolvimento de interface gráfica para suporte à análise de testes de combustão e visualização de dados para pesquisa em engenharia.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
+    { "title": "Saturn V", "description": "Criação de modelos CAD detalhados do foguete Saturn V usando software CATIA para fins educacionais e de pesquisa.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
   ],
   "education": [
-    { "institution": "Airbus e CERFACS", "location": "Toulouse, França", "degree": "PhD em modelagem complexa de combustão (interrompido)", "years": "2024-2025" },
-    { "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "location": "Chasseneuil-du-Poitou, França", "degree": "Mestrado - Aeronáutica e Espaço", "years": "2021-2024" },
-    { "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "location": "Chasseneuil-du-Poitou, França", "degree": "Diploma de Engenharia", "years": "2021-2024" },
-    { "institution": "Universidade Federal de Uberlândia (UFU)", "location": "Uberlândia, Brasil", "degree": "Engenharia Aeronáutica", "years": "2017-2021" }
+    {
+      "institution": "Airbus",
+      "location": "Toulouse, França",
+      "period": "Jan 2024 - Jul 2025",
+      "degree": "Doutorado interrompido com o laboratório parceiro CERFACS em modelagem complexa de combustão e técnicas avançadas de acoplamento de solucionadores de fluidos e calor",
+      "certificate": "/documents/airbus_cert.pdf"
+    },
+    {
+      "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique)",
+      "location": "Chasseneuil-du-Poitou, França",
+      "period": "Ago 2021 - Fev 2024",
+      "degree": "Mestrado em Pesquisa - Aeronáutica e Espaço | Diploma de Engenharia Propulsão",
+      "certificate": "/documents/ENSMA(en).pdf"
+    },
+    {
+      "institution": "UFU (Universidade Federal de Uberlândia)",
+      "location": "Uberlândia, Brasil",
+      "period": "Ago 2017 - Jul 2021",
+      "degree": "Curso de Engenharia Aeronáutica (transferido para ENSMA)",
+      "certificate": "/documents/UFU(en).pdf"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Airbus",
+      "role": "Engenheira de Pesquisa - Doutorado CIFRE",
+      "period": "Jan 2024 - Jul 2025",
+      "location": "Toulouse, França",
+      "description": "Condução de pesquisas em dinâmica termo-fluida não estacionária, utilizando ferramentas avançadas de simulação de fluidos e sistemas de computação de alto desempenho. Desenvolvimento de expertise em simulação numérica e otimização de software, com responsabilidades incluindo manutenção e depuração de solucionadores. O doutorado foi interrompido para seguir interesses em aprendizado de máquina, visão computacional, IA criativa e segurança de software.",
+      "certificate": "/documents/airbus_recommendation.pdf"
+    },
+    {
+      "company": "Safran Helicopter Engines",
+      "role": "Estagiária de Pesquisa em Combustão",
+      "period": "Abr 2023 - Set 2023",
+      "location": "Bordes, França",
+      "description": "Realização de análises de combustão aplicando o código de cálculo LES AVBP a bancos de dados experimentais. Comparação de resultados experimentais com simulações tridimensionais para melhorar a precisão das ferramentas e identificação de estratégias de design para reduzir emissões mantendo o desempenho. Ganho de experiência prática em engenharia de combustão na Safran, uma empresa líder em propulsão aeroespacial.",
+      "certificate": "/documents/safran_recommendation.pdf"
+    },
+    {
+      "company": "Illinois Institute of Technology",
+      "role": "Estagiária de Pesquisa Visitante",
+      "period": "Jul 2022 - Set 2022",
+      "location": "Chicago, EUA",
+      "description": "Desenvolvimento de ferramentas Python e fluxos de trabalho GT Suite para automatizar pipelines de dados para análise de simulação. Criação de scripts para extração, processamento e visualização de dados, melhorando a eficiência do fluxo de trabalho. Integração de automação em ambientes GT Suite, reduzindo significativamente o tempo de pós-processamento manual.",
+      "certificate": "/documents/iit_recommendation.pdf"
+    },
+    {
+      "company": "Petrobras",
+      "role": "Estagiária de Pesquisa de Graduação",
+      "period": "Jun 2019 - Mai 2021",
+      "location": "Uberlândia, Brasil",
+      "description": "Pesquisa sobre modelagem de combustão e quantificação de incertezas em sistemas de fluxo multifásico, aplicando métodos estocásticos de Monte Carlo para estudar combustão e quantificar incertezas. Desenvolvimento e otimização de componentes de solucionadores internos em Fortran e C para melhorar a robustez numérica, e automação de pipelines de dados e controle de simulação usando scripts Python e Bash em ambientes Linux.",
+      "certificate": "/documents/petrobras_recommendation.pdf"
+    },
+    {
+      "company": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)",
+      "role": "Gerente de Aerodinâmica da Equipe de Foguetes Universitária",
+      "period": "Nov 2018 - Out 2020",
+      "location": "Uberlândia, Brasil",
+      "description": "Desenvolvimento de algoritmo de rede neural usando Tensorflow e Pytorch para prever coeficientes aerodinâmicos de um protótipo de foguete em escala reduzida. Gerenciamento de iniciativas de captação de recursos, incluindo design de identidade visual, desenvolvimento de jogos e educação Python. Integração de modelos preditivos no simulador de voo da equipe para melhorar o controle de trajetória e supervisão da subequipe de aerodinâmica, supervisionando atividades de teste, modelagem e validação.",
+      "certificate": null
+    }
   ],
   "achievements": [
-    "Menção honrosa - XIX Mathematical School Week and IX Statistics School Week",
-    "Medalha de prata - OBA (Astronomia e Astronáutica)",
-    "Medalha de prata - Kangourou Matemática (KAN)",
+    "Menção honrosa - Artigo de pesquisa 'Using the transported pdf method to evaluate mixture between chemical components'",
+    "Certificação - Introdução ao Gerenciamento de Risco de Portfólio em Python",
+    "Certificação - Métodos numéricos para simulação de grandes escalas com AVBP",
+    "Medalha de prata - Olimpíada Brasileira de Astronomia e Astronáutica (OBA)",
+    "Medalha de prata - Canguru de Matemática Brasil (KAN)",
     "Medalhas de bronze e menções honrosas em olimpíadas nacionais"
   ],
   "courses": [
     "Curso de Inverno - Introdução às Tecnologias Espaciais (INPE)",
     "COBEM - Congresso Internacional de Engenharia Mecânica",
-    "EPTT - Escola de Primavera",
+    "Escola de Primavera EPTT",
     "Programa MIT Junior - Science & Technology Explorer",
     "Curso rápido de MATLAB",
     "Gestão da Inovação - O Caso Embraer"
   ],
   "articles": [
-    { "title": "Modelagem Fluidodinâmica", "file": "/documents/ModelagemFluidodinamica.pdf" },
-    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial) - Python & Data", "file": "/documents/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)_python.pdf" }
+    { "title": "Neural Network Algorithm for Prediction of Aerodynamic Coefficients of a Reduced-Scale Rocket", "file": "/documents/nn_aero_coefficients.pdf" },
+    { "title": "Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment", "file": "/documents/hybrid_les.pdf" },
+    { "title": "Transported PDF Method for Chemical Mixing (H₂/O₂)", "file": "/documents/transported_pdf.pdf" },
+    { "title": "Acoustic Levitation Modeling", "file": "/documents/acoustic_levitation.pdf" }
   ],
   "contact": {
-    "phone": "+55 34 99999-9999",
+    "phone": "+33 07 68 57 81 91",
     "email": "laurapdec@gmail.com",
+    "github": "https://github.com/laurapdec",
     "linkedin": "https://www.linkedin.com/in/laurapdec/"
   },
   "portfolio": [
-    { "title": "Experimentos de web design", "description": "Sites pessoais e experimentos interativos." }
+    { "title": "Experimentos de web design", "description": "Sites pessoais lúdicos e experimentos interativos." }
   ],
   "locations": [
-  { "id": "ensma", "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)", "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique) (ENSMA)", "years": "2021-2024 (fev)", "description": "Mestrado (Pesquisa) - Aeronáutica e Espaço; Diploma de Engenheira.", "projects": ["Safran Internship", "Droney", "ATREX"], "x": 58, "y": 28 },
-  { "id": "ufu", "name": "UFU", "institution": "Universidade Federal de Uberlândia", "years": "até 2021", "description": "Estudos de graduação em engenharia.", "projects": ["Saturn V on CATIA", "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "CHARMANDER", "Undergraduate Research Intern at MFLAB"], "x": 40, "y": 62 },
-  { "id": "safran", "name": "Safran (Estágio)", "institution": "Safran", "years": "Estágio", "description": "Estágio industrial em engenharia aeroespacial.", "projects": ["Safran Internship"], "x": 58, "y": 26 },
-  { "id": "airbus", "name": "Airbus (PhD)", "institution": "Airbus", "years": "Candidatura PhD (interrompida)", "description": "Trabalhos de doutorado em aeroespacial (interrompidos).", "projects": [], "x": 60, "y": 26 }
+    { "id": "ensma", "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique)", "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique) (ENSMA)", "years": "2021-2024 (fev)", "description": "Mestrado em Pesquisa - Aeronáutica e Espaço; Diploma de Engenharia (equivalente a Mestrado).", "projects": ["Estágio Safran", "Droney", "ATREX"], "x": 58, "y": 28 },
+    { "id": "ufu", "name": "UFU", "institution": "Universidade Federal de Uberlândia", "years": "até 2021", "description": "Estudos de graduação em engenharia.", "projects": ["Saturn V", "EPTA", "Estágio Petrobras"], "x": 40, "y": 62 },
+    { "id": "safran", "name": "Safran (Estágio)", "institution": "Safran", "years": "Estágio", "description": "Estágio industrial em engenharia aeroespacial.", "projects": ["Estágio Safran"], "x": 58, "y": 26 },
+    { "id": "airbus", "name": "Airbus (Doutorado)", "institution": "Airbus", "years": "Doutorado (interrompido)", "description": "Trabalhos de doutorado em aeroespacial (interrompidos).", "projects": [], "x": 60, "y": 26 }
+  ],
+  "publications": [
+    {
+      "title": "Neural Network Algorithm for Prediction of Aerodynamic Coefficients of a Reduced-Scale Rocket",
+      "venue": "18th Brazilian Congress of Thermal Sciences and Engineering (ENCIT 2020)",
+      "authors": "Laura Pereira de Castro, Rodrigo Daher, Alexandre Zuquete Guarato",
+      "description": "Desenvolveu uma rede neural em Python para prever coeficientes de arrasto e sustentação a partir de dados CFD do foguete da EPTA, alcançando desvio < 17.7% vs ANSYS CFD e RASAero II.",
+      "doi": "10.26678/ABCM.ENCIT2020.CIT20-0806",
+      "link": "https://www.researchgate.net/publication/347875623_NEURAL_NETWORK_ALGORITHM_FOR_PREDICTION_OF_AERODYNAMIC_COEFFICIENTS_OF_A_REDUCED_SCALE_ROCKET"
+    },
+    {
+      "title": "Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment",
+      "venue": "Physics of Fluids, April 2021",
+      "authors": "Laura Pereira de Castro, Abgail Paula Pinheiro, Vitor Vilela, Gabriel Marcos Magalhães, Ricardo Serfaty, João Marcelo Vedovotto",
+      "description": "Contribuiu para a implementação de uma abordagem híbrida FDF–LES dentro de um framework AMR dinâmico para modelagem de escoamento reativo turbulento.",
+      "doi": "10.1063/5.0045873"
+    },
+    {
+      "title": "Transported PDF Method for Chemical Mixing (H₂/O₂)",
+      "venue": "XIX Semana da Matemática e IX Semana da Estatística – UFU 2019",
+      "authors": "Laura Pereira de Castro, João Marcelo Vedovotto",
+      "description": "Simulou micromistura entre hidrogênio e oxigênio usando o modelo PDF transportado (IEM-LMSE) em Python com Cantera. Recebeu Menção Honrosa."
+    },
+    {
+      "title": "Acoustic Levitation Modeling",
+      "venue": "XX Semana da Matemática e X Semana da Estatística – UFU 2020",
+      "authors": "Matheus Lopes Silva, Laura Pereira de Castro, Aristeu da Silveira Neto",
+      "description": "Construiu um modelo fluido-dinâmico 1-D Runge-Kutta descrevendo o movimento e comportamento de fase de pistões levitantes sob campos de pressão acústica."
+    }
   ],
   "footer": {
     "copyright": "© 2025 Laura Pereira de Castro. Todos os direitos reservados."

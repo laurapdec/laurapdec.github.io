@@ -7,6 +7,9 @@ import { SiReact, SiJavascript, SiTypescript, SiFortran, SiSanity, SiMongodb, Si
 export default function Home() {
   const mainContainerClass = "site-scroll"
   const { t } = useTranslation()
+  const publications = t('publications', { returnObjects: true })
+  const experience = t('experience', { returnObjects: true })
+  const personal_projects = t('personal_projects', { returnObjects: true })
   const projects = t('projects', { returnObjects: true }) || []
   const [artOpen, setArtOpen] = useState(false)
 
@@ -78,7 +81,7 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-bold mb-8">Education</h2>
             <div className="grid gap-8">
-              {mergedEducation.map((edu, idx) => {
+              {(mergedEducation || []).map((edu, idx) => {
                 const instName = (edu.institution || '').toLowerCase();
                 let tag = null;
                 if (instName.includes('ensma')) tag = 'ensma';
@@ -130,7 +133,7 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-bold mb-8">Experience</h2>
             <div className="grid gap-6">
-              {t('experience', { returnObjects: true }).map((exp, idx) => (
+              {Array.isArray(experience) && experience.map((exp, idx) => (
                 <div key={idx} className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="flex items-start justify-between">
                     <div>
@@ -173,108 +176,65 @@ export default function Home() {
 
           {/* Publications Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-8">Publications</h2>
+            <h2 className="text-3xl font-bold mb-8">{t('nav.publications')}</h2>
             <div className="grid gap-6">
-              {/* 1. Neural Network Algorithm for Prediction of Aerodynamic Coefficients of a Reduced-Scale Rocket */}
-              <div className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Neural Network Algorithm for Prediction of Aerodynamic Coefficients of a Reduced-Scale Rocket</h3>
-                  <p className="text-gray-700 mb-1">18th Brazilian Congress of Thermal Sciences and Engineering (ENCIT 2020)</p>
-                  <p className="text-gray-600 mb-1">Authors: Laura Pereira de Castro, Rodrigo Daher, Alexandre Zuquete Guarato</p>
-                  <p className="text-gray-600 mb-1">Developed a Python-based neural network to predict drag and lift coefficients from CFD data of EPTA’s rocket, achieving &lt; 17.7% deviation vs ANSYS CFD and RASAero II.</p>
-                  <p className="text-gray-600 mb-1">DOI: <a href="https://doi.org/10.26678/ABCM.ENCIT2020.CIT20-0806" target="_blank" rel="noopener noreferrer" className="text-accent underline">10.26678/ABCM.ENCIT2020.CIT20-0806</a></p>
-                </div>
-              </div>
-              {/* 2. Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment */}
-              <div className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment</h3>
-                  <p className="text-gray-700 mb-1">Physics of Fluids, April 2021</p>
-                  <p className="text-gray-600 mb-1">Authors: Laura Pereira de Castro, Abgail Paula Pinheiro, Vitor Vilela, Gabriel Marcos Magalhães, Ricardo Serfaty, João Marcelo Vedovotto</p>
-                  <p className="text-gray-600 mb-1">Contributed to the implementation of a hybrid FDF–LES approach within a dynamic AMR framework for turbulent reactive-flow modeling.</p>
-                  <p className="text-gray-600 mb-1">DOI: <a href="https://doi.org/10.1063/5.0045873" target="_blank" rel="noopener noreferrer" className="text-accent underline">10.1063/5.0045873</a></p>
-                </div>
-              </div>
-              {/* 3. Transported PDF Method for Chemical Mixing (H₂/O₂) 🏅 Awarded Paper */}
-              <div className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Transported PDF Method for Chemical Mixing (H₂/O₂)</h3>
-                  <p className="text-gray-700 mb-1">XIX Semana da Matemática e IX Semana da Estatística – UFU 2019</p>
-                  <p className="text-gray-600 mb-1">Authors: Laura Pereira de Castro, João Marcelo Vedovotto</p>
-                  <p className="text-gray-600 mb-1">Simulated micromixing between hydrogen and oxygen using the transported PDF (IEM-LMSE) model in Python with Cantera. Awarded Honorable Mention.</p>
-                  <div className="flex items-start justify-between mt-2">
-                    <div>
-                      <span className="text-gray-600">DOI: not available</span>
-                      <span className="block text-gray-400 text-sm">* Presented at a local university seminar. Full text available below.</span>
-                    </div>
-                    <a
-                      href={"/documents/transported_pdf.pdf"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                      title="View Document"
-                    >
-                      <svg
-                        className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </a>
+              {Array.isArray(publications) && publications.map((pub, idx) => (
+                <div key={idx} className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex flex-col">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pub.title}</h3>
+                    <p className="text-gray-700 mb-1">{pub.venue}</p>
+                    <p className="text-gray-600 mb-1">Authors: {pub.authors}</p>
+                    <p className="text-gray-600 mb-1">{pub.description}</p>
+                    {pub.doi ? (
+                      <p className="text-gray-600 mb-1">
+                        DOI: <a href={pub.link || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="text-accent underline">{pub.doi}</a>
+                      </p>
+                    ) : pub.link ? (
+                      <p className="text-gray-600 mb-1">
+                        DOI: <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-accent underline">{pub.link}</a>
+                      </p>
+                    ) : (
+                      <div className="flex items-start justify-between mt-2">
+                        <div>
+                          <span className="text-gray-600">DOI: {t('publications.not_available')}</span>
+                          {pub.note && <span className="block text-gray-400 text-sm">{pub.note}</span>}
+                        </div>
+                        {pub.document && (
+                          <a
+                            href={pub.document}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                            title={t('publications.view_document')}
+                          >
+                            <svg
+                              className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                              />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
+              ))}
               </div>
-              {/* 4. Acoustic Levitation Modeling */}
-              <div className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Acoustic Levitation Modeling</h3>
-                  <p className="text-gray-700 mb-1">XX Semana da Matemática e X Semana da Estatística – UFU 2020</p>
-                  <p className="text-gray-600 mb-1">Authors: Matheus Lopes Silva, Laura Pereira de Castro, Aristeu da Silveira Neto</p>
-                  <p className="text-gray-600 mb-1">Built a 1-D fluid-dynamic Runge-Kutta model describing the motion and phase behavior of levitating pistons under acoustic pressure fields.</p>
-                  <div className="flex items-start justify-between mt-2">
-                    <div>
-                      <span className="text-gray-600">DOI: not available</span>
-                      <span className="block text-gray-400 text-sm">* Presented at a local university seminar. Full text available below.</span>
-                    </div>
-                    <a
-                      href={"/documents/acoustic_levitation.pdf"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                      title="View Document"
-                    >
-                      <svg
-                        className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Personal Projects Section */}
           <div>
             <h2 className="text-3xl font-bold mb-8">Personal Projects</h2>
             <div className="grid gap-6">
-              {t('personal_projects', { returnObjects: true }).map((project, idx) => (
+              {Array.isArray(personal_projects) && personal_projects.map((project, idx) => (
                 <div key={idx} className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="flex flex-col">
                     <div className="flex justify-between items-start mb-2">
