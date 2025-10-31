@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CreativeServices />} /> {/* Minimal portfolio as the main page */}
-        <Route path="/cv" element={<CV />} /> {/* CV remains at /cv */}
+        <Route exact path="/" element={<CreativeServices />} /> {/* Minimal portfolio as the main page */}
+        <Route exact path="cv" element={<CV />} /> {/* CV page without leading slash for HashRouter */}
         <Route path="*" element={<NotFound />} /> {/* Custom 404 page for unmatched routes */}
       </Routes>
       <Footer />
