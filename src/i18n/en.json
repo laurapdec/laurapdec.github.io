@@ -67,7 +67,7 @@
       "location": "Toulouse, France",
       "period": "Jan 2024 - Jul 2025",
       "degree": "Interrupted PhD with partner CERFACS laboratory in complex combustion modelling and advanced techniques to couple fluid and heat solvers",
-      "certificate": null
+      "certificate": "/documents/airbus_recommendation.pdf"
     },
     {
       "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)",
@@ -91,7 +91,7 @@
       "period": "Jan 2024 - Jul 2025",
       "location": "Toulouse, France",
       "description": "Conducted research in unsteady thermo-fluid dynamics, utilizing advanced fluid simulation tools and high-performance computing systems. Developed expertise in numerical simulation and software optimization, with responsibilities including solver maintenance and debugging. The PhD was interrupted to pursue interests in machine learning, computer vision, creative AI, and software security.",
-      "certificate": null
+      "certificate": "/documents/airbus_recommendation.pdf"
     },
     {
       "company": "Safran Helicopter Engines",
@@ -123,7 +123,7 @@
       "period": "Nov 2018 - Oct 2020",
       "location": "Uberlândia, Brazil",
       "description": "Developed a neural network algorithm using Tensorflow and Pytorch to predict aerodynamic coefficients for a reduced-scale rocket prototype. Managed fundraising initiatives, including visual identity design, game development, and Python education. Integrated predictive models into the team's flight simulator to improve trajectory control and supervised the aerodynamics sub-team, overseeing testing, modeling, and validation activities.",
-      "certificate": "/documents/EPTA.pdf"
+      "certificate": "/documents/EPTA_recommendation.pdf"
     }
   ],
   "achievements": [
