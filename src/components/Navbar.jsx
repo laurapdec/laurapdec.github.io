@@ -97,7 +97,7 @@ export default function Navbar() {
   ]
 
   const pathname = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '/'
-  const showCvHeader = pathname === '/cv' || pathname.startsWith('/cv')
+  const showCvHeader = pathname === '/#/cv' || pathname.startsWith('/#/cv')
   console.log('Current pathname:', pathname)
   console.log('Is CV header?', showCvHeader)
 
@@ -159,7 +159,7 @@ export default function Navbar() {
       </div>
 
       {/* Tech Stack Marquee - Only shown on CV page */}
-      {(pathname === '/cv' || pathname.startsWith('/cv')) && (
+      {(pathname === '/#/cv' || pathname.startsWith('/#/cv')) && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">
             <div className="marquee flex items-center gap-8 py-2">
