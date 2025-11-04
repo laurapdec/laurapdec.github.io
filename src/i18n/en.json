@@ -204,15 +204,33 @@
   "creative": {
     "heading": "Creative Services",
     "subheading": "Independent Creative Direction and Production",
-    "description": "Bringing ideas to life through both traditional videography and computer generated imagery.",
+    "description": "Freelance creative services including writing (screenplays, scripts, copywriting, songwriting), videography, and computer generated imagery.",
     "photography": "Photography",
     "writing": "Writing",
     "about": "About this",
     "poem_orlando": {
       "title": "Pray for Orlando",
       "date": "August 5, 2016",
-      "text": "Sou um ET\nDe um mundo plano.\nVenho de um tempo\nDistante desse ano.\n\nAndava pelas ruas,\nEstavam asfaltadas.\nOlhando para o céu\nEu só via a fumaça.\nE via homens agindo como máquinas.\n\nVi um homem estuprando,\nUm matando negros e índios,\nUma mulher com olho roxo\nChorando escondido.\nTudo continua tão normal.\n\nMas de repente,\nAlgo incomodou.\nAlgo que ninguém jamais me perguntou.\n\nVi dois homens se beijando,\nQue horror!\nQueime na fogueira\nOu atire, por favor.\n\n50 mortos\n53 feridos\n\nOlha o Bolsonaro,\nUm alívio para a família.\nAntes filho morto,\nDo que gay.\n\nPorque de onde eu venho,\nIsso sim que é castigo.\nEsses homens pervertidos.\nO amor está perdido.\nMas eu não,\nPois eu sou dono da razão.",
+      "file": "/media/writings/pray-for-orlando.txt",
       "context": "Written in response to the 2016 Pulse nightclub shooting in Orlando, Florida. The poem reflects on societal prejudices and the tragedy that claimed 49 lives and injured 53 others. Through irony, it critiques discrimination and violence against the LGBTQ+ community."
+    },
+    "poem_sonho": {
+      "title": "Sonho",
+      "date": "May 19, 2016",
+      "file": "/media/writings/sonho.txt",
+      "context": "A dream about a distant world where love knows no boundaries and nature still thrives. The poem contrasts this utopian vision with harsh reality, questioning social norms and inequalities."
+    },
+    "poem_incapaz": {
+      "title": "Incapaz",
+      "date": "2016",
+      "file": "/media/writings/incapaz.txt",
+      "context": "A poem about empathy and understanding, questioning those who judge others for being themselves. It explores themes of love, acceptance, and the beauty of authenticity while criticizing prejudice and narrow-mindedness."
+    },
+    "poem_amor": {
+      "title": "Odeio não te odiar",
+      "date": "2016",
+      "file": "/media/writings/amor.txt",
+      "context": "A passionate reflection on the complexity of love, where hatred would be justified but love prevails. The poem explores the contradictions of emotions and the overwhelming nature of true affection."
     },
     "more_writings": "Visit my blog for more writings",
     "contact": "Contact",

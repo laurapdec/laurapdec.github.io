@@ -113,18 +113,25 @@ export default function Navbar() {
             <img src={profilePhoto} alt="Profile" className="w-full h-full rounded-full object-cover shadow-sm" style={{maxWidth:96, maxHeight:96}} />
           </div>
           <div aria-label='headerText' className="flex-1 flex items-center justify-between min-w-0">
-            <div className="flex-1 min-w-0 pr-4">
+              <div className="flex-1 min-w-0 pr-4">
               <h1 className="text-xl md:text-2xl font-semibold truncate">Laura Pereira de Castro</h1>
-              <div className="text-muted mt-1 truncate">Machine Learning Engineer • Data Engineer</div>
-              <p className="text-xs md:text-sm text-muted mt-1 truncate"> HPC Computing • Software Engineer • Data Analyst</p>
+              {showCvHeader ? (
+                <>
+                  <div className="text-muted mt-1 truncate">Machine Learning Engineer • Data Engineer</div>
+                  <p className="text-xs md:text-sm text-muted mt-1 truncate">HPC Computing • Software Engineer • Data Analyst</p>
+                </>
+              ) : (
+                <>
+                  <div className="text-muted mt-1 truncate">Independent Creative Direction and Production</div>
+                  <p className="text-xs md:text-sm text-muted mt-1 truncate">Copywriting • Motion and VFX Design • 3D Modeling</p>
+                </>
+              )}
               <nav className="mt-3 hidden md:flex items-center gap-4">
                 {nav.map(n => (
                   <a key={n.label} href={n.to} className="text-sm text-gray-700 hover:text-gray-900 transition py-1 px-2">{n.label}</a>
                 ))}
               </nav>
-            </div>
-
-              {/* Right-aligned controls inside the expanded CV header (desktop): socials + language select */}
+            </div>              {/* Right-aligned controls inside the expanded CV header (desktop): socials + language select */}
             <div className="flex items-center flex-shrink-0 gap-2">
               <SocialIcon url="mailto:laurapdec@gmail.com" style={{ height: 36, width: 36 }} className="social-icon" />
               <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
@@ -188,7 +195,7 @@ export default function Navbar() {
             <div className="marquee flex items-center gap-8 py-2">
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="flex items-center" style={{ marginRight: '3rem' }}>
-                  {[
+                {[
                     { name: 'Photoshop', icon: <SiAdobephotoshop className="w-5 h-5 text-[#31A8FF]" /> },
                     { name: 'Final Cut Pro', icon: <TbMovie className="w-5 h-5 text-gray-700" /> },
                     { name: 'DaVinci Resolve', icon: <SiBlackmagicdesign className="w-5 h-5 text-[#FF4A4A]" /> },

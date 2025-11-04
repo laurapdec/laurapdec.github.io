@@ -41,7 +41,7 @@
 :root{
 	/* Clean, professional palette: neutral + single accent */
 	--bg-1: #ffffff;
-	--bg-2: #f7f8fb;
+	--bg-2: #ffffff;
 	--muted: #475569; /* slate-600 */
 	--text: #0f172a; /* slate-900 */
 	--accent: #2563eb; /* blue-600 */
