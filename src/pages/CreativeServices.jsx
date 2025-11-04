@@ -1,15 +1,23 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useRef, useEffect, Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useTexture, Environment, Center, Bounds } from '@react-three/drei'
 import Navbar from '../components/Navbar'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
 
 function Model({ url, materialType = 'standard', textureUrl, initialRotation, onLoad }) {
-  console.log('Model called with:', { url, materialType, textureUrl, initialRotation });
   const { scene } = useGLTF(url)
   const texture = useTexture(textureUrl || '')
+  
+  // Add frame update for material animation
+  useFrame((state, delta) => {
+    scene?.traverse((child) => {
+      if (child.isMesh && child.material?.userData?.update) {
+        child.material.userData.update(delta);
+      }
+    });
+  });
   
   useEffect(() => {
     // Call onLoad when both scene and texture (if any) are ready
@@ -20,23 +28,22 @@ function Model({ url, materialType = 'standard', textureUrl, initialRotation, on
   
   useEffect(() => {
     if (!texture) {
-      console.warn('No texture loaded for:', textureUrl);
       return;
     }
-    console.log('Configuring texture:', {
-      url: textureUrl,
-      size: `${texture.image?.width}x${texture.image?.height}`,
-      format: texture.format,
-      loaded: texture.isTexture,
-    });
     
-    texture.flipY = false;
+    // Update texture properties without using deprecated features
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
     texture.minFilter = THREE.LinearMipmapLinearFilter;
     texture.magFilter = THREE.LinearFilter;
+    texture.generateMipmaps = true;
     texture.anisotropy = 8;
     texture.needsUpdate = true;
+    
+    // Ensure proper texture orientation without using flipY
+    if (texture.transformation) {
+      texture.transformation.makeRotationX(Math.PI);
+    }
   }, [texture])
 
   useEffect(() => {
@@ -47,39 +54,114 @@ function Model({ url, materialType = 'standard', textureUrl, initialRotation, on
       if (!child.isMesh) return
       const m = child.material
 
-      // Add edge splitting for hard edges
+      // Enhanced geometry processing for better normal mapping
       if (child.geometry) {
-        child.geometry = child.geometry.clone() // Clone to avoid modifying shared geometry
-        child.geometry.computeVertexNormals() // Recompute normals
-        // Split vertices at sharp edges (angle in radians, ~30 degrees)
-        child.geometry.clearGroups()
-        child.geometry.computeVertexNormals()
-        child.geometry.normalizeNormals()
+        // Clone geometry to avoid modifying shared data
+        child.geometry = child.geometry.clone();
+        
+        // Ensure proper index buffer for normal computation
+        if (!child.geometry.index) {
+          child.geometry.index = THREE.BufferGeometryUtils.mergeVertices(child.geometry).index;
+        }
+        
+        // Compute vertex normals with better precision
+        child.geometry.computeVertexNormals();
+        child.geometry.normalizeNormals();
+        
+        // Force attributes update
+        child.geometry.attributes.normal.needsUpdate = true;
+        if (child.geometry.attributes.uv) {
+          child.geometry.attributes.uv.needsUpdate = true;
+        }
       }
 
       // Ensure sRGB base color
       if (m?.map) m.map.colorSpace = THREE.SRGBColorSpace
 
       if (materialType === 'saturnV') {
-        console.log('Applying saturnV material to:', child.name);
-        // Always create a new material for consistency
+        // Create material with procedural pattern
         const newMaterial = new THREE.MeshStandardMaterial({
-          map: texture,
-          metalness: 0.0,
+          color: 0xffffff,
+          metalness: 0.1,
           roughness: 0.9,
-          envMapIntensity: 0.15,
+          envMapIntensity: 0.3,
           side: THREE.DoubleSide,
+          onBeforeCompile: (shader) => {
+            shader.uniforms.time = { value: 0 };
+            
+            // Add varying for position only (normal is already available)
+            shader.vertexShader = shader.vertexShader.replace(
+              'void main() {',
+              `
+              varying vec3 vModelPos;
+              void main() {
+                vModelPos = position;
+              `
+            );
+            
+            // Add noise functions and pattern to fragment shader
+            shader.fragmentShader = `
+              uniform float time;
+              varying vec3 vModelPos;
+              // vNormal is already provided by MeshStandardMaterial
+              
+              // Improved noise function
+              float hash(vec3 p) {
+                p = fract(p * vec3(443.8975,397.2973, 491.1871));
+                p += dot(p.xyz, p.yzx + 19.19);
+                return fract(p.x * p.y * p.z);
+              }
+              
+              ${shader.fragmentShader.replace(
+                'vec4 diffuseColor = vec4( diffuse, opacity );',
+                `
+                  // Create multi-scale pattern with better contrast
+                  vec3 p = vModelPos * 0.5; // Scale factor for pattern size
+                  float n1 = hash(p * 20.0); // Base frequency
+                  float n2 = hash(p * 40.0); // Detail frequency
+                  float n3 = hash(p * 80.0); // Fine detail frequency
+                  
+                  // Combine noise with more pronounced effect
+                  float pattern = mix(n1, n2, 0.6) + n3 * 0.3;
+                  
+                  // Use vNormal from Three.js MeshStandardMaterial
+                  float normalEffect = dot(normalize(vNormal), vec3(0.0, 1.0, 0.0)) * 0.7 + 0.3;
+                  pattern = mix(pattern, normalEffect, 0.5);
+                  
+                  // Create final color with more contrast
+                  vec3 baseColor = vec3(0.85, 0.85, 0.87); // Lighter base
+                  vec3 patternColor = vec3(0.65, 0.65, 0.67); // Darker pattern
+                  vec3 color = mix(baseColor, patternColor, pattern);
+                  
+                  vec4 diffuseColor = vec4(color, opacity);
+                `
+              )}
+            `;
+            
+            // Update time uniform
+            newMaterial.userData.shader = shader;
+          }
         });
         
-        // Debug material creation
-        console.log('Created material:', {
-          hasTexture: !!newMaterial.map,
-          textureLoaded: texture?.isTexture,
-          meshName: child.name
-        });
+        // Add update function to animate pattern
+        newMaterial.userData.update = (delta) => {
+          if (newMaterial.userData.shader) {
+            newMaterial.userData.shader.uniforms.time.value += delta;
+          }
+        };
         
         child.material = newMaterial;
         child.material.needsUpdate = true;
+        
+        // Force geometry update if UV coordinates exist
+        if (child.geometry) {
+          if (child.geometry.attributes.uv) {
+            child.geometry.attributes.uv.needsUpdate = true;
+          }
+          if (child.geometry.attributes.normal) {
+            child.geometry.attributes.normal.needsUpdate = true;
+          }
+        }
       } else if (materialType === 'metal') {
         if (texture) {
           child.material = new THREE.MeshStandardMaterial({
@@ -102,11 +184,11 @@ function Model({ url, materialType = 'standard', textureUrl, initialRotation, on
       } else {
         // Handle default case or existing materials
         if (texture) {
-          texture.flipY = false;
           texture.colorSpace = THREE.SRGBColorSpace;
           texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
           texture.minFilter = THREE.LinearMipmapLinearFilter;
           texture.magFilter = THREE.LinearFilter;
+          texture.generateMipmaps = true;
           texture.needsUpdate = true;
 
           // Create new material with texture
@@ -336,7 +418,6 @@ export default function CreativeServices() {
     if (playPromise !== undefined) {
       playPromise.catch(error => {
         // Auto-play was prevented, try again with muted
-        console.log('Autoplay prevented, trying muted playback');
         if (videoRef.current) {
           videoRef.current.muted = true;
           videoRef.current.play();
