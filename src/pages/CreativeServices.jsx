@@ -6,23 +6,41 @@ import Navbar from '../components/Navbar'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
 
-function Model({ url, materialType = 'standard', textureUrl, initialRotation }) {
+function Model({ url, materialType = 'standard', textureUrl, initialRotation, onLoad }) {
+  console.log('Model called with:', { url, materialType, textureUrl, initialRotation });
   const { scene } = useGLTF(url)
-  const texture = textureUrl ? useTexture(textureUrl) : null
-
+  const texture = useTexture(textureUrl || '')
+  
   useEffect(() => {
-    if (texture) {
-      texture.colorSpace = THREE.SRGBColorSpace;
-      texture.generateMipmaps = true;
-      texture.minFilter = THREE.LinearMipmapLinearFilter;
-      texture.magFilter = THREE.LinearFilter;
-      texture.needsUpdate = true;
+    // Call onLoad when both scene and texture (if any) are ready
+    if (scene && (!textureUrl || texture)) {
+      onLoad?.();
     }
+  }, [scene, texture, textureUrl, onLoad]);
+  
+  useEffect(() => {
+    if (!texture) {
+      console.warn('No texture loaded for:', textureUrl);
+      return;
+    }
+    console.log('Configuring texture:', {
+      url: textureUrl,
+      size: `${texture.image?.width}x${texture.image?.height}`,
+      format: texture.format,
+      loaded: texture.isTexture,
+    });
+    
+    texture.flipY = false;
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
+    texture.minFilter = THREE.LinearMipmapLinearFilter;
+    texture.magFilter = THREE.LinearFilter;
+    texture.anisotropy = 8;
+    texture.needsUpdate = true;
   }, [texture])
 
   useEffect(() => {
     if (!scene) return
-
     if (initialRotation) scene.rotation.set(...initialRotation)
 
     scene.traverse((child) => {
@@ -42,99 +60,77 @@ function Model({ url, materialType = 'standard', textureUrl, initialRotation }) 
       // Ensure sRGB base color
       if (m?.map) m.map.colorSpace = THREE.SRGBColorSpace
 
-      // If you're replacing materials:
-      if (texture) {
-        if (materialType === 'metal') {
+      if (materialType === 'saturnV') {
+        console.log('Applying saturnV material to:', child.name);
+        // Always create a new material for consistency
+        const newMaterial = new THREE.MeshStandardMaterial({
+          map: texture,
+          metalness: 0.0,
+          roughness: 0.9,
+          envMapIntensity: 0.15,
+          side: THREE.DoubleSide,
+        });
+        
+        // Debug material creation
+        console.log('Created material:', {
+          hasTexture: !!newMaterial.map,
+          textureLoaded: texture?.isTexture,
+          meshName: child.name
+        });
+        
+        child.material = newMaterial;
+        child.material.needsUpdate = true;
+      } else if (materialType === 'metal') {
+        if (texture) {
           child.material = new THREE.MeshStandardMaterial({
             map: texture,
-            metalness: 0.8,     // was 1.0 (too hot)
-            roughness: 0.45,    // Reduced for better edge definition
-            envMapIntensity: 0.4, // Increased for better edge highlights
-            flatShading: false,  // Smooth shading between faces
-            side: THREE.DoubleSide, // Render both sides
-          })
-        } else if (materialType === 'carbon') {
+            metalness: 0.8,
+            roughness: 0.55,
+            envMapIntensity: 0.25,
+          });
+        }
+      } else if (materialType === 'carbon') {
+        if (texture) {
           child.material = new THREE.MeshPhysicalMaterial({
             map: texture,
             clearcoat: 1.0,
             clearcoatRoughness: 0.2,
             roughness: 0.5,
             envMapIntensity: 0.25,
-          })
-        } else if (materialType === 'saturnV') {
-          if (texture) {
-            texture.colorSpace = THREE.SRGBColorSpace;
-            texture.flipY = false;
-            texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
-            texture.minFilter = THREE.LinearMipmapLinearFilter;
-            texture.magFilter = THREE.LinearFilter;
-            texture.anisotropy = 16; // Increased for better detail
-            
-            // Adjust texture scale if needed
-            texture.repeat.set(1, 1);
-            // Center the texture
-            texture.offset.set(0, 0);
-            
-            texture.needsUpdate = true;
-          }
-
-          // ROCKET BODY = PAINT, NOT METAL
-          const isEngine = child.name?.toLowerCase().includes("engine");
-          const isBody = child.name?.toLowerCase().includes("body") || 
-                        child.name?.toLowerCase().includes("stage") ||
-                        child.name?.toLowerCase().includes("tank");
-
-          // Create base material
-          const material = new THREE.MeshStandardMaterial({
-            map: texture,
-            metalness: isEngine ? 0.9 : 0.1,    // slight metalness for non-engines
-            roughness: isEngine ? 0.3 : 0.7,    // adjusted for better texture visibility
-            envMapIntensity: isEngine ? 0.4 : 0.2,
-            side: THREE.DoubleSide,             // ensure all sides are visible
           });
+        }
+      } else {
+        // Handle default case or existing materials
+        if (texture) {
+          texture.flipY = false;
+          texture.colorSpace = THREE.SRGBColorSpace;
+          texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
+          texture.minFilter = THREE.LinearMipmapLinearFilter;
+          texture.magFilter = THREE.LinearFilter;
+          texture.needsUpdate = true;
 
-          // Additional material tweaks based on part type
-          if (isBody) {
-            material.color = new THREE.Color(0xffffff); // ensure white base for texture
-            material.normalScale = new THREE.Vector2(1, 1); // normal mapping intensity
-          }
-
-          child.material = material;
-          child.material.needsUpdate = true;
-
-          // Debug UV mapping if texture is not showing correctly
-          // Uncomment to check UV mapping:
-          /*
-          child.material.onBeforeCompile = (shader) => {
-            shader.fragmentShader = shader.fragmentShader.replace(
-              '#include <map_fragment>',
-              `
-              vec4 texelColor = texture2D(map, vUv);
-              diffuseColor = vec4(vUv, 0.0, 1.0);
-              `
-            );
-          };
-          */
-        } else {
+          // Create new material with texture
           child.material = new THREE.MeshStandardMaterial({
             map: texture,
             roughness: 0.6,
             metalness: 0.1,
             envMapIntensity: 0.25,
-          })
+          });
+          child.material.needsUpdate = true;
+        } else if (child.material && child.material.isMeshStandardMaterial) {
+          // Keep original, just tone it down
+          child.material.roughness = Math.min(0.7, (child.material.roughness ?? 0.5) + 0.1);
+          child.material.metalness = Math.max(0.6, (child.material.metalness ?? 0.8) - 0.1);
+          child.material.envMapIntensity = 0.3;
+          child.material.needsUpdate = true;
         }
-      } else if (m && m.isMeshStandardMaterial) {
-        // Keep original, just tone it down
-        m.roughness = Math.min(0.7, (m.roughness ?? 0.5) + 0.1)
-        m.metalness = Math.max(0.6, (m.metalness ?? 0.8) - 0.1)
-        m.envMapIntensity = 0.3
-        m.needsUpdate = true
       }
     })
   }, [scene, texture, materialType, initialRotation])
 
   return <primitive object={scene} />
 }
+
 
 function ControlsHelper() {
   const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
@@ -160,6 +156,7 @@ function ControlsHelper() {
 
 function ModelViewer({ url, materialType, textureUrl, initialRotation }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const controlsRef = useRef();
   
   const handleCenterView = () => {
@@ -174,6 +171,11 @@ function ModelViewer({ url, materialType, textureUrl, initialRotation }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {isLoading && (
+        <div className="absolute inset-0 bg-zinc-50 flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
       <Canvas
         dpr={[1, 2]}
         shadows
@@ -192,8 +194,10 @@ function ModelViewer({ url, materialType, textureUrl, initialRotation }) {
         }}
         onCreated={({ scene, camera }) => {
           scene.background = null;
-          // Ensure camera is looking at center
+          // Set camera to final position and ensure it's looking at center
+          camera.position.set(0, 5, 10);
           camera.lookAt(0, 0, 0);
+          camera.updateProjectionMatrix();
         }}
       >
         {/* Improved environment lighting */}
@@ -220,28 +224,33 @@ function ModelViewer({ url, materialType, textureUrl, initialRotation }) {
                 materialType={materialType}
                 textureUrl={textureUrl}
                 initialRotation={initialRotation}
+                onLoad={() => setIsLoading(false)}
               />
             </Center>
           </Bounds>
         </Suspense>
 
-        <OrbitControls
-          ref={controlsRef}
-          makeDefault
-          enableDamping
-          dampingFactor={0.05}
-          target={[0, 0, 0]}
-          minDistance={2}
-          maxDistance={20}
-          enablePan={true}
-          enableZoom={true}
-          enableRotate={true}
-          rotateSpeed={0.5}
-          maxPolarAngle={Math.PI * 0.8}
-          minPolarAngle={Math.PI * 0.2}
-          doubleClickZoomSpeed={1}
-          zoomSpeed={0.5}
-        />
+        {!isLoading && (
+          <OrbitControls
+            ref={controlsRef}
+            makeDefault
+            enableDamping
+            dampingFactor={0.05}
+            target={[0, 0, 0]}
+            minDistance={2}
+            maxDistance={20}
+            enablePan={true}
+            enableZoom={true}
+            enableRotate={true}
+            rotateSpeed={0.5}
+            maxPolarAngle={Math.PI * 0.8}
+            minPolarAngle={Math.PI * 0.2}
+            doubleClickZoomSpeed={1}
+            zoomSpeed={0.5}
+            // Start with the final position
+            position={[0, 5, 10]}
+          />
+        )}
       </Canvas>
       {isHovered && <ControlsHelper />}
     </div>
@@ -249,35 +258,36 @@ function ModelViewer({ url, materialType, textureUrl, initialRotation }) {
 }
 
 export default function CreativeServices() {
-  const { t } = useTranslation()
-  const contentRef = useRef(null)
-  const [mediaCategories, setMediaCategories] = useState([])
-  const [showFullPoem, setShowFullPoem] = useState(false)
-  const [poems, setPoems] = useState({})
-  const [selectedPoem, setSelectedPoem] = useState(null)
+  const { t, i18n } = useTranslation();
+  const contentRef = useRef(null);
+  const [mediaCategories, setMediaCategories] = useState([]);
+  const [showFullPoem, setShowFullPoem] = useState(false);
+  const [poems, setPoems] = useState({});
+  const [selectedPoem, setSelectedPoem] = useState(null);
   
   useEffect(() => {
-    // Load poem texts
+    if (!i18n.isInitialized) return   // wait until translations loaded
+
     const loadPoems = async () => {
-      try {
-        const poemKeys = ['orlando', 'sonho', 'incapaz', 'amor']
-        const loadedPoems = {}
-        
-        for (const key of poemKeys) {
-          const response = await fetch(t(`creative.poem_${key}.file`))
-          if (response.ok) {
-            loadedPoems[key] = await response.text()
-          }
+      const poemKeys = ['orlando', 'sonho', 'incapaz', 'amor']
+      const loaded = {}
+      for (const key of poemKeys) {
+        const file = t(`creative.poem_${key}.file`, { defaultValue: '' })
+        if (!file) continue                      // skip missing key
+        try {
+          const res = await fetch(file.startsWith('/')
+            ? file
+            : `/${file}`)                        // ensure absolute path
+          if (!res.ok) throw new Error(res.statusText)
+          loaded[key] = await res.text()
+        } catch (e) {
+          console.warn('Poem fetch failed:', key, file, e)
         }
-        
-        setPoems(loadedPoems)
-      } catch (error) {
-        console.error('Error loading poems:', error)
       }
+      setPoems(loaded)
     }
-    
     loadPoems()
-  }, [t])
+  }, [i18n.isInitialized, i18n.language, t])
 
   useEffect(() => {
     const folders = [
@@ -317,8 +327,22 @@ export default function CreativeServices() {
   }
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = false
+    if (!videoRef.current) return;
+    
+    // Try to play unmuted first
+    videoRef.current.muted = false;
+    const playPromise = videoRef.current.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // Auto-play was prevented, try again with muted
+        console.log('Autoplay prevented, trying muted playback');
+        if (videoRef.current) {
+          videoRef.current.muted = true;
+          videoRef.current.play();
+          setIsMuted(true);
+        }
+      });
     }
   }, [])
 
@@ -367,14 +391,14 @@ export default function CreativeServices() {
 
       {/* Portfolio Content */}
       <div ref={contentRef}>
-        {/* Direction & VFX Section */}
+        {/* Gallery Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="w-full max-w-6xl mx-auto px-6 py-16"
         >
-          <h2 className="text-3xl font-bold mb-8">Direction & VFX</h2>
+          <h2 className="text-3xl font-bold mb-8">Gallery</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mediaCategories[0]?.items.map((photo, index) => (
               <motion.div
@@ -387,7 +411,7 @@ export default function CreativeServices() {
               >
                 <img
                   src={`/media/photos/${photo}`}
-                  alt={`Direction & VFX ${index + 1}`}
+                  alt={`Gallery ${index + 1}`}
                   className="w-full h-full object-cover rounded-lg shadow-sm hover:shadow-lg transition-all duration-300"
                 />
               </motion.div>
@@ -419,8 +443,8 @@ export default function CreativeServices() {
                 model: "/media/3d-designs/SaturnV.glb", 
                 description: "3D modeling of historic rocket assembly",
                 materialType: "saturnV",
-                textureUrl: "/media/textures/saturnV.png",
-                initialRotation: [-Math.PI / 2, 0, Math.PI / 2] // Simplified rotation
+                textureUrl: "/media/textures/saturnV.png", // Make sure this file exists in public folder
+                initialRotation: [-Math.PI / 2, 0, Math.PI / 2]
               },
               { 
                 name: "F1 Engine", 
