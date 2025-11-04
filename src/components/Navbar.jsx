@@ -96,8 +96,8 @@ export default function Navbar() {
     { label: 'Creative Services', to: '/' },
   ]
 
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
-  const showCvHeader = pathname === '/#/cv' || pathname.startsWith('/#/cv')
+  const pathname = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '/'
+  const showCvHeader = pathname === '/cv' || pathname.startsWith('/cv')
 
   return (
     <>
@@ -157,7 +157,7 @@ export default function Navbar() {
       </div>
 
       {/* Tech Stack Marquee - Only shown on CV page */}
-      {pathname === '/#/cv' && (
+      {(pathname === '/cv' || pathname.startsWith('/cv')) && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">
             <div className="marquee flex items-center gap-8 py-2">
@@ -189,7 +189,7 @@ export default function Navbar() {
       )}
 
       {/* Creative Skills Marquee - Only shown on CreativeServices */}
-      {pathname === '/' && (
+      {(pathname === '/' || pathname === '') && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">
             <div className="marquee flex items-center gap-8 py-2">
