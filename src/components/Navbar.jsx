@@ -137,7 +137,7 @@ export default function Navbar() {
             <div className="flex items-center flex-shrink-0 gap-2">
               <SocialIcon url="mailto:laurapdec@gmail.com" style={{ height: 36, width: 36 }} className="social-icon" />
               <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
-              {pathname === '/#/cv' ? (
+              {pathname === '/cv' ? (
                 <SocialIcon url="https://github.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
               ) : (
                 <SocialIcon url="https://www.instagram.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
