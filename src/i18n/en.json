@@ -159,7 +159,7 @@
   ],
   "publications": [
     {
-      "title": "Neural Network for Prediction of Drag and Lift Coefficients from CFD Data",
+      "title": "Neural Network Algorithm For Prediction Of Aerodynamic Coefficients Of A Reduced Scale Rocket",
       "venue": "18th Brazilian Congress of Thermal Sciences and Engineering (ENCIT 2020)",
       "authors": "Laura Pereira de Castro, Rodrigo Daher, Alexandre Zuquete Guarato",
       "description": "Developed a Python-based neural network to predict drag and lift coefficients from CFD data of EPTA's rocket, achieving < 17.7% deviation vs ANSYS CFD and RASAero II.",
