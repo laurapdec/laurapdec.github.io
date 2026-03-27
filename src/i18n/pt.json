@@ -25,14 +25,13 @@
     { "name": "Francês", "level": "Avançado · DELF B1" }
   ],
   "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
-  "tech_stack": ["JavaScript", "TypeScript", "React", "Next.js", "Sanity", "MongoDB", "Node.js", "Python", "MATLAB", "Fortran"],
-  "machine_learning": ["Machine Learning", "Neural Networks", "Pytorch", "Tensorflow"],
+  "tech_stack": ["Python", "Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "Physics-Informed Neural Networks", "MATLAB", "Linux", "Fortran", "Git", "Bash", "MPI", "OpenMP", "Docker", "GCP", "C", "TypeScript", "Next.js", "React.js", "PostgreSQL", "SQL"],
+  "machine_learning": [],
   "personal_projects": [
     {
       "title": "CodingElf",
-      "description": "Blog de programação em português visando tornar o aprendizado de código mais acessível. Construído com React e styled-components.",
+      "description": "Blog de programação em português com o objetivo de tornar a educação em programação mais acessível. Construído com React, Next.js, Sanity.io e Tailwind CSS. Procuro voluntários interessados em produzir conteúdo educativo em português — entre em contato pelo laurapdec@gmail.com.",
       "tags": ["Next.js", "JavaScript", "Sanity.io", "React", "Tailwind CSS", "Vercel"],
-      "status": "Plataforma pronta, conteúdo fictício e implantação em produção pendente. Se você fala português e está interessado em produção de conteúdo educacional, entre em contato!",
       "link": "https://github.com/laurapdec/CodingElf"
     },
     {
@@ -40,13 +39,6 @@
       "description": "Este site de portfólio interativo construído com Next.js, React e Tailwind CSS. Inclui design responsivo, suporte i18n e elementos interativos.",
       "tags": ["Next.js", "TypeScript", "React", "Tailwind CSS", "i18n"],
       "link": "https://github.com/laurapdec/laurapdec.github.io"
-    },
-    {
-      "title": "Gerador de CV ATS",
-      "description": "Ferramenta alimentada por IA que gera CVs e cartas de apresentação otimizados para ATS usando dados do LinkedIn e descrições de vagas. Utiliza a API OpenAI para geração de conteúdo personalizado.",
-      "tags": ["Next.js", "FastAPI", "TypeScript", "React", "Tailwind CSS", "LinkedIn API"],
-      "status": "Em desenvolvimento",
-      "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
     }
   ],
   "projects": [
@@ -63,67 +55,64 @@
   ],
   "education": [
     {
-      "institution": "Airbus",
-      "location": "Toulouse, França",
-      "period": "Jan 2024 - Jul 2025",
-      "degree": "Doutorado interrompido com o laboratório parceiro CERFACS em modelagem complexa de combustão e técnicas avançadas de acoplamento de solucionadores de fluidos e calor",
-      "certificate": "/documents/airbus_cert.pdf"
-    },
-    {
       "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique)",
       "location": "Chasseneuil-du-Poitou, França",
       "period": "Ago 2021 - Fev 2024",
-      "degree": "Mestrado em Pesquisa - Aeronáutica e Espaço | Diploma de Engenharia Propulsão",
+      "degree": "Mestrado em Aeronáutica & Espaço (trilha Energética) — Duplo diploma: Mestrado de Pesquisa e Diploma de Engenharia",
       "certificate": "/documents/ENSMA(en).pdf"
     },
     {
       "institution": "UFU (Universidade Federal de Uberlândia)",
       "location": "Uberlândia, Brasil",
       "period": "Ago 2017 - Jul 2021",
-      "degree": "Curso de Engenharia Aeronáutica (transferido para ENSMA)",
+      "degree": "Bacharelado em Engenharia Aeronáutica — Admitida em 4º lugar no vestibular aos 16 anos. Posteriormente transferida para o ISAE-ENSMA",
       "certificate": "/documents/UFU(en).pdf"
     }
   ],
+  "headline": "Engenheira de Pesquisa",
+  "bio": "Mais de 4 anos aplicando métodos estocásticos e modelos de aprendizado de máquina à dinâmica dos fluidos computacional. De refinamento adaptativo de malha à otimização de cinética química, desenvolvo soluções de ML para problemas de engenharia de alta criticidade. Publicada na Physics of Fluids, com experiência internacional na Airbus, Safran, IIT e Petrobras.",
   "experience": [
     {
       "company": "Airbus",
-      "role": "Engenheira de Pesquisa - Doutorado CIFRE",
+      "role": "Engenheira de Pesquisa • Tempo integral",
       "period": "Jan 2024 - Jul 2025",
       "location": "Toulouse, França",
-      "description": "Condução de pesquisas em dinâmica termo-fluida não estacionária, utilizando ferramentas avançadas de simulação de fluidos e sistemas de computação de alto desempenho. Desenvolvimento de expertise em simulação numérica e otimização de software, com responsabilidades incluindo manutenção e depuração de solucionadores. O doutorado foi interrompido para seguir interesses em aprendizado de máquina, visão computacional, IA criativa e segurança de software.",
+      "description": "Contribuição ao código AVBP por meio do desenvolvimento e manutenção dos métodos no solver, usando Fortran, Python e C. Pesquisa em aprendizado de máquina para otimização da cinética química e acoplamento multifísico entre solvers de combustão, térmico e de pirólise, cada um evoluindo em escalas de tempo muito diferentes. Trabalho voltado ao desenvolvimento de modelos computacionais para certificação de segurança contra incêndio da FAA em componentes aeronáuticos.",
       "certificate": "/documents/airbus_recommendation.pdf"
     },
     {
       "company": "Safran Helicopter Engines",
-      "role": "Estagiária de Pesquisa em Combustão",
+      "role": "Engenheira de Pesquisa • Estágio",
       "period": "Abr 2023 - Set 2023",
       "location": "Bordes, França",
-      "description": "Realização de análises de combustão aplicando o código de cálculo LES AVBP a bancos de dados experimentais. Comparação de resultados experimentais com simulações tridimensionais para melhorar a precisão das ferramentas e identificação de estratégias de design para reduzir emissões mantendo o desempenho. Ganho de experiência prática em engenharia de combustão na Safran, uma empresa líder em propulsão aeroespacial.",
+      "description": "Realização de um grande conjunto de simulações de combustão, analisando e comparando diferentes modelos para prever a extinção de chama em situações críticas de voo. Desenvolvimento de um conjunto de ferramentas em Python para a equipe de engenharia e outros estagiários.",
       "certificate": "/documents/safran_recommendation.pdf"
     },
     {
       "company": "Illinois Institute of Technology",
-      "role": "Estagiária de Pesquisa Visitante",
+      "role": "Pesquisadora Visitante • Estágio",
       "period": "Jul 2022 - Set 2022",
       "location": "Chicago, EUA",
-      "description": "Desenvolvimento de ferramentas Python e fluxos de trabalho GT Suite para automatizar pipelines de dados para análise de simulação. Criação de scripts para extração, processamento e visualização de dados, melhorando a eficiência do fluxo de trabalho. Integração de automação em ambientes GT Suite, reduzindo significativamente o tempo de pós-processamento manual.",
+      "description": "Participação em um projeto de pesquisa do Department of Energy, no qual desenvolvi ferramentas em Python e Excel para automatizar o pipeline de dados. Geração de um grande conjunto de dados para previsão de poluição de motores diesel, e quantificação do impacto do uso de uma mistura com propano.",
       "certificate": "/documents/iit_recommendation.pdf"
     },
     {
       "company": "Petrobras",
-      "role": "Estagiária de Pesquisa de Graduação",
+      "role": "Pesquisadora de Graduação • Estágio",
       "period": "Jun 2019 - Mai 2021",
       "location": "Uberlândia, Brasil",
-      "description": "Pesquisa sobre modelagem de combustão e quantificação de incertezas em sistemas de fluxo multifásico, aplicando métodos estocásticos de Monte Carlo para estudar combustão e quantificar incertezas. Desenvolvimento e otimização de componentes de solucionadores internos em Fortran e C para melhorar a robustez numérica, e automação de pipelines de dados e controle de simulação usando scripts Python e Bash em ambientes Linux.",
+      "description": "Desenvolvimento e manutenção de funcionalidades para o MFSim, o solver CFD interno do laboratório, usando Fortran, Python e C. Contribuição para um método de aprendizado de máquina para refinamento adaptativo de malha utilizando métodos estocásticos, nomeadamente simulações de Monte-Carlo, reduzindo custos computacionais de simulações de combustão em larga escala. Resultou em publicação na Physics of Fluids (abril de 2021).",
       "certificate": "/documents/petrobras_recommendation.pdf"
-    },
+    }
+  ],
+  "volunteering": [
     {
-      "company": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)",
-      "role": "Gerente de Aerodinâmica da Equipe de Foguetes Universitária",
+      "company": "Equipe de Propulsão e Tecnologia Aeroespacial - EPTA",
+      "role": "Líder de Aerodinâmica & Captação de Recursos",
       "period": "Nov 2018 - Out 2020",
       "location": "Uberlândia, Brasil",
-      "description": "Desenvolvimento de algoritmo de rede neural usando Tensorflow e Pytorch para prever coeficientes aerodinâmicos de um protótipo de foguete em escala reduzida. Gerenciamento de iniciativas de captação de recursos, incluindo design de identidade visual, desenvolvimento de jogos e educação Python. Integração de modelos preditivos no simulador de voo da equipe para melhorar o controle de trajetória e supervisão da subequipe de aerodinâmica, supervisionando atividades de teste, modelagem e validação.",
-      "certificate": null
+      "description": "Gestão do departamento de aerodinâmica da recém-fundada equipe de foguetes universitária. Liderança da captação de recursos do zero até operação completa, parcerias com patrocinadores corporativos e o exército para o espaço aéreo de lançamento. Organização de tutoria STEM em escolas públicas locais e ensino de cursos de Python no campus. Desenvolvimento de uma rede neural com TensorFlow e PyTorch para prever coeficientes aerodinâmicos necessários para o simulador de voo da equipe. Resultados publicados no ENCIT 2020.",
+      "certificate": "/documents/EPTA_recommendation.pdf"
     }
   ],
   "achievements": [

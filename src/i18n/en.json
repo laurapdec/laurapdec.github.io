@@ -40,13 +40,6 @@
       "description": "This interactive portfolio website built with Next.js, React, and Tailwind CSS. Features responsive design, i18n support, and interactive elements.",
       "tags": ["Next.js", "TypeScript", "React", "Tailwind CSS", "i18n"],
       "link": "https://github.com/laurapdec/laurapdec.github.io"
-    },
-    {
-      "title": "ATS CV Generator",
-      "description": "AI-powered tool that generates ATS-optimized CVs and cover letters using LinkedIn data and job descriptions. Leverages OpenAI's API for customized content generation.",
-      "tags": ["Next.js", "FastAPI", "TypeScript", "React", "Tailwind CSS", "LinkedIn API"],
-      "status": "In development",
-      "link": "https://github.com/laurapdec/Free_ATS_Proofed_Resume"
     }
   ],
   "projects": [ 
@@ -77,6 +70,7 @@
       "certificate": "/documents/UFU(en).pdf"
     }
   ],
+  "headline": "Research Engineer",
   "bio": "4+ years applying stochastic methods and machine learning models to computational fluid dynamics. From adaptive mesh refinement to chemical kinetics optimization, I build ML solutions for high-stakes engineering problems. Published in Physics of Fluids, with international experience spanning Airbus, Safran, IIT, and Petrobras.",
   "experience": [
     {

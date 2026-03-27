@@ -1,8 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar' // Import Navbar
 import { useRef, useState, useEffect } from 'react'
-import { FaPython } from 'react-icons/fa'
-import { SiReact, SiJavascript, SiTypescript, SiFortran, SiSanity, SiMongodb, SiC, SiAdobephotoshop, SiWondersharefilmora, SiE, SiDocker, SiAdobeaftereffects, SiNextdotjs, SiLatex, SiKubernetes, SiPytorch, SiTensorflow } from 'react-icons/si'
 
 export default function CV() {
   const mainContainerClass = "site-scroll"
@@ -14,18 +12,6 @@ export default function CV() {
   const personal_projects = t('personal_projects', { returnObjects: true })
   const projects = t('projects', { returnObjects: true }) || []
   const [artOpen, setArtOpen] = useState(false)
-
-  // categorized skills for UI (icons shown, names available for search/accessibility)
-  const skillCategories = [
-    { name: 'Languages & Frameworks', items: [ {icon: FaPython, label: 'Python'}, {icon: SiReact, label: 'React'}, {icon: SiJavascript, label: 'JavaScript'}, {icon: SiTypescript, label: 'TypeScript'} ] },
-    { name: 'Data & ML', items: [ {icon: SiPytorch, label: 'PyTorch'}, {icon: SiTensorflow, label: 'TensorFlow'} ] },
-    { name: 'Dev & Infra', items: [ {icon: SiDocker, label: 'Docker'}, {icon: SiKubernetes, label: 'Kubernetes'}, {icon: SiNextdotjs, label: 'Next.js'} ] },
-    { name: 'Databases & CMS', items: [ {icon: SiMongodb, label: 'MongoDB'}, {icon: SiSanity, label: 'Sanity'} ] },
-    { name: 'Design & Media', items: [ {icon: SiAdobephotoshop, label: 'Photoshop'}, {icon: SiAdobeaftereffects, label: 'After Effects'}, {icon: SiWondersharefilmora, label: 'Filmora'} ] },
-    { name: 'Other', items: [ {icon: SiFortran, label: 'Fortran'}, {icon: SiC, label: 'C'}, {icon: SiLatex, label: 'LaTeX'} ] }
-  ]
-
-  const allSkillNames = skillCategories.flatMap(c => c.items.map(i => i.label))
 
 
 
