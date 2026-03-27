@@ -25,8 +25,8 @@
     { "name": "French", "level": "Advanced + DELF B1" }
   ],
   "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
-  "tech_stack": ["JavaScript", "TypeScript", "React", "Next.js", "Sanity", "MongoDB", "Node.js", "Python", "MATLAB", "Fortran"],
-  "machine_learning": ["Machine Learning", "Neural Networks","Pytorch","Tensorflow"],
+  "tech_stack": ["Python", "Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "Physics-Informed Neural Networks", "MATLAB", "Linux", "Fortran", "Git", "Bash", "MPI", "OpenMP", "Docker", "GCP", "C", "TypeScript", "Next.js", "React.js", "PostgreSQL", "SQL"],
+  "machine_learning": [],
   "personal_projects": [
     {
       "title": "CodingElf",
@@ -63,66 +63,62 @@
   ],
   "education": [
     {
-      "institution": "Airbus",
-      "location": "Toulouse, France",
-      "period": "Jan 2024 - Jul 2025",
-      "degree": "Interrupted PhD with partner CERFACS laboratory in complex combustion modelling and advanced techniques to couple fluid and heat solvers",
-      "certificate": "/documents/airbus_recommendation.pdf"
-    },
-    {
       "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d’Aérotechnique)",
       "location": "Chasseneuil-du-Poitou, France",
       "period": "Aug 2021 - Feb 2024",
-      "degree": "Research Master - Aeronautic and Espace | Propulsion & Engineering Degree",
+      "degree": "Master in Aeronautics & Space (Energetics Track) — Dual degree: Research Masters and Engineering Bachelor’s Degree",
       "certificate": "/documents/ENSMA(en).pdf"
     },
     {
       "institution": "UFU (Universidade Federal de Uberlândia)",
       "location": "Uberlândia, Brazil",
       "period": "Aug 2017 - Jul 2021",
-      "degree": "Coursework for Aeronautical Engineering (transferred to ENSMA)",
+      "degree": "Bachelor’s in Aeronautical Engineering — Admitted 4th in class via university entrance exam at age 16. Later transferred to ISAE-ENSMA",
       "certificate": "/documents/UFU(en).pdf"
     }
   ],
+  "bio": "4+ years applying stochastic methods and machine learning models to computational fluid dynamics. From adaptive mesh refinement to chemical kinetics optimization, I build ML solutions for high-stakes engineering problems. Published in Physics of Fluids, with international experience spanning Airbus, Safran, IIT, and Petrobras.",
   "experience": [
     {
       "company": "Airbus",
-      "role": "Research Engineer - PhD CIFRE",
+      "role": "Research Engineer • Full-time",
       "period": "Jan 2024 - Jul 2025",
       "location": "Toulouse, France",
-      "description": "Conducted research in unsteady thermo-fluid dynamics, utilizing advanced fluid simulation tools and high-performance computing systems. Developed expertise in numerical simulation and software optimization, with responsibilities including solver maintenance and debugging. The PhD was interrupted to pursue interests in machine learning, computer vision, creative AI, and software security.",
+      "description": "Contributed to the codebase AVBP by developing and maintaining the methods in the solver, using Fortran, Python, and C. Researched machine learning for optimizing the chemical kinetics and for multiphysics coupling between combustion, thermal, and pyrolysis solvers, each evolving at vastly different timescales. Work targeted the development of computational models for FAA fire safety certification of aircraft components.",
       "certificate": "/documents/airbus_recommendation.pdf"
     },
     {
       "company": "Safran Helicopter Engines",
-      "role": "Combustion Graduate Research Intern",
+      "role": "Research Engineer • Internship",
       "period": "Apr 2023 - Sep 2023",
       "location": "Bordes, France",
-      "description": "Performed combustion analysis by applying the LES AVBP calculation code to experimental databases. Compared experimental results with three-dimensional simulations to improve tool accuracy and identified design strategies to reduce emissions while maintaining performance. Gained practical experience in combustion engineering at Safran, a leading aerospace propulsion company.",
+      "description": "Conducted a large set of combustion simulations, analyzing and comparing different models to predict flame extinguishment in critical flight situations. Also developed a set of tools, using Python, for the engineering team and other interns.",
       "certificate": "/documents/safran_recommendation.pdf"
     },
     {
       "company": "Illinois Institute of Technology",
-      "role": "Visiting Graduate Research Intern",
+      "role": "Visiting Researcher • Internship",
       "period": "Jul 2022 - Sep 2022",
       "location": "Chicago, USA",
-      "description": "Developed Python tools and GT Suite workflows to automate data pipelines for simulation analysis. Created scripts for data extraction, processing, and visualization, enhancing workflow efficiency. Integrated automation into GT Suite environments, significantly reducing manual post-processing time.",
+      "description": "Participated in a research project from the Department of Energy, in which I developed tools using both Python and Excel to automate the data pipeline. Also generated a large dataset for pollution prediction based on diesel engines, and quantified the impact of using a propane mix.",
       "certificate": "/documents/iit_recommendation.pdf"
     },
     {
       "company": "Petrobras",
-      "role": "Undergraduate Research Intern",
+      "role": "Undergraduate Researcher • Internship",
       "period": "Jun 2019 - May 2021",
       "location": "Uberlândia, Brazil",
-      "description": "Conducted research on combustion modeling and uncertainty quantification in multiphase flow systems, applying Monte Carlo stochastic methods to study combustion and quantify uncertainties. Developed and optimized in-house Fortran and C solver components to improve numerical robustness, and automated data pipelines and simulation control using Python and Bash scripts in Linux environments.",
+      "description": "Developed and maintained features for MFSim, the lab's in-house CFD solver, using Fortran, Python, and C. Contributed to a machine learning method for adaptive mesh refinement using stochastic methods, namely Monte-Carlo simulations, reducing computational costs of large-scale combustion simulations. Resulted in a publication in Physics of Fluids (April 2021).",
       "certificate": "/documents/petrobras_recommendation.pdf"
-    },
+    }
+  ],
+  "volunteering": [
     {
-      "company": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)",
-      "role": "Uni Rocketry Team Aerodynamics Manager",
+      "company": "Equipe de Propulsão e Tecnologia Aeroespacial - EPTA",
+      "role": "Aerodynamics Lead & Fundraising Manager",
       "period": "Nov 2018 - Oct 2020",
       "location": "Uberlândia, Brazil",
-      "description": "Developed a neural network algorithm using Tensorflow and Pytorch to predict aerodynamic coefficients for a reduced-scale rocket prototype. Managed fundraising initiatives, including visual identity design, game development, and Python education. Integrated predictive models into the team's flight simulator to improve trajectory control and supervised the aerodynamics sub-team, overseeing testing, modeling, and validation activities.",
+      "description": "Managed the aerodynamics department of the newly founded rocketry team. Led fundraising from zero budget to full operation, partnered with corporate sponsors and the army for launch airspace. Organized STEM tutoring in local public schools and taught on-campus courses in Python. Also developed a neural network using TensorFlow and PyTorch to predict aerodynamic coefficients necessary for the team's flight simulator. Results published at ENCIT 2020.",
       "certificate": "/documents/EPTA_recommendation.pdf"
     }
   ],

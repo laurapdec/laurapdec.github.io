@@ -29,6 +29,7 @@ const getIconForTech = (tech) => {
   const icons = {
     'Python': FaPython,
     'React': FaReact,
+    'React.js': FaReact,
     'JavaScript': SiJavascript,
     'TypeScript': SiTypescript,
     'Fortran': SiFortran,
@@ -38,7 +39,8 @@ const getIconForTech = (tech) => {
     'PyTorch': SiPytorch,
     'Next.js': SiNextdotjs,
     'Node.js': FaNodeJs,
-    'Tensorflow': SiTensorflow
+    'Tensorflow': SiTensorflow,
+    'TensorFlow': SiTensorflow
   }
   
   const Icon = icons[tech]
@@ -91,16 +93,8 @@ export default function Navbar() {
     }
   }, [scrolled])
 
-  const nav = [
-    { label: 'CV', to: '/#/cv' },
-    { label: 'Creative Services', to: '/' },
-  ]
-
   const pathname = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '/'
-  const showCvHeader = pathname === '/cv' || pathname.startsWith('/cv')
-  console.log('Current pathname:', pathname)
-  console.log('Is CV header?', showCvHeader)
-
+  const showCvHeader = !pathname.startsWith('/cs')
   return (
     <>
       {scrolled && <div style={{ height: headerHeight, width: '100%', margin: 0, padding: 0 }} aria-hidden="true" />}
@@ -119,8 +113,7 @@ export default function Navbar() {
               <h1 className="text-xl md:text-2xl font-semibold truncate">Laura Pereira de Castro</h1>
               {showCvHeader ? (
                 <>
-                  <div className="text-muted mt-1 truncate">Machine Learning Engineer • Data Engineer</div>
-                  <p className="text-xs md:text-sm text-muted mt-1 truncate">HPC Computing • Software Engineer • Data Analyst</p>
+                  <div className="text-muted mt-1 truncate">Research Engineer</div>
                 </>
               ) : (
                 <>
@@ -128,19 +121,14 @@ export default function Navbar() {
                   <p className="text-xs md:text-sm text-muted mt-1 truncate">Copywriting • Motion and VFX Design • 3D Modeling</p>
                 </>
               )}
-              <nav className="mt-3 hidden md:flex items-center gap-4">
-                {nav.map(n => (
-                  <a key={n.label} href={n.to} className="text-sm text-gray-700 hover:text-gray-900 transition py-1 px-2">{n.label}</a>
-                ))}
-              </nav>
             </div>              {/* Right-aligned controls inside the expanded CV header (desktop): socials + language select */}
             <div className="flex items-center flex-shrink-0 gap-2">
               <SocialIcon url="mailto:laurapdec@gmail.com" style={{ height: 36, width: 36 }} className="social-icon" />
               <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
-              {pathname === '/cv' ? (
-                <SocialIcon url="https://github.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
-              ) : (
+              {pathname.startsWith('/cs') ? (
                 <SocialIcon url="https://www.instagram.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
+              ) : (
+                <SocialIcon url="https://github.com/laurapdec" style={{ height: 36, width: 36 }} className="social-icon" />
               )}
               <select
                 aria-label="Change language"
@@ -158,8 +146,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Tech Stack Marquee - Only shown on CV page */}
-      {(pathname === '/cv' || pathname.startsWith('/cv')) && (
+      {/* Tech Stack Marquee - Shown on CV page and home */}
+      {!pathname.startsWith('/cs') && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">
             <div className="marquee flex items-center gap-8 py-2">
@@ -191,7 +179,7 @@ export default function Navbar() {
       )}
 
       {/* Creative Skills Marquee - Only shown on CreativeServices */}
-      {(pathname === '/' || pathname === '' || pathname === '/cv/creative') && (
+      {pathname.startsWith('/cs') && (
         <div className="max-w-6xl mx-auto px-6 overflow-hidden">
           <div className="marquee-wrapper relative border-b border-gray-100">
             <div className="marquee flex items-center gap-8 py-2">

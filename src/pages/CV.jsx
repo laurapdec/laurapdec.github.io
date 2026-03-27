@@ -9,6 +9,8 @@ export default function CV() {
   const { t } = useTranslation()
   const publications = t('publications', { returnObjects: true })
   const experience = t('experience', { returnObjects: true })
+  const volunteering = t('volunteering', { returnObjects: true })
+  const bio = t('bio')
   const personal_projects = t('personal_projects', { returnObjects: true })
   const projects = t('projects', { returnObjects: true }) || []
   const [artOpen, setArtOpen] = useState(false)
@@ -77,6 +79,13 @@ export default function CV() {
       <Navbar /> {/* Add Navbar here */}
       <section id="work" className="section">
         <div className="max-w-4xl mx-auto w-full px-6 lg:px-8 space-y-16">
+          {/* Bio/Summary */}
+          {bio && (
+            <div>
+              <p className="text-gray-700 leading-relaxed text-base">{bio}</p>
+            </div>
+          )}
+
           {/* Education Section */}
           <div>
             <h2 className="text-3xl font-bold mb-8">Education</h2>
@@ -173,6 +182,43 @@ export default function CV() {
               ))}
             </div>
           </div>
+
+          {/* Volunteering & Leadership Section */}
+          {Array.isArray(volunteering) && volunteering.length > 0 && (
+            <div>
+              <h2 className="text-3xl font-bold mb-8">Volunteering & Leadership</h2>
+              <div className="grid gap-6">
+                {volunteering.map((vol, idx) => (
+                  <div key={idx} className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <div className="space-y-1">
+                          <p className="text-lg text-gray-600 font-medium">{vol.role} @ <span className="text-gray-900 font-bold">{vol.company}</span></p>
+                          <p className="text-accent/80 font-medium">
+                            {vol.location} · {vol.period}
+                          </p>
+                        </div>
+                        <p className="text-gray-600 mt-2 leading-relaxed">{vol.description}</p>
+                      </div>
+                      {vol.certificate && (
+                        <a
+                          href={vol.certificate}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                          title="View Recommendation Letter"
+                        >
+                          <svg className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Publications Section */}
           <div>
