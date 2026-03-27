@@ -27,20 +27,6 @@
   "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
   "tech_stack": ["Python", "Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "Physics-Informed Neural Networks", "MATLAB", "Linux", "Fortran", "Git", "Bash", "MPI", "OpenMP", "Docker", "GCP", "C", "TypeScript", "Next.js", "React.js", "PostgreSQL", "SQL"],
   "machine_learning": [],
-  "personal_projects": [
-    {
-      "title": "CodingElf",
-      "description": "Blog de programação em português com o objetivo de tornar a educação em programação mais acessível. Construído com React, Next.js, Sanity.io e Tailwind CSS. Procuro voluntários interessados em produzir conteúdo educativo em português — entre em contato pelo laurapdec@gmail.com.",
-      "tags": ["Next.js", "JavaScript", "Sanity.io", "React", "Tailwind CSS", "Vercel"],
-      "link": "https://github.com/laurapdec/CodingElf"
-    },
-    {
-      "title": "Portfolio Pessoal",
-      "description": "Este site de portfólio interativo construído com Next.js, React e Tailwind CSS. Inclui design responsivo, suporte i18n e elementos interativos.",
-      "tags": ["Next.js", "TypeScript", "React", "Tailwind CSS", "i18n"],
-      "link": "https://github.com/laurapdec/laurapdec.github.io"
-    }
-  ],
   "projects": [
     { "title": "Coding Elf", "description": "Desenvolvimento de um site dedicado a fornecer conteúdo de programação em português, visando apoiar estudantes e profissionais da área.", "link": "portfolio/codingelf.html", "tags": [] },
     { "title": "Web Development Freelance", "description": "Entrega de diversos projetos de desenvolvimento web, incluindo um blog de programação e este currículo interativo, além de outras soluções focadas no cliente.", "link": "portfolio/website.html", "tags": [] },
@@ -106,6 +92,14 @@
     }
   ],
   "volunteering": [
+    {
+      "company": "CodingElf",
+      "role": "Fundadora",
+      "period": "2023 – presente",
+      "location": "Remoto",
+      "description": "Blog de programação em português com o objetivo de tornar a educação em programação mais acessível. Construído com React, Next.js, Sanity.io e Tailwind CSS. Procuro voluntários interessados em produzir conteúdo educativo em português. Entre em contato se estiver interessado.",
+      "link": "https://github.com/laurapdec/CodingElf"
+    },
     {
       "company": "Equipe de Propulsão e Tecnologia Aeroespacial - EPTA",
       "role": "Líder de Aerodinâmica & Captação de Recursos",

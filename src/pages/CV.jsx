@@ -9,7 +9,6 @@ export default function CV() {
   const experience = t('experience', { returnObjects: true })
   const volunteering = t('volunteering', { returnObjects: true })
   const bio = t('bio')
-  const personal_projects = t('personal_projects', { returnObjects: true })
   const projects = t('projects', { returnObjects: true }) || []
   const [artOpen, setArtOpen] = useState(false)
 
@@ -186,19 +185,22 @@ export default function CV() {
                         </div>
                         <p className="text-gray-600 mt-2 leading-relaxed">{vol.description}</p>
                       </div>
-                      {vol.certificate && (
-                        <a
-                          href={vol.certificate}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                          title="View Recommendation Letter"
-                        >
-                          <svg className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                          </svg>
-                        </a>
-                      )}
+                      <div className="flex gap-2">
+                        {vol.link && (
+                          <a href={vol.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group" title="View Project">
+                            <svg className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        )}
+                        {vol.certificate && (
+                          <a href={vol.certificate} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group" title="View Recommendation Letter">
+                            <svg className="w-5 h-5 text-accent group-hover:text-accent-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -262,59 +264,6 @@ export default function CV() {
               </div>
           </div>
 
-          {/* Personal Projects Section */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8">Personal Projects</h2>
-            <div className="grid gap-6">
-              {Array.isArray(personal_projects) && personal_projects.map((project, idx) => (
-                <div key={idx} className="relative bg-white bg-opacity-20 backdrop-blur-sm p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="flex flex-col">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-accent-dark transition-colors"
-                        >
-                          <svg
-                            className="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                            />
-                          </svg>
-                        </a>
-                      )}
-                    </div>
-                    <p className="text-gray-600 mb-3">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {project.tags.map((tag, tagIdx) => (
-                        <span
-                          key={tagIdx}
-                          className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    {project.status && (
-                      <p className="text-gray-500 text-sm mt-3 italic">
-                        Status: {project.status}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
     </div>

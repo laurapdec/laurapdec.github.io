@@ -27,21 +27,6 @@
   "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
   "tech_stack": ["Python", "Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "Physics-Informed Neural Networks", "MATLAB", "Linux", "Fortran", "Git", "Bash", "MPI", "OpenMP", "Docker", "GCP", "C", "TypeScript", "Next.js", "React.js", "PostgreSQL", "SQL"],
   "machine_learning": [],
-  "personal_projects": [
-    {
-      "title": "CodingElf",
-      "description": "Programming blog in Portuguese aimed at making coding education more accessible. Built with React and styled-components.",
-      "tags": ["Next.js", "JavaScript", "Sanity.io","React", "Tailwind CSS", "Vercel"],
-      "status": "Platform ready, dummy content and production deployment pending. If you speak Portuguese and are interested in educational content production contact me!",
-      "link": "https://github.com/laurapdec/CodingElf"
-    },
-    {
-      "title": "Personal Portfolio",
-      "description": "This interactive portfolio website built with Next.js, React, and Tailwind CSS. Features responsive design, i18n support, and interactive elements.",
-      "tags": ["Next.js", "TypeScript", "React", "Tailwind CSS", "i18n"],
-      "link": "https://github.com/laurapdec/laurapdec.github.io"
-    }
-  ],
   "projects": [ 
     { "title": "Coding Elf", "description": "Developed a website dedicated to providing programming content in Portuguese, aimed at supporting learners and professionals in the field.", "link": "portfolio/codingelf.html", "tags": ["Next.js", "React", "JavaScript"] },
     { "title": "Web Development Freelance", "description": "Delivered a variety of web development projects, including a programming blog and this interactive resume, as well as other client-focused solutions.", "link": "portfolio/website.html", "tags": ["Next.js", "TypeScript", "React"] },
@@ -107,6 +92,14 @@
     }
   ],
   "volunteering": [
+    {
+      "company": "CodingElf",
+      "role": "Founder",
+      "period": "2023 – present",
+      "location": "Remote",
+      "description": "Programming blog in Portuguese aimed at making coding education more accessible. Built with React, Next.js, Sanity.io and Tailwind CSS. Looking for volunteers interested in producing educational content in Portuguese. Reach out if interested.",
+      "link": "https://github.com/laurapdec/CodingElf"
+    },
     {
       "company": "Equipe de Propulsão e Tecnologia Aeroespacial - EPTA",
       "role": "Aerodynamics Lead & Fundraising Manager",
