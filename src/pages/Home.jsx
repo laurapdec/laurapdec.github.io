@@ -12,7 +12,7 @@ export default function Home() {
     <div className="site-scroll">
       <Navbar />
 
-      <section className="relative w-full h-[calc(100vh-312px)] md:h-[calc(100vh-208px)] min-h-[420px] overflow-hidden">
+      <section className="relative w-full h-[calc(100vh-184px)] md:h-[calc(100vh-208px)] min-h-[420px] overflow-hidden">
         <img
           src={HERO_IMAGE}
           alt="Illuminated London street"

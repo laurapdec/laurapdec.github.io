@@ -182,7 +182,7 @@ select[aria-label="Change language"] option {
 @media (max-width: 768px){
 	.hero-inner{ grid-template-columns: 1fr; text-align:center }
 	.site-scroll{
-		height: calc(100vh - 128px - 56px);
+		height: calc(100vh - 56px); /* Only subtract footer; padding-top eats into this budget */
 		padding-top: 128px; /* Keep consistent with desktop */
 	}
 }
