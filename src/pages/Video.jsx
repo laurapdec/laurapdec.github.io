@@ -25,7 +25,7 @@ export default function Video() {
   return (
     <div className="site-scroll">
       <Navbar />
-      <section className="max-w-6xl mx-auto px-6 pt-32 pb-8">
+      <section className="max-w-6xl mx-auto px-6 pt-16 pb-8">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('nav.video')}</h1>
         <div className="flex flex-wrap gap-2" role="group" aria-label="Filter videos by tag">
           <button

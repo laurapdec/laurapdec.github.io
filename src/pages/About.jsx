@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div className="site-scroll">
       <Navbar />
-      <section className="max-w-3xl mx-auto px-6 pt-32 pb-16">
+      <section className="max-w-3xl mx-auto px-6 pt-16 pb-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-8">{t('nav.about')}</h1>
 
         <div className="space-y-6 mb-16">
