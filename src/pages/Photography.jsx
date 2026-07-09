@@ -7,7 +7,7 @@ import photos from '../data/photography.json'
 export default function Photography() {
   const { t } = useTranslation()
   const [selected, setSelected] = useState(null)
-  const [activeTags, setActiveTags] = useState([])
+  const [activeTag, setActiveTag] = useState(null)
 
   const allTags = useMemo(() => {
     const set = new Set()
@@ -16,12 +16,12 @@ export default function Photography() {
   }, [])
 
   const toggleTag = (tag) => {
-    setActiveTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
+    setActiveTag(prev => prev === tag ? null : tag)
   }
 
-  const filtered = activeTags.length === 0
+  const filtered = activeTag === null
     ? photos
-    : photos.filter(p => activeTags.some(tag => p.tags.includes(tag)))
+    : photos.filter(p => p.tags.includes(activeTag))
 
   return (
     <div className="site-scroll">
@@ -30,9 +30,9 @@ export default function Photography() {
         <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('nav.photography')}</h1>
         <div className="flex flex-wrap gap-2" role="group" aria-label="Filter photos by tag">
           <button
-            onClick={() => setActiveTags([])}
+            onClick={() => setActiveTag(null)}
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-              activeTags.length === 0 ? 'bg-cream text-ink' : 'bg-ink-light text-cream/70 hover:bg-ink-light/70'
+              activeTag === null ? 'bg-cream text-ink' : 'bg-ink-light text-cream/70 hover:bg-ink-light/70'
             }`}
           >
             {t('filters.all')}
@@ -42,7 +42,7 @@ export default function Photography() {
               key={tag}
               onClick={() => toggleTag(tag)}
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                activeTags.includes(tag) ? 'bg-cream text-ink' : 'bg-ink-light text-cream/70 hover:bg-ink-light/70'
+                activeTag === tag ? 'bg-cream text-ink' : 'bg-ink-light text-cream/70 hover:bg-ink-light/70'
               }`}
             >
               {t(`filters.tag_${tag.replace(/\s+/g, '')}`, { defaultValue: tag })}
