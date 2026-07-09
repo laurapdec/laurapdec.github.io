@@ -134,12 +134,7 @@ header {
 
 /* Social icons and language selector spacing */
 .social-icon {
-    margin-right: 1rem !important;
     display: inline-block !important;
-}
-
-.social-icon:last-child {
-    margin-right: 1rem !important;
 }
 
 select[aria-label="Change language"] {

@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div className="site-scroll">
       <Navbar />
-      <section className="max-w-3xl mx-auto px-6 pt-16 pb-16">
+      <section className="max-w-3xl mx-auto px-6 pt-6 md:pt-12 pb-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-8">{t('nav.about')}</h1>
 
         <div className="space-y-6 mb-16">
@@ -47,13 +47,12 @@ export default function About() {
 
         <div>
           <h2 className="text-2xl font-bold mb-6">{t('about.contactHeading')}</h2>
-          <div className="flex items-center gap-4">
-            <SocialIcon url={`mailto:${contact.email}`} style={{ height: 40, width: 40 }} className="social-icon" />
-            <SocialIcon url={contact.linkedin} style={{ height: 40, width: 40 }} className="social-icon" />
-            <SocialIcon url={contact.instagram} style={{ height: 40, width: 40 }} className="social-icon" />
-            <SocialIcon url={contact.tiktok} style={{ height: 40, width: 40 }} className="social-icon" />
-            <SocialIcon url={contact.substack} style={{ height: 40, width: 40 }} className="social-icon" />
-            <a href={`mailto:${contact.email}`} className="text-cream underline text-sm">{contact.email}</a>
+          <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+            <SocialIcon url={`mailto:${contact.email}`} style={{ height: 52, width: 52 }} className="social-icon flex-shrink-0" />
+            <SocialIcon url={contact.linkedin} style={{ height: 52, width: 52 }} className="social-icon flex-shrink-0" />
+            <SocialIcon url={contact.instagram} style={{ height: 52, width: 52 }} className="social-icon flex-shrink-0" />
+            <SocialIcon url={contact.tiktok} style={{ height: 52, width: 52 }} className="social-icon flex-shrink-0" />
+            <SocialIcon url={contact.substack} style={{ height: 52, width: 52 }} className="social-icon flex-shrink-0" />
           </div>
         </div>
       </section>

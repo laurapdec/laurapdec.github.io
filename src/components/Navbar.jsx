@@ -69,7 +69,7 @@ export default function Navbar() {
                   <div className="text-cream/60 mt-1 truncate">{t('headline')}</div>
                 </Link>
               </div>
-              <div className="hidden md:flex items-center gap-2 flex-shrink-0">
+              <div className="hidden md:flex items-center gap-3 flex-shrink-0">
                 <SocialIcon url="mailto:laurapdec@hotmail.com" style={{ height: 32, width: 32 }} className="social-icon" />
                 <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 32, width: 32 }} className="social-icon" />
                 <SocialIcon url="https://instagram.com/laurapdec" style={{ height: 32, width: 32 }} className="social-icon" />
@@ -81,7 +81,7 @@ export default function Navbar() {
                   value={lang}
                   onChange={e => changeLang(e.target.value)}
                 >
-                  <option value="en">🇬🇧</option>
+                  <option value="en">🇺🇸</option>
                   <option value="fr">🇫🇷</option>
                   <option value="pt">🇧🇷</option>
                 </select>
@@ -116,19 +116,20 @@ export default function Navbar() {
                 {t(`nav.${link.key}`)}
               </Link>
             ))}
-            <div className="md:hidden flex items-center gap-3 pt-2 mt-1 border-t border-cream/10">
-              <SocialIcon url="mailto:laurapdec@hotmail.com" style={{ height: 28, width: 28 }} className="social-icon" />
-              <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 28, width: 28 }} className="social-icon" />
-              <SocialIcon url="https://instagram.com/laurapdec" style={{ height: 28, width: 28 }} className="social-icon" />
-              <SocialIcon url="https://tiktok.com/@laura.pc" style={{ height: 28, width: 28 }} className="social-icon" />
-              <SocialIcon url="https://substack.com/@laurapdec" style={{ height: 28, width: 28 }} className="social-icon" />
+            <div className="md:hidden flex items-center gap-4 w-full pt-3 mt-1 border-t border-cream/10">
+              <SocialIcon url="mailto:laurapdec@hotmail.com" style={{ height: 42, width: 42 }} className="social-icon !mx-0 flex-shrink-0" />
+              <SocialIcon url="https://linkedin.com/in/laurapdec" style={{ height: 42, width: 42 }} className="social-icon !mx-0 flex-shrink-0" />
+              <SocialIcon url="https://instagram.com/laurapdec" style={{ height: 42, width: 42 }} className="social-icon !mx-0 flex-shrink-0" />
+              <SocialIcon url="https://tiktok.com/@laura.pc" style={{ height: 42, width: 42 }} className="social-icon !mx-0 flex-shrink-0" />
+              <SocialIcon url="https://substack.com/@laurapdec" style={{ height: 42, width: 42 }} className="social-icon !mx-0 flex-shrink-0" />
               <select
                 aria-label="Change language"
-                className="bg-white/5 backdrop-blur-sm rounded-lg px-3 py-1.5 text-sm appearance-none hover:bg-white/10 transition-colors cursor-pointer"
+                className="bg-white/5 backdrop-blur-sm rounded-lg px-2 py-1.5 text-sm appearance-none hover:bg-white/10 transition-colors cursor-pointer flex-shrink-0"
+                style={{ width: 42 }}
                 value={lang}
                 onChange={e => changeLang(e.target.value)}
               >
-                <option value="en">🇬🇧</option>
+                <option value="en">🇺🇸</option>
                 <option value="fr">🇫🇷</option>
                 <option value="pt">🇧🇷</option>
               </select>

@@ -25,7 +25,7 @@ export default function Video() {
   return (
     <div className="site-scroll">
       <Navbar />
-      <section className="max-w-6xl mx-auto px-6 pt-16 pb-8">
+      <section className="max-w-6xl mx-auto px-6 pt-6 md:pt-12 pb-8">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('nav.video')}</h1>
         <div className="flex flex-wrap gap-2" role="group" aria-label="Filter videos by tag">
           <button
@@ -65,6 +65,7 @@ export default function Video() {
                 controls
                 playsInline
                 preload="metadata"
+                poster={`/media/videos/posters/${video.file.replace('.mp4', '.jpg')}`}
                 className={`w-full object-cover ${video.vertical ? 'aspect-[9/16]' : 'aspect-video'}`}
               >
                 <source src={`/media/videos/${video.file}`} type="video/mp4" />

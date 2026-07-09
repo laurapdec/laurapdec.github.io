@@ -19,7 +19,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
-        <div className="relative h-full flex flex-col justify-end max-w-6xl mx-auto px-6 pb-16">
+        <div className="relative h-full flex flex-col justify-center max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
