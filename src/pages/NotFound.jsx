@@ -7,7 +7,7 @@ export default function NotFound() {
         {/* Cute Robot Icon */}
         <div className="mb-8 flex justify-center">
           <svg
-            className="w-32 h-32 text-accent animate-float"
+            className="w-32 h-32 text-cream animate-float"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -41,16 +41,16 @@ export default function NotFound() {
           </svg>
         </div>
 
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-        <h2 className="text-2xl font-medium text-gray-600 mb-6">
+        <h1 className="text-6xl font-bold text-cream mb-4">404</h1>
+        <h2 className="text-2xl font-medium text-cream/70 mb-6">
           Oops! Page not found
         </h2>
-        <p className="text-gray-500 mb-8 max-w-md mx-auto">
+        <p className="text-cream/50 mb-8 max-w-md mx-auto">
           The page you're looking for seems to have wandered off. Let's get you back on track!
         </p>
         <Link
-          to="/#/cv"
-          className="inline-flex items-center px-6 py-3 bg-accent text-black font-medium rounded-lg hover:bg-accent/90 transition-colors duration-200"
+          to="/"
+          className="inline-flex items-center px-6 py-3 bg-cream text-ink font-medium rounded-lg hover:bg-white transition-colors duration-200"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -65,7 +65,7 @@ export default function NotFound() {
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             />
           </svg>
-          Back to CV
+          Back home
         </Link>
       </div>
     </div>

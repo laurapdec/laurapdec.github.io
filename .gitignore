@@ -24,3 +24,7 @@ node_modules
 *.sln
 *.sw?
 dist/index.html
+
+# Raw source media (unprocessed originals) — not for web, too large to commit
+images/photography
+videos-raw

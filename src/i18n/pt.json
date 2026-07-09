@@ -1,199 +1,87 @@
 {
   "nav": {
-    "CV": "Início",
-    "work": "Trabalho",
-    "education": "Formação",
-    "portfolio": "Portfólio",
-    "about": "Sobre",
-    "achievements": "Conquistas",
-    "publications": "Publicações"
+    "home": "Início",
+    "photography": "Fotografia",
+    "video": "Vídeo",
+    "writing": "Escrita",
+    "about": "Sobre"
   },
+  "headline": "Fotógrafa & Cineasta",
   "hero": {
     "title": "Laura Pereira de Castro",
-    "subtitle": "Engenheira formada • Desenvolvedora • Designer",
-    "description": "Currículo interativo e portfólio — projetos, publicações e documentos verificados disponíveis para download.",
-    "ctaPrimary": "Portfólio",
-    "ctaSecondary": "Sobre"
+    "subtitle": "Fotógrafa & Cineasta",
+    "description": "Fotógrafa e cineasta baseada em Nova York, prestes a iniciar um MFA em Roteiro de TV na Stony Brook University.",
+    "ctaPrimary": "Ver Fotografia",
+    "ctaSecondary": "Assistir Vídeo",
+    "ctaTertiary": "Ler Meus Textos"
   },
-  "stats": {
-    "gpa": "84.227/100",
-    "gpa_label": "Média acumulada"
+  "filters": {
+    "all": "Todos",
+    "empty": "Nada por aqui para esse filtro.",
+    "tag_NewYork": "Nova York",
+    "tag_London": "Londres",
+    "tag_France": "França",
+    "tag_People": "Pessoas",
+    "tag_Animals": "Animais",
+    "tag_Nature": "Natureza",
+    "tag_Food": "Comida"
+  },
+  "video": {
+    "moreSoon": "Mais trabalhos em vídeo em breve."
+  },
+  "writing": {
+    "mfaHeading": "Atualmente: MFA em Roteiro de TV, Stony Brook University",
+    "mfaNote": "Estou começando meu MFA em Roteiro de TV no campus de Manhattan da Stony Brook University, desenvolvendo pilotos originais enquanto continuo meu trabalho de fotografia e vídeo.",
+    "substackLink": "Leia mais dos meus textos no Substack",
+    "draftNote": "Primeiros rascunhos escritos para minha candidatura ao MFA de Stony Brook — nenhum destes é um texto finalizado.",
+    "readScript": "Ler o roteiro",
+    "script_witchcraft": {
+      "title": "Witchcraft Academy",
+      "meta": "Piloto original · 12 páginas",
+      "description": "Um piloto de drama sobrenatural que se abre com o despertar inquietante de uma jovem, escrito como spec pilot para o portfólio de candidatura ao MFA."
+    },
+    "script_pretty": {
+      "title": "It Hurts to Be Pretty",
+      "meta": "Amostra de cena · 5 páginas",
+      "description": "Uma pequena cena que acompanha uma menina experimentando roupas novas para a mãe, em que o desconforto de performar a feminilidade se torna literal."
+    }
+  },
+  "about": {
+    "bio": "Sou fotógrafa e cineasta, baseada em Nova York. Neste outono, começo um MFA em Roteiro de TV na Stony Brook University, passando da imagem para a escrita roteirizada. Tenho maior interesse em desenvolver pilotos, spec scripts e curtas-metragens.",
+    "pastLife": "Antes de me dedicar integralmente à narrativa visual, passei vários anos estudando e trabalhando como engenheira de pesquisa em aeronáutica e mecânica dos fluidos, na Airbus, Safran, e em laboratórios de pesquisa na França, Brasil e Estados Unidos.",
+    "equipment": "Filmo com uma Sony A7III e lente Sony E PZ 18-105mm f/4 G OSS, estabilizada com um DJI RS4 Mini.",
+    "educationHeading": "Formação",
+    "education": [
+      {
+        "institution": "Stony Brook University",
+        "location": "Nova York, EUA",
+        "period": "A partir do outono de 2026",
+        "degree": "MFA em Roteiro de TV"
+      },
+      {
+        "institution": "ISAE-ENSMA & UFU",
+        "location": "França & Brasil",
+        "period": "2017 - 2024",
+        "degree": "Mestrado e Graduação em Engenharia Aeronáutica"
+      }
+    ],
+    "languagesHeading": "Idiomas",
+    "contactHeading": "Contato"
   },
   "languages": [
     { "name": "Português", "level": "Nativo" },
-    { "name": "Inglês", "level": "Avançado · TOEFL iBT: 104/120" },
-    { "name": "Francês", "level": "Avançado · DELF B1" }
-  ],
-  "skills": ["Python", "LaTeX", "MATLAB", "Catia", "Fortran", "SolidWorks", "C"],
-  "tech_stack": ["Python", "Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "Physics-Informed Neural Networks", "MATLAB", "Linux", "Fortran", "Git", "Bash", "MPI", "OpenMP", "Docker", "GCP", "C", "TypeScript", "Next.js", "React.js", "PostgreSQL", "SQL"],
-  "machine_learning": [],
-  "projects": [
-    { "title": "Coding Elf", "description": "Desenvolvimento de um site dedicado a fornecer conteúdo de programação em português, visando apoiar estudantes e profissionais da área.", "link": "portfolio/codingelf.html", "tags": [] },
-    { "title": "Web Development Freelance", "description": "Entrega de diversos projetos de desenvolvimento web, incluindo um blog de programação e este currículo interativo, além de outras soluções focadas no cliente.", "link": "portfolio/website.html", "tags": [] },
-    { "title": "Safran Internship", "description": "Estágio de pesquisa industrial focado em análise e simulação de combustão na Safran Helicopter Engines.", "link": "portfolio/safran.html", "tags": ["ensma"] },
-    { "title": "IIT Internship", "description": "Estágio de pesquisa acadêmica no Illinois Institute of Technology, desenvolvimento de ferramentas de automação para análise de dados de simulação.", "link": "portfolio/iit.html", "tags": ["ensma"] },
-    { "title": "Drone design", "description": "Projeto e desenvolvimento de um veículo aéreo não tripulado (UAV) autônomo como parte de um projeto de engenharia multidisciplinar.", "link": "portfolio/droney.html", "tags": ["ensma"] },
-    { "title": "ATREX", "description": "Contribuição para o desenvolvimento e simulação de um motor de foguete como parte de uma iniciativa de engenharia colaborativa.", "link": "portfolio/atrex.html", "tags": ["ensma"] },
-    { "title": "Petrobras Internship", "description": "Pesquisa em dinâmica dos fluidos computacional (CFD) usando métodos Monte Carlo para estudar processos de combustão durante estágio na Petrobras.", "link": "portfolio/mflab.html", "tags": ["ufu"] },
-    { "title": "EPTA (Equipe de Propulsão e Tecnologia Aeroespacial)", "description": "Colaboração com a equipe universitária de foguetes em pesquisa, desenvolvimento e publicação de projetos de engenharia aeroespacial.", "link": "portfolio/EPTA (Equipe de Propulsão e Tecnologia Aeroespacial).html", "tags": ["ufu"] },
-    { "title": "CHARMANDER", "description": "Desenvolvimento de interface gráfica para suporte à análise de testes de combustão e visualização de dados para pesquisa em engenharia.", "link": "portfolio/charmander.html", "tags": ["ufu"] },
-    { "title": "Saturn V", "description": "Criação de modelos CAD detalhados do foguete Saturn V usando software CATIA para fins educacionais e de pesquisa.", "link": "portfolio/saturnV.html", "tags": ["ufu"] }
-  ],
-  "education": [
-    {
-      "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique)",
-      "location": "Chasseneuil-du-Poitou, França",
-      "period": "Ago 2021 - Fev 2024",
-      "degree": "Mestrado em Aeronáutica & Espaço (trilha Energética) — Duplo diploma: Mestrado de Pesquisa e Diploma de Engenharia",
-      "certificate": "/documents/ENSMA(en).pdf"
-    },
-    {
-      "institution": "UFU (Universidade Federal de Uberlândia)",
-      "location": "Uberlândia, Brasil",
-      "period": "Ago 2017 - Jul 2021",
-      "degree": "Bacharelado em Engenharia Aeronáutica — Admitida em 4º lugar no vestibular aos 16 anos. Posteriormente transferida para o ISAE-ENSMA",
-      "certificate": "/documents/UFU(en).pdf"
-    }
-  ],
-  "headline": "Engenheira de Pesquisa",
-  "bio": "Mais de 4 anos aplicando métodos estocásticos e modelos de aprendizado de máquina à dinâmica dos fluidos computacional. De refinamento adaptativo de malha à otimização de cinética química, desenvolvo soluções de ML para problemas de engenharia de alta criticidade. Publicada na Physics of Fluids, com experiência internacional na Airbus, Safran, IIT e Petrobras.",
-  "experience": [
-    {
-      "company": "Airbus",
-      "role": "Engenheira de Pesquisa • Tempo integral",
-      "period": "Jan 2024 - Jul 2025",
-      "location": "Toulouse, França",
-      "description": "Contribuição ao código AVBP por meio do desenvolvimento e manutenção dos métodos no solver, usando Fortran, Python e C. Pesquisa em aprendizado de máquina para otimização da cinética química e acoplamento multifísico entre solvers de combustão, térmico e de pirólise, cada um evoluindo em escalas de tempo muito diferentes. Trabalho voltado ao desenvolvimento de modelos computacionais para certificação de segurança contra incêndio da FAA em componentes aeronáuticos.",
-      "certificate": "/documents/airbus_recommendation.pdf"
-    },
-    {
-      "company": "Safran Helicopter Engines",
-      "role": "Engenheira de Pesquisa • Estágio",
-      "period": "Abr 2023 - Set 2023",
-      "location": "Bordes, França",
-      "description": "Realização de um grande conjunto de simulações de combustão, analisando e comparando diferentes modelos para prever a extinção de chama em situações críticas de voo. Desenvolvimento de um conjunto de ferramentas em Python para a equipe de engenharia e outros estagiários.",
-      "certificate": "/documents/safran_recommendation.pdf"
-    },
-    {
-      "company": "Illinois Institute of Technology",
-      "role": "Pesquisadora Visitante • Estágio",
-      "period": "Jul 2022 - Set 2022",
-      "location": "Chicago, EUA",
-      "description": "Participação em um projeto de pesquisa do Department of Energy, no qual desenvolvi ferramentas em Python e Excel para automatizar o pipeline de dados. Geração de um grande conjunto de dados para previsão de poluição de motores diesel, e quantificação do impacto do uso de uma mistura com propano.",
-      "certificate": "/documents/iit_recommendation.pdf"
-    },
-    {
-      "company": "Petrobras",
-      "role": "Pesquisadora de Graduação • Estágio",
-      "period": "Jun 2019 - Mai 2021",
-      "location": "Uberlândia, Brasil",
-      "description": "Desenvolvimento e manutenção de funcionalidades para o MFSim, o solver CFD interno do laboratório, usando Fortran, Python e C. Contribuição para um método de aprendizado de máquina para refinamento adaptativo de malha utilizando métodos estocásticos, nomeadamente simulações de Monte-Carlo, reduzindo custos computacionais de simulações de combustão em larga escala. Resultou em publicação na Physics of Fluids (abril de 2021).",
-      "certificate": "/documents/petrobras_recommendation.pdf"
-    }
-  ],
-  "volunteering": [
-    {
-      "company": "CodingElf",
-      "role": "Fundadora",
-      "period": "2023 – presente",
-      "location": "Remoto",
-      "description": "Blog de programação em português com o objetivo de tornar a educação em programação mais acessível. Construído com React, Next.js, Sanity.io e Tailwind CSS. Procuro voluntários interessados em produzir conteúdo educativo em português. Entre em contato se estiver interessado.",
-      "link": "https://github.com/laurapdec/CodingElf"
-    },
-    {
-      "company": "Equipe de Propulsão e Tecnologia Aeroespacial - EPTA",
-      "role": "Líder de Aerodinâmica & Captação de Recursos",
-      "period": "Nov 2018 - Out 2020",
-      "location": "Uberlândia, Brasil",
-      "description": "Gestão do departamento de aerodinâmica da recém-fundada equipe de foguetes universitária. Liderança da captação de recursos do zero até operação completa, parcerias com patrocinadores corporativos e o exército para o espaço aéreo de lançamento. Organização de tutoria STEM em escolas públicas locais e ensino de cursos de Python no campus. Desenvolvimento de uma rede neural com TensorFlow e PyTorch para prever coeficientes aerodinâmicos necessários para o simulador de voo da equipe. Resultados publicados no ENCIT 2020.",
-      "certificate": "/documents/EPTA_recommendation.pdf"
-    }
-  ],
-  "achievements": [
-    "Menção honrosa - Artigo de pesquisa 'Using the transported pdf method to evaluate mixture between chemical components'",
-    "Certificação - Introdução ao Gerenciamento de Risco de Portfólio em Python",
-    "Certificação - Métodos numéricos para simulação de grandes escalas com AVBP",
-    "Medalha de prata - Olimpíada Brasileira de Astronomia e Astronáutica (OBA)",
-    "Medalha de prata - Canguru de Matemática Brasil (KAN)",
-    "Medalhas de bronze e menções honrosas em olimpíadas nacionais"
-  ],
-  "courses": [
-    "Curso de Inverno - Introdução às Tecnologias Espaciais (INPE)",
-    "COBEM - Congresso Internacional de Engenharia Mecânica",
-    "Escola de Primavera EPTT",
-    "Programa MIT Junior - Science & Technology Explorer",
-    "Curso rápido de MATLAB",
-    "Gestão da Inovação - O Caso Embraer"
-  ],
-  "articles": [
-    { "title": "Neural Network Algorithm for Prediction of Aerodynamic Coefficients of a Reduced-Scale Rocket", "file": "/documents/nn_aero_coefficients.pdf" },
-    { "title": "Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment", "file": "/documents/hybrid_les.pdf" },
-    { "title": "Transported PDF Method for Chemical Mixing (H₂/O₂)", "file": "/documents/transported_pdf.pdf" },
-    { "title": "Acoustic Levitation Modeling", "file": "/documents/acoustic_levitation.pdf" }
+    { "name": "Inglês", "level": "Avançado (TOEFL: 5,5/6)" },
+    { "name": "Francês", "level": "Avançado" },
+    { "name": "Espanhol", "level": "Básico" }
   ],
   "contact": {
-    "phone": "+33 07 68 57 81 91",
-    "email": "laurapdec@gmail.com",
-    "github": "https://github.com/laurapdec",
+    "email": "laurapdec@hotmail.com",
+    "instagram": "https://instagram.com/laurapdec",
+    "tiktok": "https://tiktok.com/@laura.pc",
+    "substack": "https://substack.com/@laurapdec",
     "linkedin": "https://www.linkedin.com/in/laurapdec/"
   },
-  "portfolio": [
-    { "title": "Experimentos de web design", "description": "Sites pessoais lúdicos e experimentos interativos." }
-  ],
-  "locations": [
-    { "id": "ensma", "name": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique)", "institution": "ISAE-ENSMA (École Nationale Supérieure de Mécanique et d'Aérotechnique) (ENSMA)", "years": "2021-2024 (fev)", "description": "Mestrado em Pesquisa - Aeronáutica e Espaço; Diploma de Engenharia (equivalente a Mestrado).", "projects": ["Estágio Safran", "Droney", "ATREX"], "x": 58, "y": 28 },
-    { "id": "ufu", "name": "UFU", "institution": "Universidade Federal de Uberlândia", "years": "até 2021", "description": "Estudos de graduação em engenharia.", "projects": ["Saturn V", "EPTA", "Estágio Petrobras"], "x": 40, "y": 62 },
-    { "id": "safran", "name": "Safran (Estágio)", "institution": "Safran", "years": "Estágio", "description": "Estágio industrial em engenharia aeroespacial.", "projects": ["Estágio Safran"], "x": 58, "y": 26 },
-    { "id": "airbus", "name": "Airbus (Doutorado)", "institution": "Airbus", "years": "Doutorado (interrompido)", "description": "Trabalhos de doutorado em aeroespacial (interrompidos).", "projects": [], "x": 60, "y": 26 }
-  ],
-  "publications": [
-    {
-      "title": "Neural Network Algorithm for Prediction of Aerodynamic Coefficients of a Reduced-Scale Rocket",
-      "venue": "18th Brazilian Congress of Thermal Sciences and Engineering (ENCIT 2020)",
-      "authors": "Laura Pereira de Castro, Rodrigo Daher, Alexandre Zuquete Guarato",
-      "description": "Desenvolveu uma rede neural em Python para prever coeficientes de arrasto e sustentação a partir de dados CFD do foguete da EPTA, alcançando desvio < 17.7% vs ANSYS CFD e RASAero II.",
-      "doi": "10.26678/ABCM.ENCIT2020.CIT20-0806",
-      "link": "https://www.researchgate.net/publication/347875623_NEURAL_NETWORK_ALGORITHM_FOR_PREDICTION_OF_AERODYNAMIC_COEFFICIENTS_OF_A_REDUCED_SCALE_ROCKET"
-    },
-    {
-      "title": "Implementation of a Hybrid Lagrangian Filtered Density Function–Large Eddy Simulation Methodology in a Dynamic Adaptive Mesh Refinement Environment",
-      "venue": "Physics of Fluids, April 2021",
-      "authors": "Laura Pereira de Castro, Abgail Paula Pinheiro, Vitor Vilela, Gabriel Marcos Magalhães, Ricardo Serfaty, João Marcelo Vedovotto",
-      "description": "Contribuiu para a implementação de uma abordagem híbrida FDF–LES dentro de um framework AMR dinâmico para modelagem de escoamento reativo turbulento.",
-      "doi": "10.1063/5.0045873"
-    },
-    {
-      "title": "Transported PDF Method for Chemical Mixing (H₂/O₂)",
-      "venue": "XIX Semana da Matemática e IX Semana da Estatística – UFU 2019",
-      "authors": "Laura Pereira de Castro, João Marcelo Vedovotto",
-      "description": "Simulou micromistura entre hidrogênio e oxigênio usando o modelo PDF transportado (IEM-LMSE) em Python com Cantera. Recebeu Menção Honrosa."
-    },
-    {
-      "title": "Acoustic Levitation Modeling",
-      "venue": "XX Semana da Matemática e X Semana da Estatística – UFU 2020",
-      "authors": "Matheus Lopes Silva, Laura Pereira de Castro, Aristeu da Silveira Neto",
-      "description": "Construiu um modelo fluido-dinâmico 1-D Runge-Kutta descrevendo o movimento e comportamento de fase de pistões levitantes sob campos de pressão acústica."
-    }
-  ],
   "footer": {
-    "copyright": "© 2025 Laura Pereira de Castro. Todos os direitos reservados."
-  },
-  "creative": {
-    "heading": "Serviços Criativos",
-    "subheading": "Direção e Produção Criativa Independente • Serviços Criativos",
-    "description": "Serviços criativos freelance incluindo escrita (letras de música, roteiros, copywriting), videografia e imagens geradas por computador.",
-    "photography": "Fotografia",
-    "writing": "Escrita",
-    "about": "Mais sobre",
-    "poem_orlando": {
-      "title": "Reze por Orlando",
-      "date": "5 de agosto de 2016",
-      "text": "Sou um ET\nDe um mundo plano.\nVenho de um tempo\nDistante desse ano.\n\nAndava pelas ruas,\nEstavam asfaltadas.\nOlhando para o céu\nEu só via a fumaça.\nE via homens agindo como máquinas.\n\nVi um homem estuprando,\nUm matando negros e índios,\nUma mulher com olho roxo\nChorando escondido.\nTudo continua tão normal.\n\nMas de repente,\nAlgo incomodou.\nAlgo que ninguém jamais me perguntou.\n\nVi dois homens se beijando,\nQue horror!\nQueime na fogueira\nOu atire, por favor.\n\n50 mortos\n53 feridos\n\nOlha o Bolsonaro,\nUm alívio para a família.\nAntes filho morto,\nDo que gay.\n\nPorque de onde eu venho,\nIsso sim que é castigo.\nEsses homens pervertidos.\nO amor está perdido.\nMas eu não,\nPois eu sou dono da razão.",
-      "context": "Escrito em resposta ao tiroteio de 2016 na boate Pulse em Orlando, Flórida. O poema reflete sobre preconceitos sociais e a tragédia que tirou a vida de 49 pessoas e feriu outras 53. Através da ironia, critica a discriminação e a violência contra a comunidade LGBTQ+."
-    },
-    "more_writings": "Visite meu blog para mais textos",
-    "contact": "Contato",
-    "read_more": "Ler textp completo",
-    "read_less": "Mostrar menos"
+    "copyright": "© 2026 Laura Pereira de Castro. Todos os direitos reservados."
   }
 }
