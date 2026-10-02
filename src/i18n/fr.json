@@ -3,17 +3,14 @@
     "home": "Accueil",
     "photography": "Photographie",
     "video": "Vidéo",
-    "writing": "Écriture",
     "about": "À propos"
   },
   "headline": "Photographe & Réalisatrice",
   "hero": {
     "title": "Laura Pereira de Castro",
     "subtitle": "Photographe & Réalisatrice",
-    "description": "Photographe et réalisatrice basée à New York, en préparation d'un MFA en écriture de séries télévisées à Stony Brook University.",
     "ctaPrimary": "Voir la Photographie",
-    "ctaSecondary": "Regarder la Vidéo",
-    "ctaTertiary": "Lire mes Écrits"
+    "ctaSecondary": "Regarder la Vidéo"
   },
   "filters": {
     "all": "Tout",
@@ -25,40 +22,18 @@
     "tag_Animals": "Animaux",
     "tag_Nature": "Nature",
     "tag_Food": "Cuisine",
-    "tag_FashionWeekParis": "Fashion Week Paris"
+    "tag_FashionWeekParis": "Fashion Week Paris",
+    "tag_SummerStageNYC": "SummerStage NYC"
   },
   "video": {
     "moreSoon": "Plus de contenu vidéo à venir bientôt."
   },
-  "writing": {
-    "mfaHeading": "Actuellement : MFA en écriture de séries télévisées, Stony Brook University",
-    "mfaNote": "Je commence mon MFA en écriture de séries télévisées au campus de Manhattan de Stony Brook University, développant des pilotes originaux tout en poursuivant mon travail de photographie et de vidéo.",
-    "substackLink": "Lire plus de mes écrits sur Substack",
-    "draftNote": "Premiers brouillons écrits pour ma candidature au MFA de Stony Brook — aucun de ces textes n'est une œuvre finalisée.",
-    "readScript": "Lire le scénario",
-    "script_witchcraft": {
-      "title": "Witchcraft Academy",
-      "meta": "Pilote original · 12 pages",
-      "description": "Un pilote de drame surnaturel qui s'ouvre sur le réveil troublant d'une jeune fille, écrit comme spec pilot pour le dossier de candidature au MFA."
-    },
-    "script_pretty": {
-      "title": "It Hurts to Be Pretty",
-      "meta": "Extrait de scène · 5 pages",
-      "description": "Une courte scène suivant une jeune fille essayant de nouveaux vêtements pour sa mère, où l'inconfort de performer la féminité devient littéral."
-    }
-  },
   "about": {
-    "bio": "Je suis photographe et réalisatrice, basée à New York. Cet automne, je commence un MFA en écriture de séries télévisées à Stony Brook University, passant de l'image à l'écriture scénarisée. Je m'intéresse surtout au développement de pilotes, de spec scripts et de courts métrages.",
+    "bio": "Je suis photographe et réalisatrice.",
     "pastLife": "Avant de me consacrer pleinement à l'image, j'ai passé plusieurs années à étudier et travailler comme ingénieure de recherche en aéronautique et mécanique des fluides, chez Airbus, Safran, et dans des laboratoires de recherche en France, au Brésil et aux États-Unis.",
     "equipment": "Je tourne avec un Sony A7III et un objectif Sony E PZ 18-105mm f/4 G OSS, stabilisé avec un DJI RS4 Mini.",
     "educationHeading": "Formation",
     "education": [
-      {
-        "institution": "Stony Brook University",
-        "location": "New York, États-Unis",
-        "period": "À partir de l'automne 2026",
-        "degree": "MFA en écriture de séries télévisées"
-      },
       {
         "institution": "ISAE-ENSMA & UFU",
         "location": "France & Brésil",

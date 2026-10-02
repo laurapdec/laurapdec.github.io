@@ -3,17 +3,14 @@
     "home": "Home",
     "photography": "Photography",
     "video": "Video",
-    "writing": "Writing",
     "about": "About"
   },
   "headline": "Photographer & Filmmaker",
   "hero": {
     "title": "Laura Pereira de Castro",
     "subtitle": "Photographer & Filmmaker",
-    "description": "NYC-based photographer and filmmaker, starting an MFA in TV Writing at Stony Brook University.",
     "ctaPrimary": "View Photography",
-    "ctaSecondary": "Watch Videos",
-    "ctaTertiary": "Read My Writing"
+    "ctaSecondary": "Watch Videos"
   },
   "filters": {
     "all": "All",
@@ -25,40 +22,18 @@
     "tag_Animals": "Animals",
     "tag_Nature": "Nature",
     "tag_Food": "Food",
-    "tag_FashionWeekParis": "Fashion Week Paris"
+    "tag_FashionWeekParis": "Fashion Week Paris",
+    "tag_SummerStageNYC": "SummerStage NYC"
   },
   "video": {
     "moreSoon": "More videos coming soon."
   },
-  "writing": {
-    "mfaHeading": "Currently: MFA in TV Writing, Stony Brook University",
-    "mfaNote": "I'm starting my MFA in TV Writing at Stony Brook University's Manhattan campus, developing original pilots and building a writing practice alongside my photography and video work.",
-    "substackLink": "Read more of my writing on Substack",
-    "draftNote": "Early drafts written for my Stony Brook MFA application. These are not finished pieces.",
-    "readScript": "Read the script",
-    "script_witchcraft": {
-      "title": "Witchcraft Academy",
-      "meta": "Original Pilot · 12 pages",
-      "description": "A supernatural drama pilot opening on a girl's uncanny awakening, written as a spec pilot for the MFA application portfolio."
-    },
-    "script_pretty": {
-      "title": "It Hurts to Be Pretty",
-      "meta": "Scene Sample · 5 pages",
-      "description": "A short scene following a young girl trying on new clothes for her mother, where the discomfort of performing femininity becomes literal."
-    }
-  },
   "about": {
-    "bio": "I'm a photographer and filmmaker based in New York City. This fall I'm starting an MFA in TV Writing at Stony Brook University, moving from images into scripted storytelling. I mostly interested in developing pilots, spec scripts, and short films.",
+    "bio": "I'm a photographer and filmmaker.",
     "pastLife": "Before turning to visual storytelling full-time, I spent several years studying and working as a research engineer in aerospace and fluid dynamics, working at Airbus, Safran, research labs in France, Brazil, and the US.",
     "equipment": "Shooting on a Sony A7III with a Sony E PZ 18-105mm f/4 G OSS lens, stabilized with a DJI RS4 Mini.",
     "educationHeading": "Education",
     "education": [
-      {
-        "institution": "Stony Brook University",
-        "location": "New York City, USA",
-        "period": "Starting Fall 2026",
-        "degree": "MFA in TV Writing"
-      },
       {
         "institution": "ISAE-ENSMA & UFU",
         "location": "France & Brazil",

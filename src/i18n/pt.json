@@ -3,17 +3,14 @@
     "home": "Início",
     "photography": "Fotografia",
     "video": "Vídeo",
-    "writing": "Escrita",
     "about": "Sobre"
   },
-  "headline": "Fotógrafa & Cineasta",
+  "headline": "Fotógrafa & Videomaker",
   "hero": {
     "title": "Laura Pereira de Castro",
-    "subtitle": "Fotógrafa & Cineasta",
-    "description": "Fotógrafa e cineasta baseada em Nova York, prestes a iniciar um MFA em Roteiro de TV na Stony Brook University.",
+    "subtitle": "Fotógrafa & Videomaker",
     "ctaPrimary": "Ver Fotografia",
-    "ctaSecondary": "Assistir Vídeo",
-    "ctaTertiary": "Ler Meus Textos"
+    "ctaSecondary": "Assistir Vídeo"
   },
   "filters": {
     "all": "Todos",
@@ -25,40 +22,18 @@
     "tag_Animals": "Animais",
     "tag_Nature": "Natureza",
     "tag_Food": "Comida",
-    "tag_FashionWeekParis": "Fashion Week Paris"
+    "tag_FashionWeekParis": "Fashion Week Paris",
+    "tag_SummerStageNYC": "SummerStage NYC"
   },
   "video": {
     "moreSoon": "Mais trabalhos em vídeo em breve."
   },
-  "writing": {
-    "mfaHeading": "Atualmente: MFA em Roteiro de TV, Stony Brook University",
-    "mfaNote": "Estou começando meu MFA em Roteiro de TV no campus de Manhattan da Stony Brook University, desenvolvendo pilotos originais enquanto continuo meu trabalho de fotografia e vídeo.",
-    "substackLink": "Leia mais dos meus textos no Substack",
-    "draftNote": "Primeiros rascunhos escritos para minha candidatura ao MFA de Stony Brook — nenhum destes é um texto finalizado.",
-    "readScript": "Ler o roteiro",
-    "script_witchcraft": {
-      "title": "Witchcraft Academy",
-      "meta": "Piloto original · 12 páginas",
-      "description": "Um piloto de drama sobrenatural que se abre com o despertar inquietante de uma jovem, escrito como spec pilot para o portfólio de candidatura ao MFA."
-    },
-    "script_pretty": {
-      "title": "It Hurts to Be Pretty",
-      "meta": "Amostra de cena · 5 páginas",
-      "description": "Uma pequena cena que acompanha uma menina experimentando roupas novas para a mãe, em que o desconforto de performar a feminilidade se torna literal."
-    }
-  },
   "about": {
-    "bio": "Sou fotógrafa e cineasta, baseada em Nova York. Neste outono, começo um MFA em Roteiro de TV na Stony Brook University, passando da imagem para a escrita roteirizada. Tenho maior interesse em desenvolver pilotos, spec scripts e curtas-metragens.",
+    "bio": "Sou fotógrafa e videomaker.",
     "pastLife": "Antes de me dedicar integralmente à narrativa visual, passei vários anos estudando e trabalhando como engenheira de pesquisa em aeronáutica e mecânica dos fluidos, na Airbus, Safran, e em laboratórios de pesquisa na França, Brasil e Estados Unidos.",
     "equipment": "Filmo com uma Sony A7III e lente Sony E PZ 18-105mm f/4 G OSS, estabilizada com um DJI RS4 Mini.",
     "educationHeading": "Formação",
     "education": [
-      {
-        "institution": "Stony Brook University",
-        "location": "Nova York, EUA",
-        "period": "A partir do outono de 2026",
-        "degree": "MFA em Roteiro de TV"
-      },
       {
         "institution": "ISAE-ENSMA & UFU",
         "location": "França & Brasil",

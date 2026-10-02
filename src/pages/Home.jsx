@@ -26,17 +26,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">{t('hero.title')}</h1>
-            <p className="text-lg md:text-2xl text-white/90 font-medium mb-4">{t('hero.subtitle')}</p>
-            <p className="text-white/80 max-w-xl mb-8">{t('hero.description')}</p>
+            <p className="text-lg md:text-2xl text-white/90 font-medium mb-8">{t('hero.subtitle')}</p>
             <div className="flex flex-wrap gap-4">
               <Link to="/photography" className="px-6 py-3 bg-cream text-ink font-medium rounded-lg hover:bg-white transition-colors">
                 {t('hero.ctaPrimary')}
               </Link>
               <Link to="/video" className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-medium rounded-lg border border-white/30 hover:bg-white/20 transition-colors">
                 {t('hero.ctaSecondary')}
-              </Link>
-              <Link to="/writing" className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-medium rounded-lg border border-white/30 hover:bg-white/20 transition-colors">
-                {t('hero.ctaTertiary')}
               </Link>
             </div>
           </motion.div>

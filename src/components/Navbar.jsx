@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { to: '/', key: 'home' },
   { to: '/photography', key: 'photography' },
   { to: '/video', key: 'video' },
-  { to: '/writing', key: 'writing' },
   { to: '/about', key: 'about' },
 ]
 
